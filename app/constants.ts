@@ -309,11 +309,11 @@ export const TEAM: TeamMember[] = [
   },
   {
     id: "10",
-    name: "C.Indra",
-    role: "Automation Engineer",
-    bio: "Builds things that work. Fixes things you broke.",
-    sarcasticFact: "Build to run itself.",
-    imageUrl: "/images/Team_Members/indra.webp",
+    name: "D.Vijaya Lakshmi",
+    role: "Intern-Graphic Design",
+    bio: "Turning ideas into visuals — and feedback into better ones.",
+    sarcasticFact: "Turns ‘small tasks’ into big learnings.",
+    imageUrl: "/images/Team_Members/vijju.webp",
   },
 ];
 
