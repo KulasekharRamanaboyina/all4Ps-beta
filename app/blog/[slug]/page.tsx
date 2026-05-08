@@ -2,7 +2,7 @@ import { client } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import Image from "next/image";
 import { urlFor } from "@/lib/image";
-export const revalidate = 60;
+export const revalidate = 0;
 
 // ✅ METADATA (SEO ONLY)
 export async function generateMetadata({
@@ -20,7 +20,8 @@ export async function generateMetadata({
     }`,
     { slug },
   );
-
+  //console.log("slug:", slug);
+  //console.log("post:", post);
   const title = post?.title || "all4Ps Blog";
   const description =
     post?.excerpt || "Insights on B2B marketing and growth by all4Ps";
