@@ -99,19 +99,19 @@ export default async function BlogPost({
   const components = {
     block: {
       blockquote: ({ children }: any) => (
-        <blockquote className="border-l-4 border-[#800080] pl-6 italic text-lg leading-8 text-gray-900 my-12 bg-gradient-to-r from-gray-50 to-white p-6 rounded-lg shadow-sm md:text-justify">
+        <blockquote className="border-l-4 border-[#800080] pl-6 italic text-lg leading-8 text-gray-900 my-12 bg-gradient-to-r from-gray-50 to-white p-6 rounded-lg shadow-sm text-left">
           {children}
         </blockquote>
       ),
 
       h2: ({ children }: any) => (
-        <h2 className="text-[26px] font-semibold mt-8 mb-4 text-[#800080] leading-snug">
+        <h2 className="text-[26px] font-semibold mt-8 mb-4 text-[#800080] leading-snug tracking-normal">
           {children}
         </h2>
       ),
 
       h3: ({ children }: any) => (
-        <h3 className="text-[22px] font-semibold mt-6 mb-3 text-black">
+        <h3 className="text-[22px] font-semibold mt-6 mb-3 text-black tracking-normal">
           {children}
         </h3>
       ),
@@ -123,7 +123,9 @@ export default async function BlogPost({
       ),
 
       normal: ({ children }: any) => (
-        <p className="text-gray-700 leading-8 md:text-justify">{children}</p>
+        <p className="text-gray-700 leading-8 tracking-normal whitespace-pre-wrap break-words text-left">
+          {children}
+        </p>
       ),
     },
 

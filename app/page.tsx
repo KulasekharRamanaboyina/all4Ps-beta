@@ -173,10 +173,29 @@ export default function Page() {
           </h2>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <Feature icon={BarChart2} title="We Prioritize ROI" />
-            <Feature icon={ShieldCheck} title="Straightforward" />
-            <Feature icon={Zap} title="Results You Can Trust" />
-            <Feature icon={Users} title="Deeply Invested" />
+            <Feature
+              icon={BarChart2}
+              title="We Prioritize ROI"
+              description="Your financial success is our core performance measure."
+            />
+
+            <Feature
+              icon={ShieldCheck}
+              title="Straight Forward"
+              description="We speak clearly and focus on what truly matters to your business."
+            />
+
+            <Feature
+              icon={Zap}
+              title="Results You Can Trust"
+              description="Reporting that provides clarity, insight, and financial relevance."
+            />
+
+            <Feature
+              icon={Users}
+              title="Deeply Invested"
+              description="Your success drives our direction, decisions, and effort."
+            />
           </div>
         </div>
       </section>
@@ -311,14 +330,12 @@ export default function Page() {
 }
 
 /* ===== Reusable feature block ===== */
-function Feature({ icon: Icon, title }: any) {
+function Feature({ icon: Icon, title, description }: any) {
   return (
     <div className="p-6 border border-gray-800 bg-gray-900/50">
       <Icon className="w-12 h-12 text-brand-purple mb-4" />
       <h4 className="text-xl font-bold mb-2">{title}</h4>
-      <p className="text-gray-400 text-sm">
-        Your success drives our direction, decisions, and effort.
-      </p>
+      <p className="text-gray-400 text-sm">{description}</p>
     </div>
   );
 }
