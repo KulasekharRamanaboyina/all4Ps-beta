@@ -291,29 +291,14 @@ export const TEAM: TeamMember[] = [
     sarcasticFact: "Talks to Google.",
     imageUrl: "/images/Team_Members/Kumari.webp",
   },
+
   {
     id: "8",
-    name: "S.Thousif",
-    role: "Designer",
-    bio: "Builds things that work. Fixes things you broke.",
-    sarcasticFact: "Obsessed with alignment.",
-    imageUrl: "/images/Team_Members/Thousif.webp",
-  },
-  {
-    id: "9",
     name: "R.Viswa Teja",
     role: "Automation Engineer",
     bio: "Builds things that work. Fixes things you broke.",
     sarcasticFact: "Engineering intelligence.",
     imageUrl: "/images/Team_Members/ViswaTeja.webp",
-  },
-  {
-    id: "10",
-    name: "D.Vijaya Lakshmi",
-    role: "Intern-Graphic Design",
-    bio: "Turning ideas into visuals — and feedback into better ones.",
-    sarcasticFact: "Turns ‘small tasks’ into big learnings.",
-    imageUrl: "/images/Team_Members/vijju.webp",
   },
 ];
 

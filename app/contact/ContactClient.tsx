@@ -73,6 +73,10 @@ export default function ContactClient() {
             <a href="mailto:grow@all4ps.co" className="block font-bold">
               grow@all4ps.co
             </a>
+            <a href="tel:+919871749916" className="block font-bold">
+              +91 98717 49916
+            </a>
+
             <p>Bangalore, Karnataka</p>
           </div>
         </div>
