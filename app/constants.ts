@@ -291,15 +291,6 @@ export const TEAM: TeamMember[] = [
     sarcasticFact: "Talks to Google.",
     imageUrl: "/images/Team_Members/Kumari.webp",
   },
-
-  {
-    id: "8",
-    name: "R.Viswa Teja",
-    role: "Automation Engineer",
-    bio: "Builds things that work. Fixes things you broke.",
-    sarcasticFact: "Engineering intelligence.",
-    imageUrl: "/images/Team_Members/ViswaTeja.webp",
-  },
 ];
 
 /* ================= CASE STUDIES ================= */
