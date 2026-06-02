@@ -78,12 +78,25 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
 
-        <Script id="google-analytics" strategy="afterInteractive">
+        {/* <Script id="google-analytics" strategy="afterInteractive">
           {`
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-WF2VTZ5Z21');
+  `}
+        </Script> */}
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+    if (!document.cookie.includes('internal_user=true')) {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WF2VTZ5Z21');
+    } else {
+      console.log('Internal user detected - GA4 disabled');
+    }
   `}
         </Script>
         {/* ================= Meta Pixel ================= */}
