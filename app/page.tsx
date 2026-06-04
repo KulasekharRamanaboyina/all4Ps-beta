@@ -157,10 +157,11 @@ export default function Page() {
               src="/images/home/all4ps-b2b-marketing-sales-enablement.jpg"
               alt="Deep-tech marketing analytics dashboard"
               width={600}
-              height={400}
+              height={300}
               //className="w-full h-70 object-cover grayscale hover:grayscale-0 transition-all"
-              className="w-full h-70 aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all"
-              unoptimized
+              // className="w-full aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all"
+              // unoptimized
+              className="w-full h-64 object-cover grayscale hover:grayscale-0 transition-all"
             />
           </div>
         </div>
