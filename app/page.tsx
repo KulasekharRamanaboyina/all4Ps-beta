@@ -32,7 +32,7 @@ export const metadata = {
     siteName: "all4Ps",
     images: [
       {
-        url: "https://www.all4ps.co/images/og/home-page-v2.png",
+        url: "https://www.all4ps.co/images/home/all4ps-b2b-marketing-sales-enablement.jpg",
         width: 1200,
         height: 630,
         alt: "all4Ps B2B Growth Agency",
@@ -45,7 +45,9 @@ export const metadata = {
     title: "all4Ps | B2B Growth & Marketing Strategy Agency",
     description:
       "Revenue-focused B2B marketing, SEO, and GTM strategy for SaaS & tech brands.",
-    images: ["https://www.all4ps.co/images/og/home-page-v2.png"],
+    images: [
+      "https://www.all4ps.co/images/home/all4ps-b2b-marketing-sales-enablement.jpg",
+    ],
   },
 };
 const homeFaqs = [
@@ -119,7 +121,6 @@ export default function Page() {
         {/* Chart (client component, hidden on mobile by CSS) */}
         <GrowthChart />
       </section>
-
       {/* ================= WHAT WE DO ================= */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -153,18 +154,18 @@ export default function Page() {
 
           <div className="bg-white p-8 shadow-2xl border-l-4 border-brand-purple">
             <Image
-              src="/images/home-page-delivery-robot-futuristic-environment.jpg"
-              alt="B2B Growth Strategy"
+              src="/images/home/all4ps-b2b-marketing-sales-enablement.jpg"
+              alt="Deep-tech marketing analytics dashboard"
               width={600}
               height={400}
-              className="w-full h-70 object-cover grayscale hover:grayscale-0 transition-all"
+              //className="w-full h-70 object-cover grayscale hover:grayscale-0 transition-all"
+              className="w-full h-70 aspect-[4/3] object-cover grayscale hover:grayscale-0 transition-all"
+              unoptimized
             />
           </div>
         </div>
       </section>
-
       <ServicesGrid />
-
       {/* ================= OUR APPROACH ================= */}
       <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4">
@@ -199,7 +200,6 @@ export default function Page() {
           </div>
         </div>
       </section>
-
       {/* ================= SUCCESS STORIES ================= */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
@@ -277,7 +277,7 @@ export default function Page() {
         </div>
       </section>
       {/* ================= FAQ ================= */}
-      <FAQSection faqs={homeFaqs} />
+      {/* <FAQSection faqs={homeFaqs} /> */}
       {/* ================= FINAL CTA ================= */}
       <section className="py-24 bg-brand-purple text-center px-4">
         <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
@@ -298,7 +298,6 @@ export default function Page() {
           Book a 30-Minute Strategy Call
         </Link>
       </section>
-
       {/* ================= WebSite Schema ================= */}
       <script
         type="application/ld+json"
