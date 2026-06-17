@@ -3,6 +3,10 @@ import Image from "next/image";
 
 import { SERVICES, ICONS_MAP, CASE_STUDIES } from "./constants";
 import FAQSection from "./components/FAQSection";
+import LogoRibbon from "./components/home/hero/LogoRibbon";
+import ApproachSection from "./components/home/Approach/ApproachSection";
+import ServicesSection from "./components/home/Services/ServicesSection";
+import SuccessStoriesSection from "./components/home/SuccessStories/SuccessStoriesSection";
 
 import {
   ArrowRight,
@@ -15,6 +19,7 @@ import {
 
 import ServicesGrid from "./components/ServicesGrid";
 import GrowthChart from "./components/GrowthChart";
+import HeroVisual from "./components/home/hero/HeroVisual";
 
 /* ================= SEO (NEXT.JS – SERVER) ================= */
 export const metadata = {
@@ -74,55 +79,102 @@ const homeFaqs = [
 ];
 export default function Page() {
   return (
-    <div>
-      {/* ================= HERO ================= */}
-      <section className="relative bg-black text-white py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(128,0,128,0.4),transparent_70%)]" />
-          <div
-            className="w-full h-full"
-            style={{
-              backgroundImage:
-                "linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px)",
-              backgroundSize: "50px 50px",
-            }}
-          />
-        </div>
+    <div className="animate-hero">
+     {/* ================= HERO ================= */}
+<section className="relative overflow-hidden bg-black text-white">
+  {/* Background */}
+  <div className="absolute inset-0 opacity-20">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(128,0,128,0.45),transparent_60%)]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
-          <span className="inline-block py-1 px-3 rounded-full bg-brand-purple/20 text-brand-purple font-bold text-sm mb-6 border border-brand-purple/50">
-            Precision-Built B2B Growth
-          </span>
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage:
+          "linear-gradient(#2b2b2b 1px, transparent 1px), linear-gradient(90deg, #2b2b2b 1px, transparent 1px)",
+        backgroundSize: "50px 50px",
+      }}
+    />
+  </div>
 
-          <h1 className="text-5xl md:text-7xl font-display font-extrabold mb-6 leading-tight">
-            Marketing that Moves Pipelines
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-pink-500">
-              Not Just Metrics
-            </span>
-          </h1>
+  <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-light">
-            all4Ps transforms B2B businesses through actual strategy, real
-            creativity, and numbers that don&apos;t lie.
-            <span className="italic text-gray-500 text-base mt-2 block">
-              Not another agency. A strategic partner.
-            </span>
-          </p>
+    <div className="grid lg:grid-cols-2 items-center gap-16 min-h-[95vh]">
+
+      {/* LEFT CONTENT */}
+      <div className="text-center lg:text-left">
+
+        {/* <span className="inline-flex items-center rounded-full border border-brand-purple/40 bg-brand-purple/10 px-4 py-2 text-sm font-semibold text-brand-purple"> */}
+      <span className="inline-flex items-center rounded-full border border-brand-purple/30 bg-brand-purple/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple" >
+          Precision-Built B2B Growth
+        </span>
+
+          <h1 className="mt-8 max-w-2xl text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
+
+  Marketing that
+
+  <br />
+
+  <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
+    Moves Pipelines.
+  </span>
+
+  <br />
+
+  Not Just Metrics.
+
+</h1>
+
+        {/* <p className="mt-8 max-w-xl text-lg text-gray-300 leading-8">
+          all4Ps helps industrial, SaaS and technology companies create
+          positioning, demand generation and sales enablement systems that
+          produce measurable revenue growth.
+        </p> */}
+        <p className="mt-8 max-w-lg text-lg leading-8 text-gray-300">
+  We build positioning, demand generation and sales enablement
+  systems that help industrial, SaaS and technology companies
+  generate measurable pipeline and revenue growth.
+</p>
+
+        {/* CTA Buttons */}
+        <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
 
           <Link
             href="/contact"
-            className="inline-block bg-brand-purple hover:bg-purple-600 text-white px-8 py-4 text-lg font-bold shadow-[6px_6px_0px_0px_rgba(255,255,255,0.2)] transition-all"
-          >
-            Let&apos;s Build Pipelines
+            // className="bg-brand-purple hover:bg-purple-600 text-white px-8 py-4 rounded-md font-semibold transition"
+         className="group bg-brand-purple hover:bg-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-[1.02]"
+         >
+            Book a Strategy Call
           </Link>
+
+          <Link
+            href="/portfolio"
+            className="border border-gray-700 hover:border-white px-8 py-4 rounded-md font-semibold transition"
+          >
+            Explore Our Work
+          </Link>
+
         </div>
 
-        {/* Chart (client component, hidden on mobile by CSS) */}
-        <GrowthChart />
-      </section>
+      </div>
+
+      {/* RIGHT CONTENT */}
+      <div className="relative flex justify-center lg:justify-end">
+
+        {/* <GrowthChart /> */}
+        <HeroVisual />
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<LogoRibbon />
       {/* ================= WHAT WE DO ================= */}
-      <section className="py-20 bg-gray-50">
+      
+      <ApproachSection />
+      {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
             <h2 className="text-4xl font-display font-bold mb-2 text-black">
@@ -166,9 +218,9 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <ServicesGrid />
+      <ServicesGrid /> */}
       {/* ================= OUR APPROACH ================= */}
-      <section className="py-20 bg-black text-white">
+      {/* <section className="py-20 bg-black text-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-display font-bold mb-16 text-white">
             Our Approach Sets Us Apart
@@ -200,83 +252,10 @@ export default function Page() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
+      <ServicesSection />
       {/* ================= SUCCESS STORIES ================= */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex justify-between items-end mb-12">
-            <div>
-              {/* <h2 className="text-4xl font-display font-bold mb-2"> */}
-              {/* Changed to text-gray-900 for maximum contrast */}
-              <h2 className="text-4xl font-display font-bold mb-2 text-gray-900">
-                Success Stories
-              </h2>
-              {/* <p className="text-gray-600"> */}
-              {/* Changed text-gray-600 to text-gray-800 for better visibility */}
-              <p className="text-gray-800">
-                Together, we helped them scale impact, reputation, and customer
-                trust.
-              </p>
-            </div>
-
-            <Link
-              href="/portfolio"
-              className="hidden md:block text-brand-purple font-bold hover:underline"
-            >
-              See More Wins
-            </Link>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {CASE_STUDIES.slice(0, 2).map((study) => (
-              <div
-                key={study.id}
-                className="group bg-white shadow-xl overflow-hidden"
-              >
-                <div className="h-64 overflow-hidden">
-                  <Image
-                    src={study.imageUrl}
-                    alt={study.title}
-                    width={800}
-                    height={400}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-
-                <div className="p-8">
-                  <div className="flex justify-between items-center mb-4">
-                    <span className="text-xs font-bold tracking-widest uppercase text-gray-500">
-                      {study.industry}
-                    </span>
-                    <span className="bg-brand-purple text-white px-2 py-1 text-xs font-bold">
-                      {study.result}
-                    </span>
-                  </div>
-
-                  {/* <h3 className="text-2xl font-bold mb-2">{study.title}</h3>
-
-                  <p className="text-gray-600 mb-6">{study.client}</p> */}
-                  {/* Added text-gray-900 here */}
-                  <h3 className="text-2xl font-bold mb-2 text-gray-900">
-                    {study.title}
-                  </h3>
-
-                  {/* Changed text-gray-600 to text-gray-700 */}
-                  <p className="text-gray-700 mb-6">{study.client}</p>
-
-                  <Link
-                    href={`/portfolio/${study.id}`}
-                    className="text-brand-purple font-bold flex items-center"
-                  >
-                    Read Case Study
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <SuccessStoriesSection />
       {/* ================= FAQ ================= */}
       {/* <FAQSection faqs={homeFaqs} /> */}
       {/* ================= FINAL CTA ================= */}
