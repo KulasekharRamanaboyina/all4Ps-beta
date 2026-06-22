@@ -3,7 +3,7 @@ import ApproachStep from "./ApproachStep";
 
 export default function ApproachSection() {
   return (
-<section className="pt-20 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
+<section className=" bg-[#0B0813] pt-20 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Label */}

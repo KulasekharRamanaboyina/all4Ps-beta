@@ -13,17 +13,11 @@
 
 /* ================== CSS VARIABLES ================== */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #05030A;
+  --foreground: #ffffff;
 }
 
-/* ================== DARK MODE ================== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 /* ================== BASE TYPOGRAPHY ================== */
 body {

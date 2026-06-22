@@ -43,9 +43,9 @@ export default function ApproachStep({
       </h3>
 
       {/* Description */}
-      <p >
-        {description}
-      </p>
+      <p className="max-w-[220px] text-sm leading-7 text-gray-400 transition-colors duration-300 group-hover:text-gray-300">
+  {description}
+</p>
 
     </div>
   );

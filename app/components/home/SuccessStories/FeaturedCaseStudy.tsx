@@ -1,86 +1,153 @@
+import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+
 export default function FeaturedCaseStudy() {
   return (
-<div className="grid lg:grid-cols-[0.95fr_1.15fr] gap-10 rounded-3xl border border-white/10 bg-[#0B0813] p-10">
-      {/* Left Side */}
-      {/* <div>
-        <span>FEATURED CASE STUDY</span>
+<div className="
+group
+grid
+grid-cols-1
+md:grid-cols-[0.7fr_1.3fr]
+h-auto
+md:h-[480px]
+overflow-hidden
+rounded-3xl
+border
+border-white/10
+bg-[#0B0813]
+transition-all
+duration-500
+hover:border-brand-purple/40
+hover:shadow-[0_20px_60px_rgba(168,85,247,.15)]
+">
+    {/* Left Side */}
+   
+<div className="order-2 flex h-full flex-col justify-between p-6 md:p-7 md:order-1">
+    <div>
 
-        <h3>UNBOX ROBOTICS</h3>
+ <div className="mb-6 inline-flex items-center rounded-full border border-brand-purple/25 bg-gradient-to-r from-brand-purple/15 to-fuchsia-500/10 px-4 py-2 backdrop-blur-sm">
+  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-purple">
+    Featured Case Study
+  </span>
+</div>
 
-        <div>
-          <p>+312% Organic Growth</p>
-          <p>+280% Qualified Leads</p>
-          <p>₹32Cr+ Pipeline Influenced</p>
-        </div>
-
-        <p>
-          From early-stage visibility challenges to category leadership in
-          robotics automation.
-        </p>
-
-        <button>
-          View Case Study
-        </button>
-      </div> */}
-      <div className="flex flex-col justify-between">
-
-  <div>
-
-    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-brand-purple">
-      FEATURED CASE STUDY
-    </p>
-
-    <h2 className="mb-8 text-4xl font-bold text-white">
+    <h2 className="mb-5 text-4xl
+md:text-[2.2rem] leading-tight font-bold text-white">
       UNBOX ROBOTICS
     </h2>
 
-    <div className="mb-8 space-y-5">
+<div className="mb-5 space-y-3">
 
-      <div>
-        <h3 className="text-4xl font-bold text-brand-purple">
-          +312%
-        </h3>
-        <p className="text-gray-400">
-          Organic Growth
-        </p>
-      </div>
+  <div className="flex items-center gap-4">
+    <h3 className="w-24
+md:w-32
+text-2xl
+md:text-3xl font-extrabold text-brand-purple">
+      +312%
+    </h3>
 
-      <div>
-        <h3 className="text-4xl font-bold text-brand-purple">
-          +280%
-        </h3>
-        <p className="text-gray-400">
-          Qualified Leads
-        </p>
-      </div>
+<p className="flex-1 text-base
+md:text-lg font-medium text-white">
+      Organic Growth
+    </p>
+  </div>
 
-      <div>
-        <h3 className="text-4xl font-bold text-brand-purple">
-          ₹32Cr+
-        </h3>
-        <p className="text-gray-400">
-          Pipeline Influenced
-        </p>
-      </div>
+  <div className="flex items-center gap-4">
+<h3 className="w-24
+md:w-32
+text-2xl
+md:text-3xl font-extrabold text-brand-purple">
+        +280%
+    </h3>
 
-    </div>
+<p className="flex-1 text-base
+md:text-lg font-medium text-white">
+      Qualified Leads
+    </p>
+  </div>
 
-    <p className="max-w-md leading-7 text-gray-400">
+  <div className="flex items-center gap-4">
+<h3 className="w-24
+md:w-32
+text-2xl
+md:text-3xl font-extrabold text-brand-purple">      ₹32Cr+
+    </h3>
+
+<p className="flex-1 text-base
+md:text-lg font-medium text-white">
+      Pipeline Influenced
+    </p>
+  </div>
+
+</div>
+    
+
+    <p className="max-w-full
+lg:max-w-[280px] text-[15px] leading-6 text-gray-400">
       From early-stage visibility challenges to category leadership in robotics automation.
     </p>
 
   </div>
 
-  <button className="mt-10 w-fit rounded-xl bg-brand-purple px-6 py-3 font-semibold text-white transition-all duration-300 hover:bg-fuchsia-500">
-    View Case Study
-  </button>
+<button
+  className="
+    inline-flex
+w-full
+justify-center
+sm:w-fit items-center gap-4 py-2
+    rounded-xl
+    border border-brand-purple/40
+    bg-transparent
+    px-5 py-2.5
+    text-sm font-semibold text-white
+    transition-all duration-300
+    hover:border-brand-purple
+    hover:bg-brand-purple/10
+  "
+>
+  View Case Study
+
+  <span
+    className="
+      flex h-6 w-6 items-center justify-center
+      rounded-full
+      border border-white/20
+      bg-white/10
+      transition-all duration-300
+      group-hover:bg-brand-purple
+      group-hover:border-brand-purple
+    "
+  >
+    <ArrowRight
+      size={14}
+      className="transition-transform duration-300 group-hover:translate-x-0.5"
+    />
+  </span>
+</button>
 
 </div>
 
       {/* Right Side */}
-      <div className="rounded-xl bg-gray-800 min-h-[420px] flex items-center justify-center">
-        Image
-      </div>
+<div className="order-1 relative h-[280px] overflow-hidden lg:order-2 md:h-fullmd:order-2 ">
+      <Image
+  src="/images/portfolio/unbox.webp"
+  alt="Unbox Robotics"
+  fill
+className="h-full w-full object-cover object-center transition-transform duration-700 group-hover:scale-105"/>
+
+  {/* Dark Gradient */}
+<div
+  className="
+    absolute
+    inset-0
+    bg-gradient-to-r
+    from-[#07030E]
+    via-[#07030E]/45
+    via-40%
+    to-transparent
+  "
+/>
+</div>
 
     </div>
   );

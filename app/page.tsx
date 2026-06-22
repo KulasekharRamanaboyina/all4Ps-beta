@@ -7,6 +7,7 @@ import LogoRibbon from "./components/home/hero/LogoRibbon";
 import ApproachSection from "./components/home/Approach/ApproachSection";
 import ServicesSection from "./components/home/Services/ServicesSection";
 import SuccessStoriesSection from "./components/home/SuccessStories/SuccessStoriesSection";
+import CTASection from "./components/cta/CtaSection";
 
 import {
   ArrowRight,
@@ -259,7 +260,8 @@ export default function Page() {
       {/* ================= FAQ ================= */}
       {/* <FAQSection faqs={homeFaqs} /> */}
       {/* ================= FINAL CTA ================= */}
-      <section className="py-24 bg-brand-purple text-center px-4">
+      <CTASection />
+      {/* <section className="py-24 bg-brand-purple text-center px-4">
         <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
           Ready to Take the Next Step?
           <br />
@@ -277,7 +279,7 @@ export default function Page() {
         >
           Book a 30-Minute Strategy Call
         </Link>
-      </section>
+      </section> */}
       {/* ================= WebSite Schema ================= */}
       <script
         type="application/ld+json"

@@ -298,7 +298,7 @@ export const TEAM: TeamMember[] = [
 export const CASE_STUDIES: CaseStudy[] = [
   {
     id: "motherson",
-    client: "ROBIS motherson",
+    client: "ROBIS MOTHERSON",
     description:
       "ROBIS Motherson is the industrial robotics and automation business unit of the Motherson Group, focused on designing and delivering advanced automation solutions for complex manufacturing environments. The team specializes in custom robotic systems that enhance productivity, precision, and operational scalability across automotive and industrial manufacturing lines. ROBIS supports manufacturers in transitioning from traditional processes to smart, future-ready factories through intelligent automation.",
     challenge: `Originally built to support internal automation needs, ROBIS operated primarily as an in-house capability within the Motherson Group.
@@ -358,7 +358,7 @@ As the business moved toward commercializing its robotics solutions and expandin
   },
   {
     id: "anscer",
-    client: "ANSCER Robotics",
+    client: "ANSCER ROBOTICS",
     description:
       "ANSCER Robotics is an industrial automation company focused on delivering advanced robotics solutions for complex manufacturing environments. Operating across India and the United States, the company designs and deploys robotic systems that help manufacturers improve operational efficiency, consistency, and scalability. ANSCER works closely with industrial clients to replace manual and semi-automated processes with intelligent, future-ready automation solutions.",
     challenge:
@@ -436,7 +436,7 @@ As the business moved toward commercializing its robotics solutions and expandin
   },
   {
     id: "unbox",
-    client: "Unbox Robotics",
+    client: "UNBOX ROBOTICS",
     description:
       "Unbox Robotics is an industrial automation company specializing in robotics solutions for logistics and warehouse operations. Based in Pune, the company focuses on building intelligent robotic systems that enable faster order processing, improved accuracy, and scalable automation for high-volume fulfillment environments. Unbox works with enterprises looking to modernize warehouse operations and adopt next-generation automation technologies.",
     challenge:

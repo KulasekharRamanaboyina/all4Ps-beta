@@ -17,7 +17,7 @@ const logos = [
 
 export default function LogoRibbon() {
   return (
-    <section className="bg-white py-8 md:py-10 lg:py-12 border-y border-gray-200">
+    <section className=" bg-white py-8 md:py-10 lg:py-12 border-y border-gray-200">
       <p className="text-center text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.25em] md:tracking-[0.35em] text-gray-500 mb-6 md:mb-8">
         Trusted by Industry Leaders
       </p>
