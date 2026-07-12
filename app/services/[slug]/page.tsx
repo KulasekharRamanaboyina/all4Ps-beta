@@ -1,13 +1,19 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import { Metadata } from "next";
-import { CheckCircle, BarChart, ArrowRight } from "lucide-react";
-import Image from "next/image";
 import FAQSection from "@/app/components/FAQSection";
 
-import { SERVICES, ICONS_MAP, CASE_STUDIES } from "@/app/constants";
+import { SERVICES, CASE_STUDIES } from "@/app/constants";
 import { Service } from "@/app/types";
+
+// Dynamic modular services components
+import ServicesHero from "@/app/components/services/ServicesHero";
+import ServicesFramework from "@/app/components/services/ServicesFramework";
+import ServicesStats from "@/app/components/services/ServicesStats";
+import ServicesList from "@/app/components/services/ServicesList";
+import ServicesFeaturedCaseStudy from "@/app/components/services/ServicesFeaturedCaseStudy";
+import ServicesTestimonials from "@/app/components/services/ServicesTestimonials";
+import CtaSection from "@/app/components/cta/CtaSection";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -55,164 +61,176 @@ export async function generateMetadata({
   };
 }
 
-// ===== 2. MAIN PAGE COMPONENT =====
+// ===== 2. DYNAMIC FIELD MAPS FOR SERVICES =====
+
+const badgesMap: Record<string, string[]> = {
+  "brand-identity": ["Clear Positioning", "Memorable Design", "Consistent Identity", "Lasting Impact"],
+  "marketing-strategy": ["GTM Roadmap", "Market Research", "Ideal Buyer ICP", "Sales Enablement"],
+  "growth-marketing": ["Demand Gen", "Scalable Funnels", "Lead Capture", "Continuous CRO"],
+  "content-marketing": ["Blog Authority", "Email Campaigns", "PR Outreach", "Sustained Traffic"],
+  "seo-sem": ["Organic Ranking", "High-Intent Keywords", "LinkedIn Ads", "Ad Spend ROI"],
+  "website-services": ["UX/UI Design", "Site Speed", "High Conversions", "CMS Control"],
+};
+
+const ctaMap: Record<string, { title: string; subtitle: string }> = {
+  "brand-identity": {
+    title: "Ready to Build a Brand That Stands Out?",
+    subtitle: "Let's create clarity, connection, and impact together."
+  },
+  "marketing-strategy": {
+    title: "Ready to Launch a GTM Strategy That Wins?",
+    subtitle: "Let's align your messaging and start scaling your channels."
+  },
+  "growth-marketing": {
+    title: "Ready to Accelerate Your Customer Acquisition?",
+    subtitle: "Let's build a systematic, data-driven lead generation funnel."
+  },
+  "content-marketing": {
+    title: "Ready to Build Industry Topical Authority?",
+    subtitle: "Let's craft high-impact, author-led content assets."
+  },
+  "seo-sem": {
+    title: "Ready to Capture High-Intent Buyer Traffic?",
+    subtitle: "Let's optimize your organic presence and paid campaigns."
+  },
+  "website-services": {
+    title: "Ready to Design a Website That Closes Deals?",
+    subtitle: "Let's craft a fast, responsive, conversion-ready website."
+  }
+};
+
+const frameworkTitles: Record<string, string> = {
+  "brand-identity": "A Clear Path from Clarity to Connection",
+  "marketing-strategy": "A Clear Path from Clarity to Direction",
+  "growth-marketing": "A Clear Path from Clarity to Pipeline",
+  "content-marketing": "A Clear Path from Clarity to Authority",
+  "seo-sem": "A Clear Path from Clarity to Visibility",
+  "website-services": "A Clear Path from Clarity to Conversion"
+};
+
+const getFrameworkSteps = (slug: string) => {
+  switch (slug) {
+    case "brand-identity":
+      return [
+        { number: "01", title: "Discover", description: "We dive deep into your business, audience, and market to find what matters.", icon: "Search" },
+        { number: "02", title: "Position", description: "We define your unique positioning that makes you the obvious choice.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We craft a compelling brand identity that stands out and creates preference.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We create guidelines and systems that ensure consistency everywhere.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We optimize your brand for growth across every channel and touchpoint.", icon: "TrendingUp" }
+      ];
+    case "marketing-strategy":
+      return [
+        { number: "01", title: "Discover", description: "We analyze your competitive landscape, buyers, and performance.", icon: "Search" },
+        { number: "02", title: "Position", description: "We define a clear GTM positioning strategy for your segments.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We clarify your unique value proposition (UVP) for commercial buyers.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We build strategy roadmaps and structured execution timelines.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We monitor pipeline goals and scale GTM channels dynamically.", icon: "TrendingUp" }
+      ];
+    case "growth-marketing":
+      return [
+        { number: "01", title: "Discover", description: "We audit your conversion funnel and identify acquisition leaks.", icon: "Search" },
+        { number: "02", title: "Position", description: "We match traffic channels with high-intent buyer personas.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We craft custom landing pages with clear, unique offers.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We implement email nurturing, tag managers, and tracking automation.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We optimize campaign variables continuously to lower customer acquisition costs.", icon: "TrendingUp" }
+      ];
+    case "content-marketing":
+      return [
+        { number: "01", title: "Discover", description: "We audit your existing blog assets and study buyer search behaviors.", icon: "Search" },
+        { number: "02", title: "Position", description: "We map topics to different stages of the buyer evaluation journey.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We develop distinct perspectives and author-led content assets.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We establish monthly content calendars, briefs, and templates.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We distribute content across dark social and organic channels to drive inbound.", icon: "TrendingUp" }
+      ];
+    case "seo-sem":
+      return [
+        { number: "01", title: "Discover", description: "We conduct technical audits and keyword search volume research.", icon: "Search" },
+        { number: "02", title: "Position", description: "We target high-intent transactional search queries for B2B search.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We optimize meta structures and on-page content relevance.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We launch standard link-building campaigns and track keyword movement.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We run paid search and paid social campaigns to scale buyer capture.", icon: "TrendingUp" }
+      ];
+    case "website-services":
+      return [
+        { number: "01", title: "Discover", description: "We review user flow analytics, site speed, and conversion friction.", icon: "Search" },
+        { number: "02", title: "Position", description: "We structure navigation to align with standard B2B buyers' expectations.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We design a custom, premium visual layout matching your brand guidelines.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We develop lightweight responsive code, custom CMS control, and CRO tests.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We deploy conversion rate audits to scale lead generation results.", icon: "TrendingUp" }
+      ];
+    default:
+      return [
+        { number: "01", title: "Discover", description: "We research your business scope and customer segments.", icon: "Search" },
+        { number: "02", title: "Position", description: "We formulate market positioning coordinates.", icon: "Target" },
+        { number: "03", title: "Differentiate", description: "We highlight your brand value compared to competitors.", icon: "Award" },
+        { number: "04", title: "Systemize", description: "We set standard workflows and campaign guidelines.", icon: "Settings" },
+        { number: "05", title: "Scale", description: "We measure outcomes and compound your pipelines.", icon: "TrendingUp" }
+      ];
+  }
+};
+
+// ===== 3. MAIN PAGE COMPONENT =====
 export default async function ServiceDetail({ params }: PageProps) {
-  // Next.js 15+ requires awaiting params
   const { slug } = await params;
 
   const service = SERVICES.find(
     (s: Service) => s.id.toLowerCase() === slug?.toLowerCase().trim(),
   );
 
-  // If service doesn't exist, show 404 page
   if (!service) {
     notFound();
   }
 
-  const Icon =
-    ICONS_MAP[service.iconName as keyof typeof ICONS_MAP] || BarChart;
-
-  // ===== Services FAQ's =====
+  // ===== Dynamic FAQs mapping =====
   const brandFaqs = [
-    {
-      q: "What does your brand identity service include?",
-      a: "It includes positioning, messaging, visual identity, and brand guidelines for consistency.",
-    },
-    {
-      q: "Do you handle rebranding?",
-      a: "Yes, we help both new brands and existing businesses redefine their identity.",
-    },
-    {
-      q: "How long does it take?",
-      a: "Typically 3–6 weeks depending on scope.",
-    },
-    {
-      q: "Will you define brand messaging?",
-      a: "Yes, we align messaging with your business goals and audience.",
-    },
-    {
-      q: "Do you provide brand guidelines?",
-      a: "Yes, a complete guideline document is included.",
-    },
+    { q: "What does your brand identity service include?", a: "It includes positioning, messaging, visual identity, and brand guidelines for consistency." },
+    { q: "Do you handle rebranding?", a: "Yes, we help both new brands and existing businesses redefine their identity." },
+    { q: "How long does it take?", a: "Typically 3–6 weeks depending on scope." },
+    { q: "Will you define brand messaging?", a: "Yes, we align messaging with your business goals and audience." },
+    { q: "Do you provide brand guidelines?", a: "Yes, a complete guideline document is included." },
   ];
 
   const marketingStrategyFaqs = [
-    {
-      q: "What does a marketing strategy include?",
-      a: "We define positioning, channels, messaging, and a clear execution roadmap.",
-    },
-    {
-      q: "Is this suitable for early-stage companies?",
-      a: "Yes, we adapt strategies based on your growth stage.",
-    },
-    {
-      q: "How long does strategy development take?",
-      a: "Usually 2–4 weeks.",
-    },
-    {
-      q: "Will you help implement the strategy?",
-      a: "Yes, we support both strategy and execution.",
-    },
-    {
-      q: "How do you measure success?",
-      a: "Through pipeline growth, leads, and conversions.",
-    },
+    { q: "What does a marketing strategy include?", a: "We define positioning, channels, messaging, and a clear execution roadmap." },
+    { q: "Is this suitable for early-stage companies?", a: "Yes, we adapt strategies based on your growth stage." },
+    { q: "How long does strategy development take?", a: "Usually 2–4 weeks." },
+    { q: "Will you help implement the strategy?", a: "Yes, we support both strategy and execution." },
+    { q: "How do you measure success?", a: "Through pipeline growth, leads, and conversions." },
   ];
 
   const growthMarketingFaqs = [
-    {
-      q: "What is growth marketing?",
-      a: "It focuses on scalable experiments across channels to drive leads and revenue.",
-    },
-    {
-      q: "How do you generate leads?",
-      a: "Through SEO, content, landing pages, and conversion optimization.",
-    },
-    {
-      q: "Is this suitable for B2B companies?",
-      a: "Yes, we specialize in B2B growth systems.",
-    },
-    {
-      q: "How soon can I see results?",
-      a: "Initial traction in 8–12 weeks.",
-    },
-    {
-      q: "Do you optimize continuously?",
-      a: "Yes, we test and improve performance regularly.",
-    },
+    { q: "What is growth marketing?", a: "It focuses on scalable experiments across channels to drive leads and revenue." },
+    { q: "How do you generate leads?", a: "Through SEO, content, landing pages, and conversion optimization." },
+    { q: "Is this suitable for B2B companies?", a: "Yes, we specialize in B2B growth systems." },
+    { q: "How soon can I see results?", a: "Initial traction in 8–12 weeks." },
+    { q: "Do you optimize continuously?", a: "Yes, we test and improve performance regularly." },
   ];
 
   const contentMarketingFaqs = [
-    {
-      q: "What does content marketing include?",
-      a: "Content strategy, blogs, landing pages, and SEO-driven content.",
-    },
-    {
-      q: "Will you handle content creation?",
-      a: "Yes, from strategy to writing and optimization.",
-    },
-    {
-      q: "Is content aligned with SEO?",
-      a: "Yes, all content is optimized for search and conversions.",
-    },
-    {
-      q: "How long before results?",
-      a: "Typically 2–3 months for traction.",
-    },
-    {
-      q: "Do you create industry-specific content?",
-      a: "Yes, tailored to your niche and audience.",
-    },
+    { q: "What does content marketing include?", a: "Content strategy, blogs, landing pages, and SEO-driven content." },
+    { q: "Will you handle content creation?", a: "Yes, from strategy to writing and optimization." },
+    { q: "Is content aligned with SEO?", a: "Yes, all content is optimized for search and conversions." },
+    { q: "How long before results?", a: "Typically 2–3 months for traction." },
+    { q: "Do you create industry-specific content?", a: "Yes, tailored to your niche and audience." },
   ];
 
   const seoFaqs = [
-    {
-      q: "How long does SEO take?",
-      a: "Most clients see results within 2–3 months, with stronger growth over time.",
-    },
-    {
-      q: "Do you guarantee rankings?",
-      a: "No guarantees, but we follow proven strategies for consistent growth.",
-    },
-    {
-      q: "What is included in SEO?",
-      a: "Keyword research, technical SEO, on-page optimization, and content.",
-    },
-    {
-      q: "Will SEO generate leads?",
-      a: "Yes, SEO drives qualified inbound traffic and leads.",
-    },
-    {
-      q: "Do you provide reports?",
-      a: "Yes, we share regular performance insights.",
-    },
+    { q: "How long does SEO take?", a: "Most clients see results within 2–3 months, with stronger growth over time." },
+    { q: "Do you guarantee rankings?", a: "No guarantees, but we follow proven strategies for consistent growth." },
+    { q: "What is included in SEO?", a: "Keyword research, technical SEO, on-page optimization, and content." },
+    { q: "Will SEO generate leads?", a: "Yes, SEO drives qualified inbound traffic and leads." },
+    { q: "Do you provide reports?", a: "Yes, we share regular performance insights." },
   ];
 
   const websiteFaqs = [
-    {
-      q: "Do you build websites from scratch?",
-      a: "Yes, we build and redesign websites focused on conversions.",
-    },
-    {
-      q: "Will my website be SEO-friendly?",
-      a: "Yes, all websites follow SEO best practices.",
-    },
-    {
-      q: "How long does it take?",
-      a: "Typically 3–6 weeks.",
-    },
-    {
-      q: "Can I update the website myself?",
-      a: "Yes, we build easy-to-manage systems.",
-    },
-    {
-      q: "Do you focus on conversions?",
-      a: "Yes, every site is optimized for leads and user experience.",
-    },
+    { q: "Do you build websites from scratch?", a: "Yes, we build and redesign websites focused on conversions." },
+    { q: "Will my website be SEO-friendly?", a: "Yes, all websites follow SEO best practices." },
+    { q: "How long does it take?", a: "Typically 3–6 weeks." },
+    { q: "Can I update the website myself?", a: "Yes, we build easy-to-manage systems." },
+    { q: "Do you focus on conversions?", a: "Yes, every site is optimized for leads and user experience." },
   ];
 
-  // ================= FAQs MAP =================
-  const faqsMap: any = {
+  const faqsMap: Record<string, typeof brandFaqs> = {
     "brand-identity": brandFaqs,
     "marketing-strategy": marketingStrategyFaqs,
     "growth-marketing": growthMarketingFaqs,
@@ -222,219 +240,68 @@ export default async function ServiceDetail({ params }: PageProps) {
   };
 
   const currentFaqs = faqsMap[slug] || [];
-  //  Fetch related case studies automatically
+
+  // Fetch related case study to display as featured card (from services.png/brand-identity.png mockup layout)
   const relatedCaseStudies =
     service.caseStudyIds
       ?.map((id) => CASE_STUDIES.find((cs) => cs.id === id))
       .filter(Boolean) || [];
 
+  // Get the single featured case study for the layout
+  const featuredCaseStudy = relatedCaseStudies[0] || CASE_STUDIES[0];
+
+  const dynamicBadges = badgesMap[slug] || badgesMap["brand-identity"];
+  const dynamicFrameworkTitle = frameworkTitles[slug] || frameworkTitles["brand-identity"];
+  const dynamicFrameworkSteps = getFrameworkSteps(slug);
+  const dynamicCtaDetails = ctaMap[slug] || ctaMap["brand-identity"];
+
+  const breadcrumbs = [
+    { label: "Home", link: "/" },
+    { label: "Services", link: "/services" },
+    { label: service.title }
+  ];
+
   return (
-    <main className="min-h-screen selection:bg-[#800080] selection:text-white">
-      {/* Hero Section */}
-      <section className="bg-black text-white py-20 relative overflow-hidden">
-        {/* Background Decorative Icon */}
-        <div className="absolute right-0 top-0 opacity-10 transform translate-x-1/3 -translate-y-1/4 pointer-events-none">
-          <Icon size={400} />
-        </div>
+    <main className="min-h-screen bg-black text-white">
+      {/* 1. Services Hero Layout with custom orbitals */}
+      <ServicesHero
+        title={service.title}
+        description={service.intro}
+        badges={dynamicBadges}
+        breadcrumbs={breadcrumbs}
+      />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            {/* <Link
-                href="/"
-                className="text-[#800080] hover:text-white mb-6 inline-flex items-center transition-colors font-medium"
-              >
-                <span className="mr-2">←</span> Back home
-              </Link> */}
+      {/* 2. Framework Pipeline Timeline */}
+      <ServicesFramework
+        title={dynamicFrameworkTitle}
+        steps={dynamicFrameworkSteps}
+      />
 
-            {/*  ----------------UI Breadcumb----------- */}
+      {/* 3. Logos Marquee & Stats Metrics */}
+      <ServicesStats />
 
-            <nav aria-label="Breadcrumb" className="mb-6 text-sm text-gray-300">
-              <ol className="flex items-center space-x-2">
-                <li>
-                  <Link href="/" className="hover:text-white">
-                    Home
-                  </Link>
-                </li>
-                <li>/</li>
-                <li>
-                  <Link href="/services" className="hover:text-white">
-                    Services
-                  </Link>
-                </li>
-                <li>/</li>
-                <li className="text-white font-medium">{service.title}</li>
-              </ol>
-            </nav>
+      {/* 4. Dynamic List of all 6 Services */}
+      <ServicesList />
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-              {service.title}
-            </h1>
-
-            <p className="text-2xl text-gray-300 font-light mb-10 border-l-4 border-[#800080] pl-6 italic leading-relaxed">
-              {service.intro}
-            </p>
-
-            <Link href={service.titleCTA.link}>
-              <button className="bg-white text-black font-bold px-10 py-4 hover:bg-[#800080] hover:text-white transition-all duration-300 shadow-lg active:scale-95">
-                {service.titleCTA.label}
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Detailed Content & Features */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-20 items-start">
-            {/* Left: Description & Features */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-8 text-[#800080] leading-tight">
-                {service.fullDescription}
-              </h2>
-              <div className="space-y-6">
-                {service.features.map((feature: string, idx: number) => (
-                  <div key={idx} className="flex items-start group">
-                    <div className="mt-1 mr-4 bg-[#f5f3ff] p-1 rounded-full group-hover:bg-[#800080] transition-colors duration-300">
-                      <CheckCircle className="w-5 h-5 text-[#800080] group-hover:text-white" />
-                    </div>
-                    <p className="text-lg text-gray-700 leading-relaxed font-medium">
-                      {feature}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Metrics Sidebar Card */}
-            <div className="bg-gray-50 p-8 md:p-10 border border-gray-200 shadow-2xl rounded-sm sticky top-10">
-              <h3 className="text-2xl font-bold mb-8 flex items-center text-black">
-                <BarChart className="mr-3 text-[#800080]" />
-                {service.outcomesHeading}
-              </h3>
-
-              <div className="grid grid-cols-1 gap-6">
-                {service.outcomesHeadingMetrics.map((metric, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-white p-6 border-l-8 border-[#800080] shadow-md transform hover:-translate-y-1 transition-transform duration-300"
-                  >
-                    <p className="text-gray-500 uppercase text-xs font-bold tracking-[0.2em] mb-2">
-                      {metric.label}
-                    </p>
-                    <p className="text-4xl font-black text-black">
-                      {metric.value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Visual Image */}
-              <div className="mt-10 pt-8 border-t border-gray-200">
-                <div className="overflow-hidden rounded-sm bg-gray-200">
-                  <img
-                    src={service.outComesHeadingImage}
-                    alt={`${service.title} visualization`}
-                    className="w-full h-48 object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-700 ease-in-out transform hover:scale-105"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* =================  Case Studies ================= */}
-      {relatedCaseStudies.length > 0 && (
-        <section className="bg-black text-white py-24">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Section Heading */}
-
-            <div className="max-w-2xl mb-14">
-              <p className="text-[#800080] font-semibold mb-4 text-base md:text-lg tracking-[0.08em] ">
-                Proof of execution
-              </p>
-
-              <h2 className="text-3xl md:text-4xl font-bold leading-tight">
-                Where this strategy has already worked
-              </h2>
-
-              <p className="text-gray-400 mt-4 text-lg leading-relaxed">
-                These engagements demonstrate how our approach translates into
-                measurable business outcomes.
-              </p>
-            </div>
-
-            {relatedCaseStudies.map((cs: any, index: number) => (
-              <div
-                key={cs.id}
-                className={`grid md:grid-cols-2 gap-16 items-center mb-28 last:mb-0 ${
-                  index % 2 === 1 ? "md:[&>div:first-child]:order-2" : ""
-                }`}
-              >
-                {/* IMAGE */}
-                <div className="relative group">
-                  <Link
-                    href={`/portfolio/${cs.id}`}
-                    className="block overflow-hidden rounded-2xl border border-white/10"
-                  >
-                    <img
-                      src={cs.imageUrl}
-                      alt={cs.client}
-                      loading="lazy"
-                      className="w-full h-[360px] object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </Link>
-                </div>
-
-                {/* CONTENT */}
-                <div className="space-y-6 max-w-xl">
-                  <span className="text-[#800080] font-semibold text-lg">
-                    Case Study
-                  </span>
-
-                  <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-                    {cs.title}
-                  </h2>
-
-                  <p className="text-gray-400 text-lg leading-relaxed">
-                    {cs.description.substring(0, 180)}...
-                  </p>
-
-                  <Link
-                    href={`/portfolio/${cs.id}`}
-                    className="inline-flex items-center gap-3 bg-[#800080] text-white px-7 py-3 font-semibold shadow-lg hover:bg-white hover:text-black transition-all duration-300"
-                  >
-                    Read Case Study
-                    <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+      {/* 5. Featured Case Study layout matching the single wide card mockup */}
+      {featuredCaseStudy && (
+        <ServicesFeaturedCaseStudy caseStudy={featuredCaseStudy} />
       )}
-      {/* FAQ Section*/}
-      {currentFaqs.length > 0 && <FAQSection faqs={currentFaqs} />}
 
-      {/* Bottom CTA Section */}
-      <section className="bg-gray-100 py-24 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-black">
-            {service.bottomCTA.heading}
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
-            {service.bottomCTA.subText}
-          </p>
-          <Link
-            href={service.bottomCTA.link}
-            className="inline-flex items-center justify-center bg-[#800080] text-white px-10 py-5 text-xl font-black hover:bg-black transition-all duration-300 shadow-xl group"
-          >
-            {service.bottomCTA.label}
-            <ArrowRight className="ml-3 group-hover:translate-x-2 transition-transform duration-300" />
-          </Link>
-        </div>
-      </section>
+      {/* 6. Client Partnerships Testimonials */}
+      <ServicesTestimonials />
+
+      {/* 7. Specific Service FAQ Section */}
+      {currentFaqs.length > 0 && (
+        <FAQSection faqs={currentFaqs} />
+      )}
+
+      {/* 8. Customized CTA Bottom banner */}
+      <CtaSection
+        title={dynamicCtaDetails.title}
+        subtitle={dynamicCtaDetails.subtitle}
+      />
+
       {/* ================= Service Schema ================= */}
       <script
         type="application/ld+json"
@@ -462,6 +329,7 @@ export default async function ServiceDetail({ params }: PageProps) {
           }),
         }}
       />
+
       {/* ================= Breadcrumb Schema ================= */}
       <script
         type="application/ld+json"

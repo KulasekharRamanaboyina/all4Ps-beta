@@ -28,11 +28,11 @@ export default function LogoRibbon() {
   <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white via-white/80 to-transparent pointer-events-none" />
 
   <div className="overflow-hidden"> 
-  <div className="flex w-max animate-marquee gap-2 sm:gap-4 md:gap-6 lg:gap-8">
+  <div className="flex w-max animate-marquee gap-2 sm:gap-3 md:gap-4 lg:gap-6">
   {[...logos, ...logos].map((logo, index) => (
-             <div
+    <div
     key={index}
-    className="flex items-center justify-center min-w-[120px] sm:min-w-[150px] md:min-w-[180px]"
+    className="flex items-center justify-center min-w-[100px] sm:min-w-[130px] md:min-w-[160px] lg:min-w-[180px]"
   >
     <Image
   src={logo}

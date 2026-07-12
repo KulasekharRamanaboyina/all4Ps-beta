@@ -12,7 +12,7 @@ export default function ApproachSection() {
 </p>
 
         {/* Heading */}
-<h2 className="max-w-3xl mb-20 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white">
+<h2 className="max-w-3xl mb-12 md:mb-20 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white">
           From Invisible to <br />
 <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
             Unstoppable.
@@ -27,7 +27,7 @@ export default function ApproachSection() {
 
 <div className="relative mt-14 hidden lg:block">
   {/* Single Timeline Line */}
-<div className="absolute z-0 top-[94px] left-[9%] right-[9%] h-[2px] bg-gradient-to-r from-brand-purple/20 via-brand-purple/80 to-brand-purple/20 animate-timeline">
+<div className="absolute z-0 top-[88px] left-[9%] right-[9%] h-[2px] bg-gradient-to-r from-brand-purple/20 via-brand-purple/80 to-brand-purple/20 animate-timeline">
 
   {/* Moving Light */}
   <div className="absolute -top-[3px] h-2 w-2 rounded-full bg-fuchsia-400 blur-[1px] animate-light" />
@@ -60,7 +60,7 @@ export default function ApproachSection() {
 </div>
 
 {/* Mobile */}
-<div className="grid md:hidden gap-12 mt-12">
+<div className="grid md:hidden gap-12 mt-12 place-items-center">
 
   {APPROACH_STEPS.map((step) => (
     <ApproachStep

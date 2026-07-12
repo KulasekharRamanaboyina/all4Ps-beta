@@ -98,3 +98,31 @@ export interface ServiceCaseStudyPreview {
   link: string;
   category: string;
 }
+
+export interface BlogAuthor {
+  name: string;
+  role: string;
+  avatar: any;
+  bio: string;
+  socials?: {
+    linkedin?: string;
+    twitter?: string;
+    email?: string;
+  };
+}
+
+export interface DetailedBlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  excerpt: string;
+  category: string;
+  publishedAt: string;
+  readTime: string;
+  mainImage: any;
+  featured: boolean;
+  author: BlogAuthor;
+  takeaways?: string[];
+  body: any;
+}

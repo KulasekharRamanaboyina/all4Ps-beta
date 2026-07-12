@@ -14,27 +14,19 @@ export default function ApproachStep({
   description,
 }: ApproachStepProps) {
   return (
-<div className="group relative flex w-[230px] flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
-    {/* Number Badge */}
-      <div className="relative z-20 mb-3 flex h-10 w-10 items-center justify-center rounded-full border border-brand-purple/50 bg-[#090909] text-sm font-semibold text-white shadow-[0_0_14px_rgba(168,85,247,0.18)] animate-badge">
+    <div className="group relative flex w-[230px] flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 cursor-pointer">
+      {/* Number Badge */}
+      <div className="relative z-20 mb-4 flex h-8 w-8 items-center justify-center rounded-full border border-brand-purple/50 bg-[#0a0a0f] text-xs font-bold text-white shadow-[0_0_10px_rgba(128,0,128,0.2)] animate-badge">
         {number}
       </div>
 
-      {/* Icon Circle */}
-      <div className="relative z-10 mb-8 flex h-[110px] w-[110px] items-center justify-center rounded-full border border-brand-purple/60 bg-[#0B0813] transition-all duration-500 group-hover:scale-105 group-hover:border-fuchsia-400 animate-node">
-
-        {/* Ambient Glow */}
-        <div className="absolute inset-0 rounded-full bg-brand-purple/15 blur-3xl transition-all duration-500 group-hover:bg-fuchsia-500/25" />
-
-        {/* Inner Ring */}
-        <div className="absolute inset-3 rounded-full border border-brand-purple/20 transition-all duration-500 group-hover:border-fuchsia-400/40" />
-
+      {/* Icon Circle (Matches About page timeline design & size) */}
+      <div className="relative z-10 mb-8 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/30 backdrop-blur-sm shadow-lg shadow-purple-950/40 group-hover:border-brand-purple/60 transition-colors duration-300 animate-node">
         {/* Icon */}
         <Icon
-          size={38}
-          className="relative z-10 text-brand-purple animate-icon transition-all duration-500 group-hover:scale-110 group-hover:text-fuchsia-300"
+          size={28}
+          className="text-brand-purple animate-icon group-hover:text-pink-400 transition-colors duration-500"
         />
-
       </div>
 
       {/* Title */}

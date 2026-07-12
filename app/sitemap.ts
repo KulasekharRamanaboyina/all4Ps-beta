@@ -2,12 +2,17 @@ import { MetadataRoute } from "next";
 import { client } from "@/lib/sanity";
 
 export default async function sitemap() {
-  const posts = await client.fetch(`
-    *[_type=="post"]{
-      "slug": slug.current,
-      _updatedAt
-    }
-  `);
+  let posts: any[] = [];
+  try {
+    posts = await client.fetch(`
+      *[_type=="post"]{
+        "slug": slug.current,
+        _updatedAt
+      }
+    `);
+  } catch (error) {
+    console.warn("Could not fetch posts for sitemap from Sanity.");
+  }
 
   const blogUrls = posts
     .filter((post: any) => post.slug && post.slug.trim() !== "")

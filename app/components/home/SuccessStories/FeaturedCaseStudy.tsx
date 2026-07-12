@@ -10,8 +10,10 @@ grid-cols-1
 md:grid-cols-[0.7fr_1.3fr]
 h-auto
 md:h-[480px]
+lg:h-[570px]
 overflow-hidden
-rounded-3xl
+rounded-2xl
+md:rounded-3xl
 border
 border-white/10
 bg-[#0B0813]
@@ -22,7 +24,7 @@ hover:shadow-[0_20px_60px_rgba(168,85,247,.15)]
 ">
     {/* Left Side */}
    
-<div className="order-2 flex h-full flex-col justify-between p-6 md:p-7 md:order-1">
+<div className="order-2 flex h-full flex-col justify-between p-5 sm:p-6 md:p-7 md:order-1">
     <div>
 
  <div className="mb-6 inline-flex items-center rounded-full border border-brand-purple/25 bg-gradient-to-r from-brand-purple/15 to-fuchsia-500/10 px-4 py-2 backdrop-blur-sm">
@@ -92,9 +94,9 @@ lg:max-w-[280px] text-[15px] leading-6 text-gray-400">
 <button
   className="
     inline-flex
-w-full
-justify-center
-sm:w-fit items-center gap-4 py-2
+    w-full
+    justify-center
+    sm:w-fit items-center gap-4 py-2
     rounded-xl
     border border-brand-purple/40
     bg-transparent
@@ -128,7 +130,7 @@ sm:w-fit items-center gap-4 py-2
 </div>
 
       {/* Right Side */}
-<div className="order-1 relative h-[280px] overflow-hidden lg:order-2 md:h-fullmd:order-2 ">
+<div className="order-1 relative h-[280px] overflow-hidden lg:order-2 md:h-full md:order-2">
       <Image
   src="/images/portfolio/unbox.webp"
   alt="Unbox Robotics"

@@ -1,6 +1,12 @@
-import ServicesGrid from "@/app/components/ServicesGrid";
 import type { Metadata } from "next";
 import FAQSection from "@/app/components/FAQSection";
+import ServicesHero from "@/app/components/services/ServicesHero";
+import ServicesFramework from "@/app/components/services/ServicesFramework";
+import ServicesStats from "@/app/components/services/ServicesStats";
+import ServicesList from "@/app/components/services/ServicesList";
+import ServicesCaseStudies from "@/app/components/services/ServicesCaseStudies";
+import ServicesTestimonials from "@/app/components/services/ServicesTestimonials";
+import CtaSection from "@/app/components/cta/CtaSection";
 
 /* ================= SEO METADATA ================= */
 export const metadata: Metadata = {
@@ -34,9 +40,7 @@ export const metadata: Metadata = {
     images: ["https://www.all4ps.co/images/og/marketing-strategy.jpg"],
   },
 };
-{
-  /* ================= FAQ's ================= */
-}
+
 const servicesFaqs = [
   {
     q: "What services does all4Ps offer?",
@@ -63,67 +67,23 @@ const servicesFaqs = [
     a: "You can book a strategy call with us, and we’ll guide you through the next steps.",
   },
 ];
+
 export default function ServicesPage() {
   return (
-    <main className="min-h-screen bg-white">
-      {/* ================= SERVICES HERO ================= */}
-      <section className="relative bg-black text-white pt-28 pb-20 overflow-hidden">
-        {/* subtle purple glow */}
-        <div className="absolute inset-0 opacity-30 pointer-events-none">
-          <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-[#800080]/30 blur-[140px]" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4">
-          {/* Breadcrumbs – LEFT ALIGNED */}
-          <nav aria-label="Breadcrumb" className="mb-10 text-sm text-gray-400">
-            <ol className="flex items-center space-x-2">
-              <li>
-                <a href="/" className="hover:text-[#800080]">
-                  Home
-                </a>
-              </li>
-              <li>/</li>
-              <li className="text-white font-medium">Services</li>
-            </ol>
-          </nav>
-
-          {/* Title */}
-          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6">
-            Services
-          </h1>
-
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
-            Strategy-led B2B growth services designed to turn clarity into
-            pipeline, revenue, and long-term scale.
-          </p>
-        </div>
-      </section>
-
-      {/* ================= SERVICES GRID ================= */}
-      <ServicesGrid
-        title="Our Services"
-        description="Explore our full suite of B2B growth, strategy, and marketing services designed to drive real business outcomes."
-      />
-      {/* ================= FAQ SECTION ================= */}
+    <main className="min-h-screen bg-black text-white">
+      {/* Modular sections composited according to services.png mockup */}
+      <ServicesHero />
+      <ServicesFramework />
+      <ServicesStats />
+      <ServicesList />
+      <ServicesCaseStudies />
+      <ServicesTestimonials />
+      
+      {/* FAQ Section */}
       <FAQSection faqs={servicesFaqs} />
-      {/* ================= CTA SECTION ================= */}
-      <section className="py-20 bg-[#800080] text-center px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Not sure which service is right for you?
-        </h2>
-
-        <p className="text-purple-200 mb-6">
-          Let’s discuss your goals and find the right growth approach.
-        </p>
-
-        <a
-          href="/contact"
-          className="inline-block bg-black text-white px-8 py-4 font-bold hover:bg-white hover:text-black transition"
-        >
-          Book a Strategy Call
-        </a>
-      </section>
+      
+      {/* CTA Section */}
+      <CtaSection />
 
       {/* ================= BREADCRUMB SCHEMA ================= */}
       <script

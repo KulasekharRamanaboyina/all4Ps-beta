@@ -48,14 +48,14 @@ export default function HeroVisual() {
           />
         </div>
 
-        <div className="absolute bottom-0 md:bottom-10 lg:bottom-24 left-[30%] -translate-x-1/2 z-20 will-change-transform transform-gpu animate-orbit-bottom">
+        <div className="absolute hidden md:block bottom-0 md:bottom-10 lg:bottom-24 left-[30%] -translate-x-1/2 z-20 will-change-transform transform-gpu animate-orbit-bottom">
           <HeroStatCard
             title="Marketing ROI"
             value="4.6x"
           />
         </div>
 
-        <div className="absolute right-0 md:right-3 lg:right-6 top-[52%] md:top-[56%] lg:top-[58%] z-20 will-change-transform transform-gpu animate-orbit-right">
+        <div className="absolute hidden md:block right-0 md:right-3 lg:right-6 top-[52%] md:top-[56%] lg:top-[58%] z-20 will-change-transform transform-gpu animate-orbit-right">
           <HeroStatCard
             title="Qualified Leads"
             value="+280%"

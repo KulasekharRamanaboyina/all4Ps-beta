@@ -513,4 +513,159 @@ animation:robotIntro .9s cubic-bezier(.22,1,.36,1) forwards;
   animation:badgeGlow 3s ease-in-out infinite;
 }
 
+/* ================= ABOUT HERO ANIMATIONS ================= */
 
+@keyframes aboutHeroFloat {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.animate-about-float {
+  animation: aboutHeroFloat 6s ease-in-out infinite;
+}
+
+@keyframes aboutHeroFloat2 {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-7px); }
+}
+.animate-about-float2 {
+  animation: aboutHeroFloat2 8s ease-in-out infinite 1s;
+}
+
+@keyframes aboutHeroFloat3 {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-13px); }
+}
+.animate-about-float3 {
+  animation: aboutHeroFloat3 7s ease-in-out infinite 2s;
+}
+
+@keyframes aboutHeroFloat4 {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-9px); }
+}
+.animate-about-float4 {
+  animation: aboutHeroFloat4 9s ease-in-out infinite 0.5s;
+}
+
+@keyframes aboutPulseRing {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.animate-about-ring {
+  animation: aboutPulseRing 3s ease-out infinite;
+}
+
+@keyframes aboutGradientShift {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-about-gradient {
+  background-size: 200% 200%;
+  animation: aboutGradientShift 6s ease infinite;
+}
+
+@keyframes aboutSlideUp {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-about-slide-up { animation: aboutSlideUp 0.7s cubic-bezier(.22,1,.36,1) forwards; }
+.animate-about-slide-up-1 { animation: aboutSlideUp 0.7s cubic-bezier(.22,1,.36,1) 0.1s forwards; opacity: 0; }
+.animate-about-slide-up-2 { animation: aboutSlideUp 0.7s cubic-bezier(.22,1,.36,1) 0.25s forwards; opacity: 0; }
+.animate-about-slide-up-3 { animation: aboutSlideUp 0.7s cubic-bezier(.22,1,.36,1) 0.4s forwards; opacity: 0; }
+.animate-about-slide-up-4 { animation: aboutSlideUp 0.7s cubic-bezier(.22,1,.36,1) 0.55s forwards; opacity: 0; }
+.animate-about-slide-up-5 { animation: aboutSlideUp 0.7s cubic-bezier(.22,1,.36,1) 0.7s forwards; opacity: 0; }
+
+@keyframes aboutBarFill {
+  0% { width: 0%; }
+  100% { width: var(--bar-width); }
+}
+.animate-about-bar {
+  animation: aboutBarFill 1.8s cubic-bezier(.22,1,.36,1) 1s forwards;
+  width: 0%;
+}
+
+@keyframes aboutTickerCount {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-about-ticker {
+  animation: aboutTickerCount 0.5s ease forwards;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0a0a0f;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #6d28d9;
+}
+
+/* Custom Numbered Lists counter for blog body */
+ol.custom-blog-list {
+  counter-reset: blog-list-counter;
+}
+
+ol.custom-blog-list li.custom-counter-item {
+  counter-increment: blog-list-counter;
+}
+
+ol.custom-blog-list li.custom-counter-item .custom-counter-badge::before {
+  content: "0" counter(blog-list-counter);
+}
+
+/* ================= CUSTOM SERVICES & CTA ANIMATIONS ================= */
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+@keyframes orbitCW {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes kiteFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1deg);
+    filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.4));
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+    filter: drop-shadow(0 0 30px rgba(217, 70, 239, 0.6));
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-orbit-line {
+  transform-origin: center;
+  animation: orbitCW 60s linear infinite;
+}
+
+.animate-kite-float {
+  animation: kiteFloat 7s ease-in-out infinite;
+}

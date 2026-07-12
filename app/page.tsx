@@ -99,7 +99,7 @@ export default function Page() {
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
-    <div className="grid lg:grid-cols-2 items-center gap-16 min-h-[95vh]">
+    <div className="grid lg:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 min-h-screen pt-16 pb-6">
 
       {/* LEFT CONTENT */}
       <div className="text-center lg:text-left">
@@ -109,7 +109,7 @@ export default function Page() {
           Precision-Built B2B Growth
         </span>
 
-          <h1 className="mt-8 max-w-2xl text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[0.95] tracking-tight">
+          <h1 className="mt-4 max-w-2xl text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] sm:leading-[0.95] tracking-tight">
 
   Marketing that
 
@@ -130,26 +130,26 @@ export default function Page() {
           positioning, demand generation and sales enablement systems that
           produce measurable revenue growth.
         </p> */}
-        <p className="mt-8 max-w-lg text-lg leading-8 text-gray-300">
+        <p className="mt-4 max-w-lg text-sm sm:text-base md:text-lg leading-7 md:leading-8 text-gray-300">
   We build positioning, demand generation and sales enablement
   systems that help industrial, SaaS and technology companies
   generate measurable pipeline and revenue growth.
 </p>
 
         {/* CTA Buttons */}
-        <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
+        <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 justify-center lg:justify-start">
 
           <Link
             href="/contact"
             // className="bg-brand-purple hover:bg-purple-600 text-white px-8 py-4 rounded-md font-semibold transition"
-         className="group bg-brand-purple hover:bg-purple-600 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-[1.02]"
+         className="group bg-brand-purple hover:bg-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 hover:scale-[1.02]"
          >
             Book a Strategy Call
           </Link>
 
           <Link
             href="/portfolio"
-            className="border border-gray-700 hover:border-white px-8 py-4 rounded-md font-semibold transition"
+            className="border border-gray-700 hover:border-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base font-semibold transition"
           >
             Explore Our Work
           </Link>

@@ -16,7 +16,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
     //   className="group"
     // >
     <div className="group">
-      <div className=" relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0B0813] p-8 h-[260px] md:h-[250px] lg:h-[260px] lg:hover:h-[470px] transition-all duration-700 ease-out hover:shadow-[0_20px_60px_rgba(168,85,247,.15)] hover:-translate-y-2">
+      <div className=" relative flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0B0813] p-8 h-[260px] md:h-[250px] lg:h-[260px] lg:hover:h-[510px] transition-all duration-700 ease-out hover:shadow-[0_20px_60px_rgba(168,85,247,.15)] hover:-translate-y-2">
 
         {/* Top Gradient */}
         <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-brand-purple via-fuchsia-400 to-brand-purple" />

@@ -13,7 +13,7 @@ export default function SuccessStoriesSection() {
         
 
         {/* Grid */}
-<div className="grid lg:grid-cols-[1.7fr_1fr] gap-5">
+<div className="grid md:grid-cols-1 lg:grid-cols-[1.7fr_1fr] gap-4 md:gap-5">
               {/* Featured */}
           <FeaturedCaseStudy />
 
