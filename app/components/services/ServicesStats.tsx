@@ -42,7 +42,7 @@ const stats = [
 
 export default function ServicesStats() {
   return (
-    <section className="relative bg-black text-white py-16 border-t border-white/5 overflow-hidden">
+    <section className="relative bg-transparent text-white py-16 border-t border-white/5 overflow-hidden">
       {/* Background glow overlay */}
       <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] pointer-events-none" />
 

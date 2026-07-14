@@ -20,7 +20,7 @@ export default function CtaSection({
   buttonLink = "/contact",
 }: CtaSectionProps) {
   return (
-    <section className="relative py-16 sm:py-24 bg-black border-t border-white/5 overflow-hidden">
+    <section className="relative py-16 sm:py-24 bg-transparent border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Glow Effects */}
@@ -32,7 +32,7 @@ export default function CtaSection({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-purple/20 via-[#0d0d14] to-brand-purple/20 border border-brand-purple/20 py-10 px-5 sm:p-12 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+          className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-purple/20 via-[#0B0813] to-brand-purple/20 border border-brand-purple/20 py-10 px-5 sm:p-12 lg:p-16 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
           {/* Subtle overlay decorative vector icon */}
           <div className="absolute top-[-10%] right-[-5%] opacity-[0.03] text-brand-purple pointer-events-none">
@@ -50,7 +50,7 @@ export default function CtaSection({
               ) : (
                 <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight font-display text-white">
                   Great Products Need{" "}
-                  <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
                     Great Positioning.
                   </span>
                 </h2>

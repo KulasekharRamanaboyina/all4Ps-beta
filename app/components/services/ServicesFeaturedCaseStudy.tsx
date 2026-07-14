@@ -81,7 +81,7 @@ export default function ServicesFeaturedCaseStudy({ caseStudy }: ServicesFeature
   const meta = getCaseStudyMeta(caseStudy);
 
   return (
-    <section className="relative bg-black text-white py-20 border-t border-white/5 overflow-hidden">
+    <section className="relative bg-transparent text-white py-20 border-t border-white/5 overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none" />
 

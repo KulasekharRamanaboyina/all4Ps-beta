@@ -27,7 +27,7 @@ export default function FAQSection({ faqs }: FAQSectionProps) {
   return (
     <div 
       ref={containerRef} 
-      className="relative bg-[#05030A] border-t border-white/5" 
+      className="relative bg-transparent border-t border-white/5" 
       style={{ height: `${numItems * 100}vh` }}
     >
       {/* Sticky viewport */}

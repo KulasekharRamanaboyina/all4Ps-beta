@@ -10,10 +10,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ================= NavLink Active Class ================= */
 const navLinkClass = (isActive: boolean) =>
-  `transition-all duration-300 ${
-    isActive
-      ? "text-brand-purple font-semibold"
-      : "text-white hover:text-brand-purple"
+  `transition-all duration-300 ${isActive
+    ? "text-brand-purple font-semibold"
+    : "text-white hover:text-brand-purple"
   }`;
 
 /* ================= Navbar Component ================= */
@@ -53,7 +52,7 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          
+
           {/* ================= Logo ================= */}
           <div
             className="flex-shrink-0 flex items-center cursor-pointer"
@@ -83,11 +82,10 @@ const Navbar: React.FC = () => {
             {/* ================= Services Dropdown ================= */}
             <div className="relative group">
               <button
-                className={`flex items-center transition-all duration-300 ${
-                  isServicesActive
-                    ? "text-brand-purple font-semibold"
-                    : "text-white hover:text-brand-purple"
-                }`}
+                className={`flex items-center transition-all duration-300 ${isServicesActive
+                  ? "text-brand-purple font-semibold"
+                  : "text-white hover:text-brand-purple"
+                  }`}
               >
                 Services <ChevronDown className="ml-1 w-4 h-4" />
               </button>
@@ -116,8 +114,8 @@ const Navbar: React.FC = () => {
                 "
               >
                 {/* Top Accent */}
-                <div className="h-[3px] w-full bg-gradient-to-r from-brand-purple to-fuchsia-500" />
-                
+                <div className="h-[3px] w-full bg-gradient-to-r from-brand-purple to-fuchsia-400" />
+
                 <div className="py-2">
                   {SERVICES.map((service) => {
                     const isActive = pathname === `/services/${service.id}`;
@@ -127,11 +125,10 @@ const Navbar: React.FC = () => {
                         key={service.id}
                         href={`/services/${service.id}`}
                         onClick={handleLinkClick}
-                        className={`block px-5 py-3 text-sm transition-all duration-300 ${
-                          isActive
-                            ? "bg-brand-purple/15 text-white font-semibold"
-                            : "text-gray-300 hover:bg-white/5 hover:text-white"
-                        }`}
+                        className={`block px-5 py-3 text-sm transition-all duration-300 ${isActive
+                          ? "bg-brand-purple/15 text-white font-semibold"
+                          : "text-gray-300 hover:bg-white/5 hover:text-white"
+                          }`}
                       >
                         {service.title}
                       </Link>
@@ -142,15 +139,15 @@ const Navbar: React.FC = () => {
             </div>
 
             <Link
-              href="/portfolio"
+              href="/portfolios"
               className={navLinkClass(pathname === "/portfolio")}
             >
               Portfolio
             </Link>
-            <Link href="/blog" className={navLinkClass(pathname === "/blog")}>
+            <Link href="/blogs" className={navLinkClass(pathname === "/blog")}>
               Blogs
             </Link>
-            
+
             <button
               onClick={() => navigateTo("/contact")}
               className="
@@ -158,7 +155,7 @@ const Navbar: React.FC = () => {
                 rounded-xl
                 bg-gradient-to-r
                 from-brand-purple
-                to-fuchsia-600
+                to-fuchsia-400
                 px-6
                 py-3
                 font-semibold
@@ -181,17 +178,14 @@ const Navbar: React.FC = () => {
             aria-label="Toggle menu"
           >
             {/* Line 1 */}
-            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
-              isOpen ? "rotate-45" : "-translate-y-1.5"
-            }`} />
+            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isOpen ? "rotate-45" : "-translate-y-1.5"
+              }`} />
             {/* Line 2 */}
-            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
-              isOpen ? "opacity-0" : ""
-            }`} />
+            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isOpen ? "opacity-0" : ""
+              }`} />
             {/* Line 3 */}
-            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
-              isOpen ? "-rotate-45" : "translate-y-1.5"
-            }`} />
+            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isOpen ? "-rotate-45" : "translate-y-1.5"
+              }`} />
           </button>
 
         </div>
@@ -224,7 +218,7 @@ const Navbar: React.FC = () => {
 
               {/* Navigation list items */}
               <div className="space-y-6">
-                
+
                 {/* Home */}
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
@@ -266,9 +260,8 @@ const Navbar: React.FC = () => {
                   >
                     Services
                     <ChevronDown
-                      className={`w-6 h-6 transform transition-transform duration-300 text-brand-purple ${
-                        isServicesOpen ? "rotate-180" : ""
-                      }`}
+                      className={`w-6 h-6 transform transition-transform duration-300 text-brand-purple ${isServicesOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 
@@ -347,7 +340,7 @@ const Navbar: React.FC = () => {
               >
                 <button
                   onClick={() => navigateTo("/contact")}
-                  className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-purple to-fuchsia-600 font-bold text-sm tracking-wider uppercase text-white shadow-lg shadow-purple-500/20 active:scale-95 transition-transform"
+                  className="w-full py-4 rounded-xl bg-gradient-to-r from-brand-purple to-fuchsia-400 font-bold text-sm tracking-wider uppercase text-white shadow-lg shadow-purple-500/20 active:scale-95 transition-transform"
                 >
                   Book a Call
                 </button>

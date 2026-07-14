@@ -41,7 +41,7 @@ const featuredStudies = [
 
 export default function ServicesCaseStudies() {
   return (
-    <section className="relative bg-black text-white py-20 border-t border-white/5 overflow-hidden">
+    <section className="relative bg-transparent text-white py-20 border-t border-white/5 overflow-hidden">
       {/* Background glow overlay */}
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] pointer-events-none" />
 

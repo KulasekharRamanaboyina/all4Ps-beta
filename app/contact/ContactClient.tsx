@@ -98,7 +98,7 @@ export default function ContactClient() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden pt-16">
+    <div className="min-h-screen relative bg-transparent text-white overflow-x-hidden pt-16">
       {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-purple/10 rounded-full blur-[120px] pointer-events-none z-0" />
       <div className="absolute top-[30%] left-0 w-[500px] h-[500px] bg-purple-900/5 blur-[100px] pointer-events-none z-0" />
@@ -576,7 +576,7 @@ export default function ContactClient() {
                 height="100%"
                 style={{
                   border: 0,
-                  filter: "invert(90%) hue-rotate(180deg) grayscale(100%) contrast(120%) brightness(90%)",
+                  filter: "invert(1) hue-rotate(220deg) saturate(3) brightness(0.55) contrast(1.1)",
                 }}
                 allowFullScreen={true}
                 loading="lazy"

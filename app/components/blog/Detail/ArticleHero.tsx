@@ -52,7 +52,7 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
       return (
         <>
           {parts[0]}:{" "}
-          <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent block sm:inline">
+          <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent block sm:inline">
             {parts.slice(1).join(":")}
           </span>
         </>
@@ -64,7 +64,7 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
   return (
     <div>
       {/* ================= BREADCRUMBS ================= */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 md:pt-24 relative z-10">
         <nav className="flex items-center gap-2 text-xs text-gray-400 font-medium">
           <Link href="/blog" className="hover:text-brand-purple transition-colors">
             Blogs & Insights

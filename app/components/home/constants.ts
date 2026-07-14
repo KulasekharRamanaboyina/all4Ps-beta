@@ -3,6 +3,7 @@ import {
   Crosshair,
   Users,
   BarChart3,
+  TrendingUp,
 } from "lucide-react";
 export const APPROACH_STEPS = [
   {
@@ -32,5 +33,12 @@ export const APPROACH_STEPS = [
     title: "Pipeline",
     description:
       "Consistent qualified leads that convert into revenue.",
+  },
+  {
+    number: "05",
+    icon: TrendingUp,
+    title: "Scale",
+    description:
+      "We continuously optimize campaigns and scale channels to compound growth.",
   },
 ];

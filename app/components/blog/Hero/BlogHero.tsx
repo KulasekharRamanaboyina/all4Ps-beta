@@ -25,7 +25,7 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
   };
 
   return (
-    <section className="relative pt-24 pb-16 px-6 lg:px-12 z-10 max-w-7xl mx-auto border-b border-brand-purple/10">
+    <section className="relative pt-20 pb-16 md:pt-24 px-6 lg:px-12 z-10 max-w-7xl mx-auto border-b border-brand-purple/10">
       <div className="grid lg:grid-cols-12 gap-12 items-center">
         
         {/* Left Column - Intro */}
@@ -40,7 +40,7 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
             Insights That Drive{" "}
-            <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
               Smarter Growth.
             </span>
           </h1>

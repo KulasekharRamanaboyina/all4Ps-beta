@@ -65,7 +65,7 @@ export default function CaseStudyMetrics({ client }: CaseStudyMetricsProps) {
         )}
 
         {/* Help-You Purple Gradient Banner */}
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-purple via-purple-700 to-fuchsia-600 p-8 sm:p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_15px_40px_rgba(128,0,128,0.15)] border border-brand-purple/20">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-brand-purple via-purple-700 to-fuchsia-400 p-8 sm:p-10 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[0_15px_40px_rgba(128,0,128,0.15)] border border-brand-purple/20">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/5 rounded-full blur-2xl pointer-events-none" />
 
           <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display tracking-tight text-center md:text-left leading-tight">

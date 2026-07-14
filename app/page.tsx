@@ -81,99 +81,90 @@ const homeFaqs = [
 export default function Page() {
   return (
     <div className="animate-hero">
-     {/* ================= HERO ================= */}
-<section className="relative overflow-hidden bg-black text-white">
-  {/* Background */}
-  <div className="absolute inset-0 opacity-20">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(128,0,128,0.45),transparent_60%)]" />
+      {/* ================= HERO ================= */}
+      <section className="relative overflow-hidden bg-transparent text-white">
+        {/* Background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(128,0,128,0.45),transparent_60%)]" />
+        </div>
 
-    <div
-      className="absolute inset-0"
-      style={{
-        backgroundImage:
-          "linear-gradient(#2b2b2b 1px, transparent 1px), linear-gradient(90deg, #2b2b2b 1px, transparent 1px)",
-        backgroundSize: "50px 50px",
-      }}
-    />
-  </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
 
-  <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 min-h-screen pt-4 md:pt-6 pb-8">
 
-    <div className="grid lg:grid-cols-2 items-center gap-8 md:gap-12 lg:gap-16 min-h-screen pt-16 pb-6">
+            {/* LEFT CONTENT */}
+            <div className="text-center lg:text-left lg:self-start lg:pt-20 xl:pt-28">
 
-      {/* LEFT CONTENT */}
-      <div className="text-center lg:text-left">
+              {/* <span className="inline-flex items-center rounded-full border border-brand-purple/40 bg-brand-purple/10 px-4 py-2 text-sm font-semibold text-brand-purple"> */}
+              <span className="inline-flex items-center rounded-full border border-brand-purple/30 bg-brand-purple/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple" >
+                Precision-Built B2B Growth
+              </span>
 
-        {/* <span className="inline-flex items-center rounded-full border border-brand-purple/40 bg-brand-purple/10 px-4 py-2 text-sm font-semibold text-brand-purple"> */}
-      <span className="inline-flex items-center rounded-full border border-brand-purple/30 bg-brand-purple/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple" >
-          Precision-Built B2B Growth
-        </span>
+              <h1 className="mt-4 max-w-2xl text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] sm:leading-[0.95] tracking-tight">
 
-          <h1 className="mt-4 max-w-2xl text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.1] sm:leading-[0.95] tracking-tight">
+                Marketing that
 
-  Marketing that
+                <br />
 
-  <br />
+                <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
+                  Moves Pipelines.
+                </span>
 
-  <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
-    Moves Pipelines.
-  </span>
+                <br />
 
-  <br />
+                Not Just Metrics.
 
-  Not Just Metrics.
+              </h1>
 
-</h1>
-
-        {/* <p className="mt-8 max-w-xl text-lg text-gray-300 leading-8">
+              {/* <p className="mt-8 max-w-xl text-lg text-gray-300 leading-8">
           all4Ps helps industrial, SaaS and technology companies create
           positioning, demand generation and sales enablement systems that
           produce measurable revenue growth.
         </p> */}
-        <p className="mt-4 max-w-lg text-sm sm:text-base md:text-lg leading-7 md:leading-8 text-gray-300">
-  We build positioning, demand generation and sales enablement
-  systems that help industrial, SaaS and technology companies
-  generate measurable pipeline and revenue growth.
-</p>
+              <p className="mt-4 max-w-lg text-sm sm:text-base md:text-lg leading-7 md:leading-8 text-gray-300">
+                We build positioning, demand generation and sales enablement
+                systems that help industrial, SaaS and technology companies
+                generate measurable pipeline and revenue growth.
+              </p>
 
-        {/* CTA Buttons */}
-        <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 justify-center lg:justify-start">
+              {/* CTA Buttons */}
+              <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-5 justify-center lg:justify-start">
 
-          <Link
-            href="/contact"
-            // className="bg-brand-purple hover:bg-purple-600 text-white px-8 py-4 rounded-md font-semibold transition"
-         className="group bg-brand-purple hover:bg-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 hover:scale-[1.02]"
-         >
-            Book a Strategy Call
-          </Link>
+                <Link
+                  href="/contact"
+                  // className="bg-brand-purple hover:bg-purple-600 text-white px-8 py-4 rounded-md font-semibold transition"
+                  className="group bg-brand-purple hover:bg-purple-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 hover:scale-[1.02]"
+                >
+                  Book a Strategy Call
+                </Link>
 
-          <Link
-            href="/portfolio"
-            className="border border-gray-700 hover:border-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base font-semibold transition"
-          >
-            Explore Our Work
-          </Link>
+                <Link
+                  href="/portfolio"
+                  className="border border-gray-700 hover:border-white px-6 sm:px-8 py-3 sm:py-4 rounded-md text-sm sm:text-base font-semibold transition"
+                >
+                  Explore Our Work
+                </Link>
+
+              </div>
+
+            </div>
+
+            {/* RIGHT CONTENT */}
+            <div className="relative flex justify-center lg:justify-end">
+
+              {/* <GrowthChart /> */}
+              <HeroVisual />
+
+            </div>
+
+          </div>
 
         </div>
 
-      </div>
-
-      {/* RIGHT CONTENT */}
-      <div className="relative flex justify-center lg:justify-end">
-
-        {/* <GrowthChart /> */}
-        <HeroVisual />
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-<LogoRibbon />
+      </section>
+      <LogoRibbon />
       {/* ================= WHAT WE DO ================= */}
-      
+
       <ApproachSection />
       {/* <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">

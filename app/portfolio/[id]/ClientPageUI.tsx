@@ -14,7 +14,7 @@ type Props = {
 
 export default function ClientPageUI({ client }: Props) {
   return (
-    <div className="bg-black min-h-screen text-white">
+    <div className="bg-transparent min-h-screen text-white">
       <CaseStudyHero client={client} />
       <CaseStudyProse client={client} />
       <CaseStudyMetrics client={client} />

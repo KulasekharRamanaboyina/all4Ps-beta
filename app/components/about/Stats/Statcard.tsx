@@ -42,7 +42,7 @@ export default function StatCard({ stat, delay = 0 }: StatCardProps) {
               initial={{ height: 0 }}
               animate={{ height: h }}
               transition={{ delay: delay + idx * 0.08, duration: 0.5, ease: "easeOut" }}
-              className="w-1 bg-gradient-to-t from-brand-purple to-pink-500 rounded-full"
+              className="w-1 bg-gradient-to-t from-brand-purple to-fuchsia-400 rounded-full"
             />
           ))}
         </div>

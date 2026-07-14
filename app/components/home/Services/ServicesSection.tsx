@@ -3,7 +3,7 @@ import ServiceCard from "./ServiceCard";
 
 export default function ServicesSection() {
   return (
-<section className="bg-[#0B0813] pt-8 pb-10 md:pt-10 md:pb-12 lg:pt-12 lg:pb-14">
+<section className="bg-transparent pt-8 pb-10 md:pt-10 md:pb-12 lg:pt-12 lg:pb-14">
 <div className="max-w-[1440px] mx-auto px-6">
 
         {/* Label */}

@@ -46,7 +46,7 @@ export default function ServiceCard({ service }: ServiceCardProps) {
         {/* Icon */}
         <div className="relative mb-5 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br
 from-brand-purple/15
-to-fuchsia-500/5 border border-brand-purple/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
+to-fuchsia-400/5 border border-brand-purple/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
 
           <Icon
             size={30}

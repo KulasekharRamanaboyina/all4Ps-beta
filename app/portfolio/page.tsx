@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-transparent text-white">
       {/* 1. Hero Landing Section */}
       <PortfolioHero />
 

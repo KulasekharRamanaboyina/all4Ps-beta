@@ -17,8 +17,10 @@ const team = [
 
 export default function TeamGrid() {
   return (
-    <section className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
-      <div className="max-w-7xl mx-auto">
+    <section id="team-grid" className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
+      <div className="max-w-[1500px] mx-auto">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,42 +35,47 @@ export default function TeamGrid() {
           </h2>
         </motion.div>
 
-        {/* 7 columns grid on desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-4">
+        {/* 7-column single row grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
           {team.map((t, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.08, duration: 0.5 }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ delay: i * 0.07, duration: 0.5 }}
               whileHover={{ y: -6 }}
-              className="group bg-gradient-to-b from-[#0e0e15] to-[#05030a] border border-brand-purple/15 rounded-xl overflow-hidden hover:border-brand-purple/40 transition-all duration-500 shadow-xl"
+              className="group flex flex-col bg-gradient-to-b from-[#0e0e15] to-[#05030a] border border-brand-purple/15 rounded-xl overflow-hidden hover:border-brand-purple/40 hover:shadow-[0_0_25px_rgba(168,85,247,0.15)] transition-all duration-500 shadow-xl"
             >
-              {/* Photo */}
-              <div className="aspect-square bg-gradient-to-br from-gray-900 to-gray-800 relative overflow-hidden border-b border-brand-purple/10">
+              {/* Photo — fixed square ratio */}
+              <div className="relative w-full aspect-[3/4] overflow-hidden">
                 <Image
                   src={t.image}
                   alt={t.name}
                   fill
-                  sizes="(max-w-768px) 50vw, (max-w-1200px) 25vw, 150px"
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 15vw"
                   className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/60 via-transparent to-transparent" />
+                {/* Bottom gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/80 via-[#0a0a0f]/10 to-transparent" />
               </div>
 
-              <div className="p-3.5 flex flex-col justify-between min-h-[140px]">
-                <div>
-                  <p className="text-xs font-bold text-white mb-0.5 tracking-tight group-hover:text-brand-purple transition-colors duration-300">
-                    {t.name}
-                  </p>
-                  <p className="text-[10px] text-gray-400 font-medium mb-3.5 leading-snug">{t.role}</p>
-                </div>
-                <div className="flex flex-wrap gap-1">
+              {/* Divider */}
+              <div className="h-px bg-brand-purple/10 group-hover:bg-brand-purple/25 transition-colors duration-300" />
+
+              {/* Text info — centered and consistent height */}
+              <div className="flex flex-col items-center text-center px-3 py-4 flex-1 gap-2">
+                <h3 className="font-bold text-white text-xs tracking-tight leading-snug group-hover:text-fuchsia-300 transition-colors duration-300">
+                  {t.name}
+                </h3>
+                <p className="text-[9px] text-brand-purple uppercase tracking-widest font-semibold leading-tight">
+                  {t.role}
+                </p>
+                <div className="flex flex-wrap justify-center gap-1 mt-auto pt-2">
                   {t.tags.map((tag, j) => (
                     <span
                       key={j}
-                      className="text-[8px] px-1.5 py-0.5 rounded-full border border-brand-purple/25 text-brand-purple/90 bg-brand-purple/5 font-semibold"
+                      className="text-[7px] bg-brand-purple/8 text-gray-400 border border-brand-purple/15 px-1.5 py-0.5 rounded-full font-semibold uppercase tracking-wider"
                     >
                       {tag}
                     </span>
@@ -79,11 +86,12 @@ export default function TeamGrid() {
           ))}
         </div>
 
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.5 }}
           className="text-center mt-14"
         >
           <Link href="/careers" className="inline-block">
@@ -97,6 +105,7 @@ export default function TeamGrid() {
             </motion.button>
           </Link>
         </motion.div>
+
       </div>
     </section>
   );

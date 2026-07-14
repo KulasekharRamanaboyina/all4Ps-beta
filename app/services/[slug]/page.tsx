@@ -262,7 +262,7 @@ export default async function ServiceDetail({ params }: PageProps) {
   ];
 
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-transparent text-white">
       {/* 1. Services Hero Layout with custom orbitals */}
       <ServicesHero
         title={service.title}

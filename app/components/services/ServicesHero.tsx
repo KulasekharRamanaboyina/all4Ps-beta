@@ -20,7 +20,7 @@ export default function ServicesHero({
   ],
 }: ServicesHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-black text-white pt-24 pb-20 md:py-32">
+    <section className="relative overflow-hidden bg-transparent text-white pt-20 pb-20 md:pt-24 md:pb-28">
 
       {/* Background glow overlay */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(circle_at_70%_20%,rgba(128,0,128,0.25),transparent_60%)] pointer-events-none" />
@@ -57,7 +57,7 @@ export default function ServicesHero({
             {/* Main Headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight font-display leading-[1.1] max-w-2xl mx-auto lg:mx-0">
               The Strongest Brands Aren&apos;t Louder. <br className="hidden md:inline" />
-              <span className="bg-gradient-to-r from-brand-purple via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
                 They&apos;re Clearer.
               </span>
             </h1>

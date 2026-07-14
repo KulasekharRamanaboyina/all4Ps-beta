@@ -17,7 +17,7 @@ const problems = [
 
 export default function FounderCard() {
   return (
-    <section className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
+    <section id="founder-card" className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-12 items-start">
           {/* Founder Photo */}

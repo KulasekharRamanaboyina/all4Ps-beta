@@ -7,10 +7,11 @@ export default function FeaturedCaseStudy() {
 group
 grid
 grid-cols-1
-md:grid-cols-[0.7fr_1.3fr]
+md:grid-cols-2
+lg:grid-cols-[0.9fr_1.1fr]
 h-auto
-md:h-[480px]
-lg:h-[570px]
+md:h-[430px]
+lg:h-[500px]
 overflow-hidden
 rounded-2xl
 md:rounded-3xl
@@ -24,59 +25,59 @@ hover:shadow-[0_20px_60px_rgba(168,85,247,.15)]
 ">
     {/* Left Side */}
    
-<div className="order-2 flex h-full flex-col justify-between p-5 sm:p-6 md:p-7 md:order-1">
+<div className="order-2 flex h-full flex-col justify-between p-5 sm:p-6 md:p-6 lg:p-7 md:order-1">
     <div>
 
- <div className="mb-6 inline-flex items-center rounded-full border border-brand-purple/25 bg-gradient-to-r from-brand-purple/15 to-fuchsia-500/10 px-4 py-2 backdrop-blur-sm">
+ <div className="mb-4 md:mb-5 inline-flex items-center rounded-full border border-brand-purple/25 bg-gradient-to-r from-brand-purple/15 to-fuchsia-400/10 px-4 py-2 backdrop-blur-sm">
   <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-brand-purple">
     Featured Case Study
   </span>
 </div>
 
-    <h2 className="mb-5 text-4xl
-md:text-[2.2rem] leading-tight font-bold text-white">
+    <h2 className="mb-3 md:mb-4 text-3xl
+md:text-3xl lg:text-4xl leading-tight font-bold text-white">
       UNBOX ROBOTICS
     </h2>
 
-<div className="mb-5 space-y-3">
+<div className="mb-4 md:mb-5 space-y-2 md:space-y-2.5">
 
-  <div className="flex items-center gap-4">
-    <h3 className="w-24
-md:w-32
-text-2xl
-md:text-3xl font-extrabold text-brand-purple">
+  <div className="flex items-center gap-3">
+    <h3 className="w-20
+md:w-24
+text-xl
+md:text-2xl lg:text-3xl font-extrabold text-brand-purple">
       +312%
     </h3>
 
-<p className="flex-1 text-base
-md:text-lg font-medium text-white">
+<p className="flex-1 text-sm
+md:text-base font-medium text-white">
       Organic Growth
     </p>
   </div>
 
-  <div className="flex items-center gap-4">
-<h3 className="w-24
-md:w-32
-text-2xl
-md:text-3xl font-extrabold text-brand-purple">
+  <div className="flex items-center gap-3">
+<h3 className="w-20
+md:w-24
+text-xl
+md:text-2xl lg:text-3xl font-extrabold text-brand-purple">
         +280%
     </h3>
 
-<p className="flex-1 text-base
-md:text-lg font-medium text-white">
+<p className="flex-1 text-sm
+md:text-base font-medium text-white">
       Qualified Leads
     </p>
   </div>
 
-  <div className="flex items-center gap-4">
-<h3 className="w-24
-md:w-32
-text-2xl
-md:text-3xl font-extrabold text-brand-purple">      ₹32Cr+
+  <div className="flex items-center gap-3">
+<h3 className="w-20
+md:w-24
+text-xl
+md:text-2xl lg:text-3xl font-extrabold text-brand-purple">      ₹32Cr+
     </h3>
 
-<p className="flex-1 text-base
-md:text-lg font-medium text-white">
+<p className="flex-1 text-sm
+md:text-base font-medium text-white">
       Pipeline Influenced
     </p>
   </div>
@@ -85,7 +86,7 @@ md:text-lg font-medium text-white">
     
 
     <p className="max-w-full
-lg:max-w-[280px] text-[15px] leading-6 text-gray-400">
+lg:max-w-[340px] text-xs md:text-sm leading-relaxed text-gray-400">
       From early-stage visibility challenges to category leadership in robotics automation.
     </p>
 

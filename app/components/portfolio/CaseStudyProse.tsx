@@ -18,7 +18,7 @@ export default function CaseStudyProse({ client }: CaseStudyProseProps) {
   const challengeLines = formatChallengeText(client.challenge);
 
   return (
-    <section className="relative bg-black text-white py-16">
+    <section className="relative bg-transparent text-white py-16">
       <div className="max-w-3xl mx-auto px-6 font-sans text-gray-300 leading-relaxed space-y-12">
         {/* Introduction Section */}
         <div>

@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 
 export default function CareersPage() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-transparent text-white">
       {/* Background soft glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_70%_20%,rgba(128,0,128,0.25),transparent_60%)] pointer-events-none" />
       <div className="absolute top-1/3 left-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_0%_50%,rgba(128,0,128,0.1),transparent_60%)] pointer-events-none" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden border-b border-white/5">
+      <section className="relative pt-20 pb-20 md:pt-24 md:pb-28 overflow-hidden border-b border-white/5">
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
           {/* Tag */}
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-purple/15 border border-brand-purple/35 text-xs font-semibold uppercase tracking-wider text-brand-purple mb-6 select-none">
@@ -32,7 +32,7 @@ export default function CareersPage() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight font-display leading-[1.1] max-w-3xl mx-auto mb-6">
             Join the People <br />
             Behind the{" "}
-            <span className="bg-gradient-to-r from-brand-purple via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
               Growth Engine.
             </span>
           </h1>

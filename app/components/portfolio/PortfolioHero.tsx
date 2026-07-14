@@ -5,7 +5,7 @@ import { ArrowRight, BarChart2, TrendingUp, DollarSign } from "lucide-react";
 
 export default function PortfolioHero() {
   return (
-    <section className="relative overflow-hidden bg-black text-white pt-24 pb-20 md:py-32">
+    <section className="relative overflow-hidden bg-transparent text-white pt-20 pb-20 md:pt-24 md:pb-28">
       {/* Background radial glows */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(circle_at_70%_20%,rgba(128,0,128,0.2),transparent_60%)] pointer-events-none" />
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[radial-gradient(circle_at_0%_50%,rgba(128,0,128,0.08),transparent_60%)] pointer-events-none" />
@@ -24,7 +24,7 @@ export default function PortfolioHero() {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight font-display leading-[1.1] max-w-2xl mx-auto lg:mx-0">
               We Turn Strategy <br className="hidden sm:inline" />
               Into{" "}
-              <span className="bg-gradient-to-r from-brand-purple via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
                 Measurable Results.
               </span>
             </h1>
@@ -63,7 +63,7 @@ export default function PortfolioHero() {
               {/* Dashboard Result Card */}
               <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0B0813]/85 p-6 shadow-[0_12px_40px_rgba(0,0,0,0.6)] backdrop-blur-md">
                 {/* Accent glow line on top border */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-brand-purple to-fuchsia-500" />
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-brand-purple to-fuchsia-400" />
                 
                 {/* Section tag */}
                 <span className="inline-block text-[10px] font-bold uppercase tracking-wider text-brand-purple bg-brand-purple/10 px-2 py-0.5 rounded-full mb-4">

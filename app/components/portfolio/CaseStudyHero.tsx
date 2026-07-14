@@ -24,10 +24,10 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
       case "motherson":
         return {
           prefix: "How ",
-          highlight1: "ROBIS Motherson",
-          middle: " Launched ",
-          highlight2: "FY26 GTM Strategy",
-          suffix: " with all4ps"
+          highlight1: "Motherson Group",
+          middle: " Positioned for ",
+          highlight2: "Enterprise Value",
+          suffix: ""
         };
       case "anscer":
         return {
@@ -109,7 +109,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
   const author = getAuthorDetails(client);
 
   return (
-    <section className="relative pt-8 pb-12 bg-black text-white">
+    <section className="relative pt-20 pb-12 md:pt-24 bg-transparent text-white">
       {/* Background glow overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(128,0,128,0.25),transparent_60%)] pointer-events-none" />
 
@@ -140,11 +140,11 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
         {/* Hero Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight font-display mb-8 max-w-5xl">
           {titleDetails.prefix}
-          <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
             {titleDetails.highlight1}
           </span>
           {titleDetails.middle}
-          <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
             {titleDetails.highlight2}
           </span>
           {titleDetails.suffix}

@@ -19,7 +19,7 @@ export default function AboutPage() {
   });
 
   return (
-    <main ref={containerRef} className="bg-[#0a0a0f] text-white overflow-x-hidden">
+    <main ref={containerRef} className="bg-transparent text-white overflow-x-hidden">
       <HeroSection scrollYProgress={scrollYProgress} />
       <FounderCard />
       <JourneyTimeline />

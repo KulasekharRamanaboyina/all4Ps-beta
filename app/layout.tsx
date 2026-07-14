@@ -6,6 +6,7 @@ import ScrollTopButton from "./components/ScrollTopButton";
 import VisibilityTitle from "./components/VisibilityTitle";
 import Script from "next/script";
 import { Inter, Manrope } from "next/font/google";
+import ParticleBackground from "./components/ParticleBackground";
 
 /* ================= FONT SETUP (FIXED) ================= */
 const inter = Inter({
@@ -62,7 +63,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable}`}>
-      <body className="font-sans">
+      <body className="font-sans relative bg-[#05030A] text-white overflow-x-hidden">
+        <ParticleBackground />
         <noscript>
           <img
             height="1"
@@ -121,7 +123,7 @@ export default function RootLayout({
         <VisibilityTitle />
 
         {/* ================= Page Content ================= */}
-        <main className="pt-16">{children}</main>
+        <main className="pt-2">{children}</main>
 
         <ScrollTopButton />
         <Footer />

@@ -3,7 +3,7 @@ import ApproachStep from "./ApproachStep";
 
 export default function ApproachSection() {
   return (
-<section className=" bg-[#0B0813] pt-20 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
+<section className=" bg-transparent pt-20 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-14">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Label */}
@@ -48,7 +48,7 @@ export default function ApproachSection() {
 </div>
 
 {/* Tablet */}
-<div className="hidden md:grid lg:hidden grid-cols-2 gap-16 mt-16 place-items-center">
+<div className="hidden md:flex lg:hidden flex-wrap justify-center gap-16 mt-16 max-w-4xl mx-auto">
 
   {APPROACH_STEPS.map((step) => (
     <ApproachStep

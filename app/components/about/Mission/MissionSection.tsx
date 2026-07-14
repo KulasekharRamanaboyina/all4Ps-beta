@@ -34,7 +34,7 @@ export default function MissionSection() {
         title="Click to copy"
       >
         {/* animated left bar */}
-        <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand-purple to-fuchsia-500" />
+        <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand-purple to-fuchsia-400" />
 
         {/* animated shimmer on hover */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/5 to-transparent

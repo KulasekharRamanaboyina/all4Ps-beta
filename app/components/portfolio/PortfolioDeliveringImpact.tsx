@@ -46,7 +46,7 @@ export default function PortfolioDeliveringImpact() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight font-display leading-[1.15]">
               Delivering Impact <br className="hidden lg:inline" />
               That{" "}
-              <span className="bg-gradient-to-r from-brand-purple via-fuchsia-400 to-pink-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
                 Moves the Needle.
               </span>
             </h2>

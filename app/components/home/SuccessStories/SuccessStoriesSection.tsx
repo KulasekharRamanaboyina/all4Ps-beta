@@ -4,7 +4,7 @@ import { CASE_STUDIES } from "@/app/constants";
 import { ArrowRight } from "lucide-react";
 export default function SuccessStoriesSection() {
   return (
-<section className="bg-[#0B0813] pt-10 pb-20 lg:pt-12 lg:pb-24">
+<section className="bg-transparent pt-10 pb-20 lg:pt-12 lg:pb-24">
 <div className="max-w-7xl mx-auto px-6 lg:px-8">
                     {/* Label */}
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.28em] text-brand-purple">
