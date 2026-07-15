@@ -23,9 +23,11 @@ export default function AboutPage() {
       <HeroSection scrollYProgress={scrollYProgress} />
       <FounderCard />
       <JourneyTimeline />
-      <ValuesGrid />
       <TeamGrid />
-      <IndustriesSection />
+      <section className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10">
+        <ValuesGrid />
+        <IndustriesSection />
+      </section>
       <CultureSection />
       <CtaSection />
     </main>

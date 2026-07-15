@@ -139,49 +139,24 @@ export default function ServicesFeaturedCaseStudy({ caseStudy }: ServicesFeature
                 <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
                   {caseStudy.industry}
                 </p>
+                           {/* 4-row metadata breakdown */}
+              <div className="border-t border-white/5 pt-4 space-y-3">
+                {[
+                  { label: "Challenge", value: meta.challenge },
+                  { label: "Approach",  value: meta.approach  },
+                  { label: "Execution", value: meta.execution },
+                  { label: "Outcome",   value: meta.outcome,  highlight: true },
+                ].map(({ label, value, highlight }) => (
+                  <div key={label} className="flex items-start gap-3">
+                    <span className="shrink-0 mt-0.5 text-[9px] font-bold uppercase tracking-wider text-brand-purple bg-brand-purple/10 border border-brand-purple/20 rounded px-2 py-0.5 w-[72px] text-center">
+                      {label}
+                    </span>
+                    <p className={`text-[11px] leading-relaxed font-medium ${highlight ? "text-white font-semibold" : "text-gray-400"}`}>
+                      {value}
+                    </p>
+                  </div>
+                ))}
               </div>
-
-              {/* 4-column metadata breakdown */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/5 pt-4 text-left">
-                {/* Challenge */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Challenge
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {meta.challenge}
-                  </p>
-                </div>
-
-                {/* Approach */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Approach
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {meta.approach}
-                  </p>
-                </div>
-
-                {/* Execution */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Execution
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {meta.execution}
-                  </p>
-                </div>
-
-                {/* Outcome */}
-                <div className="space-y-1">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Outcome
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {meta.outcome}
-                  </p>
-                </div>
               </div>
 
               {/* Action Link */}

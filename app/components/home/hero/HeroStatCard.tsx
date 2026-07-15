@@ -38,7 +38,7 @@ export default function HeroStatCard({
         uppercase
         tracking-[0.18em]
         md:tracking-[0.22em]
-        text-white-400
+        text-gray-400
         "
       >
         {title}

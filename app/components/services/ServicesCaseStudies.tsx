@@ -8,34 +8,19 @@ const featuredStudies = [
     id: "unbox",
     client: "Unbox Robotics",
     image: "/images/portfolio/unbox.webp",
-    metadata: {
-      challenge: "Low brand visibility in a competitive industrial robotics market.",
-      approach: "Re-positioned brand, built content engine & demand systems.",
-      execution: "SEO, Content, LinkedIn, and Paid Campaigns.",
-      outcome: "+312% Organic Growth & ₹32Cr+ Pipeline Influenced.",
-    }
+    description: "Re-positioned B2B brand and built marketing systems to drive +312% organic growth and ₹32Cr+ pipeline."
   },
   {
     id: "motherson",
     client: "ROBIS Motherson",
     image: "/images/portfolio/motherson.webp",
-    metadata: {
-      challenge: "Limited digital presence and GTM alignment for commercial robotics.",
-      approach: "Brand refresh, strategy-led GTM and web redesign.",
-      execution: "Website development, SEO, Content, and Lead Automation.",
-      outcome: "FY26 GTM Strategy Launched & Global Product Launch Enabled.",
-    }
+    description: "Launched global GTM strategy and executed complete website redesign to scale product launches."
   },
   {
     id: "panchayath",
     client: "Panchayath App",
     image: "/images/portfolio/panchayath.webp",
-    metadata: {
-      challenge: "Low adoption and communication gaps between citizens and local bodies.",
-      approach: "User-centric messaging and localized community engagement strategy.",
-      execution: "Content creation, Social media, and Community Outreach.",
-      outcome: "1,000+ App Installs & Higher Citizen Engagement.",
-    }
+    description: "Developed community engagement strategy and user-centric messaging to drive 1,000+ app downloads."
   }
 ];
 
@@ -93,48 +78,10 @@ export default function ServicesCaseStudies() {
                 </h3>
               </div>
 
-              {/* 4-column metadata list */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 pt-4 text-left">
-                {/* Challenge */}
-                <div className="space-y-1.5">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Challenge
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {study.metadata.challenge}
-                  </p>
-                </div>
-
-                {/* Approach */}
-                <div className="space-y-1.5">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Approach
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {study.metadata.approach}
-                  </p>
-                </div>
-
-                {/* Execution */}
-                <div className="space-y-1.5">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Execution
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {study.metadata.execution}
-                  </p>
-                </div>
-
-                {/* Outcome */}
-                <div className="space-y-1.5">
-                  <span className="text-[9px] font-bold uppercase tracking-wider text-brand-purple">
-                    Outcome
-                  </span>
-                  <p className="text-[11px] leading-relaxed text-gray-400 font-medium">
-                    {study.metadata.outcome}
-                  </p>
-                </div>
-              </div>
+              {/* Description summary */}
+              <p className="text-sm text-gray-400 leading-relaxed border-t border-white/10 pt-4 text-left">
+                {study.description}
+              </p>
 
               {/* Link button */}
               <div className="pt-2">

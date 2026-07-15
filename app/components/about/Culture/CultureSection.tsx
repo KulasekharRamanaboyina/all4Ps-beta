@@ -12,7 +12,7 @@ const culture = [
 
 export default function CultureSection() {
   return (
-    <section className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
+    <section className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10">
       {/* Background wave */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-brand-purple/10 to-transparent" />
@@ -23,12 +23,12 @@ export default function CultureSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <p className="text-brand-purple text-xs font-semibold tracking-widest uppercase mb-3">
             What It's Like to Work With Us
           </p>
-          <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white tracking-tight font-display">
             Our Culture. Our Promise.
           </h2>
         </motion.div>

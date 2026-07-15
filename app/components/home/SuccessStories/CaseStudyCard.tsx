@@ -106,7 +106,8 @@ export default function CaseStudyCard({
       flex
       items-center
       gap-4
-      h-[112px]
+      min-h-[112px]
+      h-auto
       border-b
       border-white/10
       py-3

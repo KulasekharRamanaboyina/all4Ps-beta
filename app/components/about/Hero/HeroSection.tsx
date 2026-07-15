@@ -24,13 +24,13 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
   return (
     <section
       ref={ref}
-      className="relative min-h-[90vh] pt-20 pb-16 md:pt-24 px-6 lg:px-12 flex flex-col justify-start items-center overflow-hidden bg-transparent"
+      className="relative min-h-screen pt-20 pb-12 md:pt-24 px-6 lg:px-12 flex flex-col justify-start items-center overflow-hidden bg-transparent"
     >
 
       {/* Scrollable Hero Content Container */}
       <motion.div
         style={{ y, opacity }}
-        className="relative max-w-7xl w-full mx-auto flex flex-col justify-between items-center text-center min-h-[72vh] md:min-h-[76vh] z-10"
+        className="relative max-w-7xl w-full mx-auto flex flex-col justify-between items-center text-center min-h-[80vh] z-10"
       >
         {/* Main Content Wrapper */}
         <div className="flex flex-col items-center w-full">
@@ -52,7 +52,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl md:text-6xl lg:text-[72px] font-extrabold leading-[1.1] text-white tracking-tight mb-8"
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-[72px] font-extrabold leading-[1.1] text-white tracking-tight mb-5 md:mb-8 font-display"
           >
             We Turn Complexity <br />
             Into{" "}
@@ -66,7 +66,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-400 text-base md:text-lg leading-relaxed max-w-3xl mb-12 px-4"
+            className="text-gray-400 text-sm md:text-base lg:text-lg leading-relaxed max-w-3xl mb-8 md:mb-12 px-2"
           >
             We help deep-tech companies clarify their value, connect with the right buyers,{" "}
             <br className="hidden md:inline" />
@@ -77,11 +77,11 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8 md:mb-12 w-full px-4 sm:px-0"
           >
             <button
               onClick={handleScrollToFounder}
-              className="group bg-brand-purple hover:bg-purple-600 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
+              className="group bg-brand-purple hover:bg-purple-600 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
             >
               Discover Our Story
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>
@@ -89,7 +89,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
 
             <button
               onClick={handleScrollToTeam}
-              className="group border border-gray-700 hover:border-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg text-sm sm:text-base font-semibold text-white transition flex items-center justify-center gap-2"
+              className="group border border-gray-700 hover:border-white w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg text-sm sm:text-base font-semibold text-white transition flex items-center justify-center gap-2"
             >
               Meet Our Team
               <span className="transform group-hover:translate-x-1 transition-transform">→</span>

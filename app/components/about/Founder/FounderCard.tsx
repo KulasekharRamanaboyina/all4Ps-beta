@@ -17,18 +17,18 @@ const problems = [
 
 export default function FounderCard() {
   return (
-    <section id="founder-card" className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
+    <section id="founder-card" className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
           {/* Founder Photo */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="lg:col-span-4"
+            className="lg:col-span-3"
           >
-            <div className="relative">
+            <div className="relative max-w-[220px] sm:max-w-[260px] lg:max-w-none mx-auto">
               <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/20 to-transparent rounded-3xl blur-2xl opacity-60" />
               <div className="relative aspect-[3/4] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-[#0a0a0f] border border-brand-purple/25 group">
                 <Image
@@ -58,12 +58,12 @@ export default function FounderCard() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-4 border-l-0 lg:border-l border-brand-purple/10 lg:pl-12"
+            className="lg:col-span-5 border-t lg:border-t-0 lg:border-l border-brand-purple/10 pt-6 lg:pt-0 lg:pl-12"
           >
             <p className="text-brand-purple text-xs font-semibold tracking-widest uppercase mb-3">
               Why all4Ps Exists
             </p>
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-white mb-8 tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-6 tracking-tight">
               The Problem We Saw
             </h2>
             <ul className="space-y-5">
@@ -91,7 +91,7 @@ export default function FounderCard() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="lg:col-span-4 border-l-0 lg:border-l border-brand-purple/10 lg:pl-12"
+            className="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-brand-purple/10 pt-6 lg:pt-0 lg:pl-12"
           >
             <div className="flex items-center gap-2 mb-4">
               <Target className="w-5 h-5 text-brand-purple" />

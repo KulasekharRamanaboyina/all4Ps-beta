@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import FAQSection from "@/app/components/FAQSection";
 import ServicesHero from "@/app/components/services/ServicesHero";
 import ServicesFramework from "@/app/components/services/ServicesFramework";
-import ServicesStats from "@/app/components/services/ServicesStats";
 import ServicesList from "@/app/components/services/ServicesList";
 import ServicesCaseStudies from "@/app/components/services/ServicesCaseStudies";
 import ServicesTestimonials from "@/app/components/services/ServicesTestimonials";
@@ -73,9 +72,8 @@ export default function ServicesPage() {
     <main className="min-h-screen bg-transparent text-white">
       {/* Modular sections composited according to services.png mockup */}
       <ServicesHero />
-      <ServicesFramework />
-      <ServicesStats />
       <ServicesList />
+      <ServicesFramework />
       <ServicesCaseStudies />
       <ServicesTestimonials />
       

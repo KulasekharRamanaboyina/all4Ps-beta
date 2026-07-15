@@ -6,7 +6,7 @@ export default function HeroVisual() {
     <div className="relative flex items-center justify-center w-full h-[420px] md:h-[620px] lg:h-[720px] overflow-hidden lg:overflow-visible">
 
       {/* ================= Hero Canvas ================= */}
-      <div className="relative w-[340px] md:w-[520px] lg:w-[620px] h-[280px] md:h-[520px] lg:h-[620px] mx-auto">
+      <div className="relative w-[340px] md:w-[520px] lg:w-[620px] h-[280px] md:h-[520px] lg:h-[620px] mx-auto hero-canvas">
 
         {/* ================= Background Effects ================= */}
 

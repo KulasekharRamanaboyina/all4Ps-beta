@@ -138,15 +138,18 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link
-              href="/portfolios"
-              className={navLinkClass(pathname === "/portfolio")}
+            <span
+              title="Coming Soon"
+              className="text-gray-500 cursor-not-allowed select-none"
             >
               Portfolio
-            </Link>
-            <Link href="/blogs" className={navLinkClass(pathname === "/blog")}>
+            </span>
+            <span
+              title="Coming Soon"
+              className="text-gray-500 cursor-not-allowed select-none"
+            >
               Blogs
-            </Link>
+            </span>
 
             <button
               onClick={() => navigateTo("/contact")}
@@ -287,32 +290,30 @@ const Navbar: React.FC = () => {
                   </AnimatePresence>
                 </motion.div>
 
-                {/* Portfolio */}
+                {/* Portfolio - Disabled */}
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.25 }}
                 >
-                  <button
-                    onClick={() => navigateTo("/portfolio")}
-                    className="block w-full text-left text-2xl font-bold text-white hover:text-brand-purple transition-colors font-display"
+                  <span
+                    className="block w-full text-left text-2xl font-bold text-gray-600 cursor-not-allowed select-none font-display"
                   >
                     Portfolio
-                  </button>
+                  </span>
                 </motion.div>
 
-                {/* Blogs */}
+                {/* Blogs - Disabled */}
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
                 >
-                  <button
-                    onClick={() => navigateTo("/blog")}
-                    className="block w-full text-left text-2xl font-bold text-white hover:text-brand-purple transition-colors font-display"
+                  <span
+                    className="block w-full text-left text-2xl font-bold text-gray-600 cursor-not-allowed select-none font-display"
                   >
                     Blogs
-                  </button>
+                  </span>
                 </motion.div>
 
                 {/* Careers */}
@@ -321,12 +322,11 @@ const Navbar: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35 }}
                 >
-                  <button
-                    onClick={() => navigateTo("/careers")}
-                    className="block w-full text-left text-2xl font-bold text-white hover:text-brand-purple transition-colors font-display"
+                  <span
+                    className="block w-full text-left text-2xl font-bold text-gray-600 cursor-not-allowed select-none font-display"
                   >
                     Careers
-                  </button>
+                  </span>
                 </motion.div>
 
               </div>

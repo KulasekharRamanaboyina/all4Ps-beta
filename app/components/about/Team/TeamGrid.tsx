@@ -17,7 +17,7 @@ const team = [
 
 export default function TeamGrid() {
   return (
-    <section id="team-grid" className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
+    <section id="team-grid" className="relative pt-12 md:pt-16 pb-16 md:pb-20 px-6 lg:px-12 border-t border-brand-purple/10">
       <div className="max-w-[1500px] mx-auto">
 
         {/* Header */}
@@ -25,12 +25,12 @@ export default function TeamGrid() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <p className="text-brand-purple text-xs font-semibold tracking-widest uppercase mb-3">
             Meet the People Behind the Growth
           </p>
-          <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white tracking-tight font-display">
             Our Team. Your Growth Partners.
           </h2>
         </motion.div>
@@ -92,7 +92,7 @@ export default function TeamGrid() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center mt-14"
+          className="text-center mt-10 md:mt-12"
         >
           <Link href="/careers" className="inline-block">
             <motion.button

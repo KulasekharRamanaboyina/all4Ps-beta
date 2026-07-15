@@ -94,6 +94,7 @@ lg:max-w-[340px] text-xs md:text-sm leading-relaxed text-gray-400">
 
 <button
   className="
+    mt-6 md:mt-0
     inline-flex
     w-full
     justify-center
@@ -143,11 +144,12 @@ className="h-full w-full object-cover object-center transition-transform duratio
   className="
     absolute
     inset-0
-    bg-gradient-to-r
+    bg-gradient-to-t
     from-[#07030E]
     via-[#07030E]/45
     via-40%
     to-transparent
+    md:bg-gradient-to-r
   "
 />
 </div>

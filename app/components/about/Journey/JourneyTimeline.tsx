@@ -32,18 +32,18 @@ const milestones = [
 
 export default function JourneyTimeline() {
   return (
-    <section className="relative py-24 px-6 lg:px-12 border-t border-brand-purple/10">
+    <section className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-10 md:mb-16"
         >
           <p className="text-brand-purple text-xs font-semibold tracking-widest uppercase mb-3">
             Our Journey So Far
           </p>
-          <h2 className="text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-5xl font-extrabold text-white tracking-tight">
             From Startup to Growth Partner
           </h2>
         </motion.div>
@@ -64,7 +64,7 @@ export default function JourneyTimeline() {
             <div className="absolute left-[75%] top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-brand-purple/40 shadow-sm shadow-brand-purple/30" />
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
             {milestones.map((m, i) => (
               <motion.div
                 key={i}
@@ -86,7 +86,7 @@ export default function JourneyTimeline() {
                   {/* Badge Circle (Enlarged and Animated) */}
                   <motion.div
                     whileHover={{ scale: 1.05, rotate: 2 }}
-                    className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/30 backdrop-blur-sm shadow-lg shadow-purple-950/40 group-hover:border-brand-purple/60 transition-colors duration-300 animate-node"
+                    className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#0a0a0f] bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/30 backdrop-blur-sm shadow-lg shadow-purple-950/40 group-hover:border-brand-purple/60 transition-colors duration-300 animate-node"
                   >
                     <m.icon className="w-7 h-7 text-brand-purple animate-icon group-hover:text-pink-400 transition-colors duration-500" />
                   </motion.div>

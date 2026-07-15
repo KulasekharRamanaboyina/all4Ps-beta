@@ -668,4 +668,28 @@ ol.custom-blog-list li.custom-counter-item .custom-counter-badge::before {
 
 .animate-kite-float {
   animation: kiteFloat 7s ease-in-out infinite;
+}
+
+/* ================= HERO CANVAS MOBILE SCALING ================= */
+.hero-canvas {
+  transform-origin: center center;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-w: 390px) {
+  .hero-canvas {
+    transform: scale(0.9);
+  }
+}
+
+@media (max-w: 350px) {
+  .hero-canvas {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-w: 320px) {
+  .hero-canvas {
+    transform: scale(0.72);
+  }
 }

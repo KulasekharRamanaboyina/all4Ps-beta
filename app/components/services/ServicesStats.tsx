@@ -2,20 +2,7 @@
 
 import { TrendingUp, Users, Wallet, Rocket } from "lucide-react";
 
-const logos = [
-  "/logos/anscer-logo.jpg",
-  "/logos/anzo-logo.png",
-  "/logos/fixbugs-logo.svg",
-  "/logos/flexli_logo.png",
-  "/logos/kloudlite_io_logo.jpg",
-  "/logos/livease_logo.jpg",
-  "/logos/mothersongroup_logo.jpg",
-  "/logos/panchayath-app-logo.jpg",
-  "/logos/SynergyHomeCare_logo.jpg",
-  "/logos/unbox-robotics_logo.webp",
-  "/logos/XPStays_logo.jpg",
-  "/logos/pinnacle-log.png",
-];
+
 
 const stats = [
   {
@@ -48,35 +35,7 @@ export default function ServicesStats() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* Trusted By - Title */}
-        <div className="text-center mb-8">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-brand-purple">
-            TRUSTED BY AMBITIOUS COMPANIES
-          </p>
-        </div>
 
-        {/* Dark Logo Marquee */}
-        <div className="relative overflow-hidden mb-20 px-2 py-4 rounded-xl bg-black/40 border border-white/5">
-          <div className="absolute left-0 top-0 z-10 h-full w-16 md:w-24 bg-gradient-to-r from-black via-black/80 to-transparent pointer-events-none" />
-          <div className="absolute right-0 top-0 z-10 h-full w-16 md:w-24 bg-gradient-to-l from-black via-black/80 to-transparent pointer-events-none" />
-
-          <div className="overflow-hidden">
-            <div className="flex w-max animate-marquee gap-8 md:gap-12 items-center">
-              {[...logos, ...logos].map((logo, index) => (
-                <div
-                  key={index}
-                  className="flex items-center justify-center min-w-[100px] sm:min-w-[120px] md:min-w-[140px]"
-                >
-                  <img
-                    src={logo}
-                    alt={`Client Logo ${index + 1}`}
-                    className="h-6 sm:h-8 md:h-10 w-auto object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

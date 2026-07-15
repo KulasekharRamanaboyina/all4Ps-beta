@@ -6,11 +6,8 @@ import FAQSection from "@/app/components/FAQSection";
 import { SERVICES, CASE_STUDIES } from "@/app/constants";
 import { Service } from "@/app/types";
 
-// Dynamic modular services components
 import ServicesHero from "@/app/components/services/ServicesHero";
-import ServicesFramework from "@/app/components/services/ServicesFramework";
-import ServicesStats from "@/app/components/services/ServicesStats";
-import ServicesList from "@/app/components/services/ServicesList";
+import ServiceDetailsSection from "@/app/components/services/ServiceDetailsSection";
 import ServicesFeaturedCaseStudy from "@/app/components/services/ServicesFeaturedCaseStudy";
 import ServicesTestimonials from "@/app/components/services/ServicesTestimonials";
 import CtaSection from "@/app/components/cta/CtaSection";
@@ -271,17 +268,8 @@ export default async function ServiceDetail({ params }: PageProps) {
         breadcrumbs={breadcrumbs}
       />
 
-      {/* 2. Framework Pipeline Timeline */}
-      <ServicesFramework
-        title={dynamicFrameworkTitle}
-        steps={dynamicFrameworkSteps}
-      />
-
-      {/* 3. Logos Marquee & Stats Metrics */}
-      <ServicesStats />
-
-      {/* 4. Dynamic List of all 6 Services */}
-      <ServicesList />
+      {/* 2. Detailed overview, capabilities, and outcomes of the service */}
+      <ServiceDetailsSection service={service} />
 
       {/* 5. Featured Case Study layout matching the single wide card mockup */}
       {featuredCaseStudy && (
@@ -298,8 +286,10 @@ export default async function ServiceDetail({ params }: PageProps) {
 
       {/* 8. Customized CTA Bottom banner */}
       <CtaSection
-        title={dynamicCtaDetails.title}
-        subtitle={dynamicCtaDetails.subtitle}
+        title={service.bottomCTA?.heading || dynamicCtaDetails.title}
+        subtitle={service.bottomCTA?.subText || dynamicCtaDetails.subtitle}
+        buttonText={service.bottomCTA?.label}
+        buttonLink={service.bottomCTA?.link}
       />
 
       {/* ================= Service Schema ================= */}

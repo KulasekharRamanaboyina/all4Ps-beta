@@ -5,7 +5,7 @@ import ServiceCard from "@/app/components/home/Services/ServiceCard";
 
 export default function ServicesList() {
   return (
-    <section className="relative bg-[#05030A] py-20 border-t border-white/5 overflow-hidden">
+    <section className="relative bg-transparent py-12 md:py-16 border-t border-white/5 overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/3 left-1/4 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[120px] pointer-events-none" />
