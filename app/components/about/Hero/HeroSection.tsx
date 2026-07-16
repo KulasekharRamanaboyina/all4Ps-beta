@@ -24,13 +24,13 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
   return (
     <section
       ref={ref}
-      className="relative min-h-screen pt-20 pb-12 md:pt-24 px-6 lg:px-12 flex flex-col justify-start items-center overflow-hidden bg-transparent"
+      className="relative min-h-fit md:min-h-screen pt-20 pb-6 md:pb-12 md:pt-24 px-6 lg:px-12 flex flex-col justify-start items-center overflow-hidden bg-transparent"
     >
 
       {/* Scrollable Hero Content Container */}
       <motion.div
         style={{ y, opacity }}
-        className="relative max-w-7xl w-full mx-auto flex flex-col justify-between items-center text-center min-h-[80vh] z-10"
+        className="relative max-w-7xl w-full mx-auto flex flex-col justify-between items-center text-center min-h-fit md:min-h-[80vh] z-10"
       >
         {/* Main Content Wrapper */}
         <div className="flex flex-col items-center w-full">
@@ -103,7 +103,7 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           onClick={handleScrollToFounder}
-          className="flex flex-col items-center gap-3 group cursor-pointer pointer-events-auto pb-4"
+          className="hidden md:flex flex-col items-center gap-3 group cursor-pointer pointer-events-auto pb-4"
         >
           <div
             className="w-10 h-10 rounded-full border flex items-center justify-center transition-all"

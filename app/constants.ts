@@ -9,6 +9,14 @@ import {
   Zap,
   Coffee,
   Globe,
+  MessageSquare,
+  UserCheck,
+  Magnet,
+  Workflow,
+  Send,
+  Settings,
+  Rocket,
+  Shield,
 } from "lucide-react";
 
 import { Service, TeamMember, CaseStudy, JobPosition, BlogPost } from "./types";
@@ -16,220 +24,287 @@ import { Service, TeamMember, CaseStudy, JobPosition, BlogPost } from "./types";
 /* ================= SERVICES ================= */
 
 export const SERVICES: Service[] = [
+  // ROW 1: BUILD AUTHORITY
   {
-    id: "brand-identity",
-    title: "Brand Identity",
-    shortDescription:
-      "Because people connect with what they can immediately recognize and trust.",
-    intro:
-      "Your brand deserves to be seen, recognized, and trusted across every touchpoint.",
-    titleCTA: {
-      label: "Elevate Your Brand ",
-      link: "/contact",
-    },
-    fullDescription:
-      "Your brand deserves presence, recognition, and distinction - we help you build it with intention",
-    features: [
-      "Logo & Visual Design: Memorable and meaningful",
-      "Brand Guidelines: Clear and consistent",
-      "B2B Messaging: Direct and relevant",
-      "Brand Refresh: Modern and aligned",
-    ],
+    id: "brand-strategy",
+    title: "Brand Strategy",
+    shortDescription: "Formulate a strong B2B brand strategy to navigate competitive markets.",
+    fullDescription: "Formulate a strong B2B brand strategy to navigate competitive markets with certainty.",
+    intro: "Formulate a strong B2B brand strategy to navigate competitive markets.",
+    titleCTA: { label: "Define Brand Strategy", link: "/contact" },
+    features: ["Competitor Intelligence Analysis", "Brand Positioning Roadmap"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Improved", value: "Brand Recognition" },
-      { label: "Enhanced", value: "Perceived Value" },
+      { label: "Improved", value: "Market Clarity" },
+      { label: "Higher", value: "Competitive Edge" },
     ],
     outComesHeadingImage: "/images/services/brand-identity.webp",
-    iconName: "PenTool",
-    //case studies in service page
-    caseStudyIds: ["unbox", "panchayath"],
+    iconName: "Target",
+    caseStudyIds: ["unbox", "motherson"],
     bottomCTA: {
-      heading: "Ready to Elevate Your Brand?",
-      subText: "We’re here to help you build momentum and lasting impact.",
-      label: "Let's Build Brand",
-      link: "/contact",
-    },
+      heading: "Ready for a Real Plan?",
+      subText: "Let's build a strategy that actually guides growth.",
+      label: "Start Building",
+      link: "/contact"
+    }
   },
-
   {
-    id: "marketing-strategy",
-    title: "Marketing Strategy",
-    shortDescription:
-      "A plan that understands where you are and where you’re going.",
-    intro:
-      "Good strategy removes uncertainty and guides every decision with intent.",
-    titleCTA: {
-      label: "Define Your  Direction",
-      link: "/contact",
-    },
-    fullDescription:
-      "Your marketing needs a real plan. We build strategies grounded in clarity, data, and confident decision-making.",
-    features: [
-      "Logo & Visual Design: Memorable and meaningful",
-      "Brand Guidelines: Clear and consistent",
-      "B2B Messaging: Direct and relevant",
-      "Brand Refresh: Modern and aligned",
-    ],
+    id: "positioning-messaging",
+    title: "Positioning & Messaging",
+    shortDescription: "Translate deep technical value into crystal-clear messages for B2B buyers.",
+    fullDescription: "Translate deep technical value into crystal-clear messages for B2B buyers that convert.",
+    intro: "Translate deep technical value into crystal-clear messages.",
+    titleCTA: { label: "Clarify Positioning", link: "/contact" },
+    features: ["Core Message Hierarchy", "Technical Pitch Alignment"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Stronger", value: "Pipeline Growth" },
-      { label: "Faster", value: "Time to Market" },
+      { label: "Better", value: "Buyer Engagement" },
+      { label: "Clearer", value: "Value Proposition" },
     ],
-    outComesHeadingImage: "/images/services/marketing-strategy.webp",
-    iconName: "PieChart",
-    //for case studies in service page
-    caseStudyIds: ["motherson", "anscer", "kloudlite"],
-
+    outComesHeadingImage: "/images/services/brand-identity.webp",
+    iconName: "MessageSquare",
+    caseStudyIds: ["motherson", "anscer"],
     bottomCTA: {
-      heading: "Ready to Elevate Your Brand?",
-      subText: "We’re here to help you build momentum and lasting impact.",
-      label: "Let's Build Brand",
-      link: "/contact",
-    },
+      heading: "Ready to Speak Clearly?",
+      subText: "We align your B2B messaging to resolve pipeline roadblocks.",
+      label: "Clarify Now",
+      link: "/contact"
+    }
   },
-
   {
-    id: "growth-marketing",
-    title: "Growth Marketing",
-    shortDescription: "Focused on revenue, not just reach.",
-    intro:
-      "Growth happens when strategy and structure work together efficiently.",
-    titleCTA: {
-      label: "Accelerate Your Growth",
-      link: "/contact",
-    },
-    fullDescription:
-      "Your Growth happens when your funnel is clear, intentional, and built to scale.",
-    features: [
-      "B2B Market Research: Insight that informs",
-      "Competitive Analysis: Know the landscape",
-      "Buyer Journey Mapping: Understand decision-makers",
-      "GTM Strategy: Built to work",
-    ],
+    id: "thought-leadership",
+    title: "Thought Leadership",
+    shortDescription: "Establish founder and executive voices as industry-leading authorities.",
+    fullDescription: "Establish founder and executive voices as industry-leading authorities across B2B spaces.",
+    intro: "Establish founder and executive voices as leading authorities.",
+    titleCTA: { label: "Build Authority", link: "/contact" },
+    features: ["Executive Narrative Building", "PR & Placement Support"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Better", value: "Qualified Leads" },
-      { label: "Efficient", value: "Customer Acquisition" },
+      { label: "Stronger", value: "Brand Trust" },
+      { label: "Higher", value: "Inbound Authority" },
     ],
-    outComesHeadingImage: "/images/services/growth-marketing.webp",
-    iconName: "TrendingUp",
-    //for case studies in service page
-    caseStudyIds: ["xpstays", "synergy"],
-
+    outComesHeadingImage: "/images/services/brand-identity.webp",
+    iconName: "UserCheck",
+    caseStudyIds: ["unbox"],
     bottomCTA: {
-      heading: "Ready for What’s Next?",
-      subText:
-        "We’re here to help you with clarity, data, and decision-making.",
-      label: "Let’s Talk Growth",
-      link: "/contact",
-    },
+      heading: "Ready to Stand Out?",
+      subText: "Position your leadership team as standard-setters in the market.",
+      label: "Get Positioned",
+      link: "/contact"
+    }
   },
-
   {
     id: "content-marketing",
     title: "Content Marketing",
-    shortDescription: "Content designed to inform, engage, and convert.",
-    intro:
-      "Clear, articulate communication crafted to inform and inspire action.",
-    titleCTA: {
-      label: "Enhance Your Communication",
-      link: "/contact",
-    },
-    fullDescription:
-      "Your content should reflect your expertise - clear, meaningful, and crafted to support real decision-making.",
-    features: [
-      "Blogs: Insightful and engaging",
-      "Whitepapers & Case Studies: Built to persuade",
-      "Email Campaigns: Clear and effective",
-      "Social media: Consistent and relevant",
-    ],
+    shortDescription: "Create high-intent content like whitepapers, case studies, and blogs.",
+    fullDescription: "Create high-intent content like whitepapers, case studies, and blogs that drive pipeline.",
+    intro: "Create high-intent content designed to capture interest and convert.",
+    titleCTA: { label: "Accelerate Content", link: "/contact" },
+    features: ["Expert-Driven Content Creation", "Funnel Asset Library Construction"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Higher", value: "User Stickiness" },
-      { label: "Sustained", value: "Demand Through Content" },
+      { label: "Increased", value: "Inbound Pipeline" },
+      { label: "Higher", value: "Content ROI" },
     ],
     outComesHeadingImage: "/images/services/content-marketing.webp",
-    iconName: "Megaphone",
-    //for casestudies in service page
-    caseStudyIds: ["anzo", "kloudlite"],
-
+    iconName: "PenTool",
+    caseStudyIds: ["kloudlite", "anzo"],
     bottomCTA: {
-      heading: "Ready to Improve Your Message?",
-      subText: "We craft content that connects with the right people.",
-      label: "Strengthen Your Message",
-      link: "/contact",
-    },
+      heading: "Ready for Quality Content?",
+      subText: "We write B2B content that connects directly with enterprise decision makers.",
+      label: "Start Producing",
+      link: "/contact"
+    }
   },
 
+  // ROW 2: GENERATE DEMAND
   {
-    id: "seo-sem",
-    title: "SEO & SEM",
-    shortDescription:
-      "Be visible at the exact moment your customers are searching.",
-    intro:
-      "Show up when it matters. 70% of your buyer's journey happens before they talk to you.",
-    titleCTA: {
-      label: "Increase Your Visibility",
-      link: "/contact",
-    },
-    fullDescription:
-      "We help your brand show up in the right places at the right time.",
-    features: [
-      "Keyword Research: Discover high-intent opportunities",
-      "SEO: Strengthen the core",
-      "Link Building: Grow credible authority",
-      "Paid Search & LinkedIn Ads: Reach the right audience",
-    ],
+    id: "demand-generation",
+    title: "Demand Generation",
+    shortDescription: "Build predictable lead capture channels and steady inbound flow.",
+    fullDescription: "Build predictable lead capture channels and steady inbound flow for B2B pipeline growth.",
+    intro: "Build predictable lead capture channels and steady inbound flow.",
+    titleCTA: { label: "Generate Inbound", link: "/contact" },
+    features: ["Inbound Lead Acquisition Engine", "Multi-Channel Program Scaling"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Stronger", value: "Sustained Organic Growth" },
-      { label: "Higher", value: "Lead Efficiency" },
+      { label: "Predictable", value: "Lead Acquisition" },
+      { label: "Enhanced", value: "Funnel Velocity" },
+    ],
+    outComesHeadingImage: "/images/services/growth-marketing.webp",
+    iconName: "Workflow",
+    caseStudyIds: ["unbox", "synergy"],
+    bottomCTA: {
+      heading: "Ready to Capture Real Demand?",
+      subText: "Turn commercial strategy into high-intent inbound opportunities.",
+      label: "Launch Engine",
+      link: "/contact"
+    }
+  },
+  {
+    id: "abm",
+    title: "Account-Based Marketing",
+    shortDescription: "Target high-value enterprise accounts with tailored messaging campaigns.",
+    fullDescription: "Target high-value enterprise accounts with tailored messaging and campaigns.",
+    intro: "Target high-value enterprise accounts with tailored messaging.",
+    titleCTA: { label: "Launch ABM Campaigns", link: "/contact" },
+    features: ["High-Value Target Mapping", "Multi-Touch Sales Sequence Playbooks"],
+    outcomesHeading: "Expected Outcomes",
+    outcomesHeadingMetrics: [
+      { label: "Higher", value: "Contract Values" },
+      { label: "Increased", value: "Sales Conversion" },
+    ],
+    outComesHeadingImage: "/images/services/growth-marketing.webp",
+    iconName: "Target",
+    caseStudyIds: ["unbox", "anscer"],
+    bottomCTA: {
+      heading: "Ready to Target Key Accounts?",
+      subText: "We build and execute high-converting multi-touch ABM playbooks.",
+      label: "Start Targeting",
+      link: "/contact"
+    }
+  },
+  {
+    id: "campaign-execution",
+    title: "Campaign Execution",
+    shortDescription: "Deploy multi-channel marketing campaigns to feed your pipeline.",
+    fullDescription: "Deploy multi-channel marketing campaigns to feed your pipeline with clean opportunities.",
+    intro: "Deploy multi-channel campaigns to generate high-intent pipeline.",
+    titleCTA: { label: "Run Campaigns", link: "/contact" },
+    features: ["Paid Social & Search Execution", "Lead Nurture Flow Operations"],
+    outcomesHeading: "Expected Outcomes",
+    outcomesHeadingMetrics: [
+      { label: "Scalable", value: "Paid Acquisitions" },
+      { label: "Optimized", value: "Cost Per Lead" },
+    ],
+    outComesHeadingImage: "/images/services/growth-marketing.webp",
+    iconName: "Send",
+    caseStudyIds: ["xpstays", "synergy"],
+    bottomCTA: {
+      heading: "Ready to Deploy Campaigns?",
+      subText: "Let us run your paid search, paid social, and lead flows.",
+      label: "Deploy Now",
+      link: "/contact"
+    }
+  },
+  {
+    id: "marketing-automation",
+    title: "Marketing Automation",
+    shortDescription: "Automate marketing operations, scoring, and trigger workflows.",
+    fullDescription: "Automate marketing operations, scoring, and trigger workflows for sales alignment.",
+    intro: "Automate marketing operations and trigger-based nurturing workflows.",
+    titleCTA: { label: "Optimize Automation", link: "/contact" },
+    features: ["Tech Stack Synchronization", "Behavior-Triggered Lead Scoring"],
+    outcomesHeading: "Expected Outcomes",
+    outcomesHeadingMetrics: [
+      { label: "Aligned", value: "Sales & Marketing" },
+      { label: "Reduced", value: "Manual Overhead" },
+    ],
+    outComesHeadingImage: "/images/services/growth-marketing.webp",
+    iconName: "Settings",
+    caseStudyIds: ["kloudlite"],
+    bottomCTA: {
+      heading: "Ready to Automate Growth?",
+      subText: "We configure, clean, and sync your B2B tech stack.",
+      label: "Automate Now",
+      link: "/contact"
+    }
+  },
+
+  // ROW 3: ACCELERATE GROWTH
+  {
+    id: "seo-visibility",
+    title: "SEO & Search Visibility",
+    shortDescription: "Position your brand at the exact moment buyers search for solutions.",
+    fullDescription: "Position your brand at the exact moment B2B buyers search for solutions online.",
+    intro: "Position your brand at the exact moment buyers search for your keywords.",
+    titleCTA: { label: "Optimize SEO", link: "/contact" },
+    features: ["High-Intent Keyword Dominance", "Technical Search Architecture Optimization"],
+    outcomesHeading: "Expected Outcomes",
+    outcomesHeadingMetrics: [
+      { label: "Sustained", value: "Organic Traffic" },
+      { label: "Higher", value: "Domain Authority" },
     ],
     outComesHeadingImage: "/images/services/seo-sem.webp",
     iconName: "Search",
-    //for casestudies in service page
     caseStudyIds: ["synergy", "anzo"],
-
     bottomCTA: {
-      heading: "Ready to Capture High-Intent Traffic?",
-      subText: "We position you where your audience is searching.",
-      label: "Let's Optimize Search",
-      link: "/contact",
-    },
+      heading: "Ready to Dominate Search?",
+      subText: "Show up in high-intent keyword directories and search queries.",
+      label: "Boost Visibility",
+      link: "/contact"
+    }
   },
-
   {
-    id: "website-services",
-    title: "Website Services",
-    shortDescription: "A digital presence you can be proud of.",
-    intro: "Website Services that guide users and support business growth.",
-    titleCTA: {
-      label: "Upgrade Your Website",
-      link: "/contact",
-    },
-    fullDescription:
-      "Your Website is your best salesman. Ours actually closes deals.",
-    features: [
-      "UX/UI Design: Designed for clarity",
-      "Enterprise Development: Built to perform",
-      "Landing Pages: Focused and effective",
-      "CRO: Always improving results",
-    ],
+    id: "website-optimisation",
+    title: "Website Optimisation",
+    shortDescription: "Convert static website traffic into high-value qualified sales meetings.",
+    fullDescription: "Convert static website traffic into high-value qualified sales meetings and signups.",
+    intro: "Convert static website traffic into high-value qualified sales meetings.",
+    titleCTA: { label: "Optimize Website", link: "/contact" },
+    features: ["Conversion Rate Optimisation (CRO)", "Interactive UX/UI Refining"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Optimized", value: "Site Speed" },
-      { label: "Improved", value: "Conversion Rate" },
+      { label: "Improved", value: "Conversion Rates" },
+      { label: "Faster", value: "Loading Performance" },
     ],
     outComesHeadingImage: "/images/services/web-designing.webp",
     iconName: "Monitor",
+    caseStudyIds: ["anzo", "panchayath"],
     bottomCTA: {
-      heading: "Ready to Modernize Your Website?",
-      subText: "We design purposeful, conversion-ready experiences.",
-      label: "Lets Elevate Presence",
-      link: "/contact",
-    },
+      heading: "Ready to Convert Traffic?",
+      subText: "Turn your website into a high-performance sales asset.",
+      label: "Optimize Conversion",
+      link: "/contact"
+    }
   },
+  {
+    id: "analytics-reporting",
+    title: "Analytics & Reporting",
+    shortDescription: "Establish clean attribution loops to trace commercial pipeline ROI.",
+    fullDescription: "Establish clean attribution loops to trace commercial pipeline ROI accurately.",
+    intro: "Establish clean attribution loops to trace commercial pipeline ROI.",
+    titleCTA: { label: "Configure Analytics", link: "/contact" },
+    features: ["GA4 & Attribution Configuration", "Custom Pipeline Dashboards"],
+    outcomesHeading: "Expected Outcomes",
+    outcomesHeadingMetrics: [
+      { label: "Accurate", value: "Marketing Attribution" },
+      { label: "Visible", value: "Pipeline Return" },
+    ],
+    outComesHeadingImage: "/images/services/marketing-strategy.webp",
+    iconName: "PieChart",
+    caseStudyIds: ["xpstays"],
+    bottomCTA: {
+      heading: "Ready to Measure Outcomes?",
+      subText: "Trace pipeline sourcing back to marketing touches.",
+      label: "Setup Attribution",
+      link: "/contact"
+    }
+  },
+  {
+    id: "gtm-execution",
+    title: "GTM Execution",
+    shortDescription: "Scale organic growth, launch products, and expand commercial presence.",
+    fullDescription: "Scale organic growth, launch products, and expand commercial presence seamlessly.",
+    intro: "Scale organic growth, launch products, and enter new markets.",
+    titleCTA: { label: "Run GTM", link: "/contact" },
+    features: ["Product GTM Roadmap Playbooks", "Market Penetration Programs"],
+    outcomesHeading: "Expected Outcomes",
+    outcomesHeadingMetrics: [
+      { label: "Successful", value: "Product Launches" },
+      { label: "Expanded", value: "Market Presence" },
+    ],
+    outComesHeadingImage: "/images/services/marketing-strategy.webp",
+    iconName: "Rocket",
+    caseStudyIds: ["motherson"],
+    bottomCTA: {
+      heading: "Ready to Launch?",
+      subText: "Let's validate and scale your product's commercial footprint.",
+      label: "Launch GTM",
+      link: "/contact"
+    }
+  }
 ];
 
 /* ================= TEAM ================= */
@@ -901,4 +976,12 @@ export const ICONS_MAP: Record<string, any> = {
   Zap,
   Coffee,
   Globe,
+  MessageSquare,
+  UserCheck,
+  Magnet,
+  Workflow,
+  Send,
+  Settings,
+  Rocket,
+  Shield,
 };

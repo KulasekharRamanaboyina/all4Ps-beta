@@ -42,8 +42,8 @@ export default function LatestArticlesSection({
   };
 
   return (
-    <section className="pb-24 px-6 lg:px-12 z-10 max-w-7xl mx-auto">
-      <div className="grid lg:grid-cols-12 gap-12 items-start">
+    <section className="pt-8 pb-24 px-6 lg:px-12 z-10 max-w-7xl mx-auto">
+      <div className="grid lg:grid-cols-12 gap-12">
         
         {/* LEFT: Articles List */}
         <div className="lg:col-span-8">
@@ -60,7 +60,7 @@ export default function LatestArticlesSection({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
-                  className="relative overflow-hidden rounded-2xl bg-[#0d0d14] border border-white/5 p-6 hover:border-brand-purple/20 hover:shadow-2xl transition-all duration-300"
+                  className="relative overflow-hidden border-b border-white/10 pb-8 pt-8 first:pt-0"
                 >
                   <Link href={`/blog/${post.slug}`} className="group flex flex-col md:flex-row gap-6">
                     {/* Image container */}
@@ -73,7 +73,7 @@ export default function LatestArticlesSection({
                         className="object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full">
-                        <span className="text-[10px] text-brand-purple font-bold uppercase tracking-wider">
+                        <span className="text-[10px] text-white font-bold uppercase tracking-wider">
                           {post.category}
                         </span>
                       </div>
@@ -150,10 +150,12 @@ export default function LatestArticlesSection({
         </div>
 
         {/* RIGHT: Sidebar */}
-        <aside className="lg:col-span-4 space-y-8 sticky top-24">
+        <aside className="lg:col-span-4 space-y-8 h-full">
           <AuthorWidget author={author} />
           <NewsletterWidget />
-          <PopularArticlesWidget popularPosts={posts} />
+          <div className="sticky top-28">
+            <PopularArticlesWidget popularPosts={posts} />
+          </div>
         </aside>
 
       </div>

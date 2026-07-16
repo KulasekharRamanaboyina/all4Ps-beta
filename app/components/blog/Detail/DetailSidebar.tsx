@@ -29,18 +29,33 @@ export default function DetailSidebar({ post, relatedPosts, categories }: Detail
     if (!post.body) return [];
 
     if (Array.isArray(post.body)) {
-      // Portable Text body (Sanity)
-      return post.body
-        .filter((block: any) => block._type === "block" && block.style?.startsWith("h"))
-        .map((block: any) => {
-          const text = block.children?.map((c: any) => c.text).join("") || "";
-          const level = parseInt(block.style.replace("h", ""), 10) || 2;
-          return {
-            text,
-            id: slugify(text),
-            level,
-          };
-        });
+      const isMock = post.body.length > 0 && "type" in post.body[0];
+
+      if (isMock) {
+        return post.body
+          .filter((block: any) => block.type === "heading")
+          .map((block: any, idx: number) => {
+            const text = block.text || "";
+            return {
+              text,
+              id: text ? slugify(text) : `h-${idx}`,
+              level: block.level || 2,
+            };
+          });
+      } else {
+        // Portable Text body (Sanity)
+        return post.body
+          .filter((block: any) => block._type === "block" && block.style?.startsWith("h"))
+          .map((block: any) => {
+            const text = block.children?.map((c: any) => c.text).join("") || "";
+            const level = parseInt(block.style.replace("h", ""), 10) || 2;
+            return {
+              text,
+              id: slugify(text),
+              level,
+            };
+          });
+      }
     }
     return [];
   }, [post.body]);
@@ -71,43 +86,11 @@ export default function DetailSidebar({ post, relatedPosts, categories }: Detail
   }, [headings]);
 
   return (
-    <aside className="lg:col-span-4 space-y-8 sticky top-24">
+    <aside className="lg:col-span-4 space-y-8 h-full">
       {/* 1. About the Author */}
       <AuthorWidget author={post.author} />
 
-      {/* 2. Table of Contents */}
-      {headings.length > 0 && (
-        <div className="rounded-2xl border border-white/5 bg-[#0d0d14] p-6">
-          <div className="flex items-center gap-2.5 mb-5 border-b border-white/5 pb-3">
-            <List className="w-4.5 h-4.5 text-brand-purple" />
-            <h3 className="font-bold text-white text-sm">Table of Contents</h3>
-          </div>
-          <nav className="space-y-3.5">
-            {headings.map((h, idx) => (
-              <button
-                key={idx}
-                onClick={() => {
-                  const element = document.getElementById(h.id);
-                  if (element) {
-                    element.scrollIntoView({ behavior: "smooth", block: "start" });
-                  }
-                }}
-                className={`block text-xs text-left transition-colors duration-200 pl-3 border-l-2 hover:text-white ${
-                  h.level === 3 ? "ml-4" : ""
-                } ${
-                  activeId === h.id
-                    ? "border-brand-purple text-white font-bold"
-                    : "border-transparent text-gray-400"
-                }`}
-              >
-                {h.text}
-              </button>
-            ))}
-          </nav>
-        </div>
-      )}
-
-      {/* 3. Related Articles */}
+      {/* 2. Related Articles */}
       {relatedPosts.length > 0 && (
         <div className="rounded-2xl border border-white/5 bg-[#0d0d14] p-6">
           <h3 className="font-bold text-white text-sm mb-5 border-b border-white/5 pb-3">
@@ -146,7 +129,7 @@ export default function DetailSidebar({ post, relatedPosts, categories }: Detail
         </div>
       )}
 
-      {/* 4. Popular Topics */}
+      {/* 3. Popular Topics */}
       {categories.length > 0 && (
         <div className="rounded-2xl border border-white/5 bg-[#0d0d14] p-6">
           <h3 className="font-bold text-white text-sm mb-5 border-b border-white/5 pb-3">
@@ -169,8 +152,42 @@ export default function DetailSidebar({ post, relatedPosts, categories }: Detail
         </div>
       )}
 
-      {/* 5. Newsletter Signup */}
+      {/* 4. Newsletter Signup */}
       <NewsletterWidget />
+
+      {/* 5. Sticky Table of Contents (at the bottom to avoid overlap) */}
+      {headings.length > 0 && (
+        <div className="sticky top-28 hidden lg:block">
+          <div className="rounded-2xl border border-white/5 bg-[#0d0d14]/40 backdrop-blur-md p-6">
+            <div className="flex items-center gap-2.5 mb-5 border-b border-white/5 pb-3">
+              <List className="w-4.5 h-4.5 text-brand-purple" />
+              <h3 className="font-bold text-white text-sm">Table of Contents</h3>
+            </div>
+            <nav className="space-y-3.5">
+              {headings.map((h, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => {
+                    const element = document.getElementById(h.id);
+                    if (element) {
+                       element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }}
+                  className={`block text-xs text-left transition-colors duration-200 pl-3 border-l-2 hover:text-white ${
+                    h.level === 3 ? "ml-4" : ""
+                  } ${
+                    activeId === h.id
+                      ? "border-brand-purple text-white font-bold"
+                      : "border-transparent text-gray-400"
+                  }`}
+                >
+                  {h.text}
+                </button>
+              ))}
+            </nav>
+          </div>
+        </div>
+      )}
     </aside>
   );
 }

@@ -19,7 +19,7 @@ export default function ClientPageUI({ client }: Props) {
       <CaseStudyProse client={client} />
       <CaseStudyMetrics client={client} />
       <RelatedCaseStudies currentId={client.id} />
-      <CtaSection title="Ready to Create Your Success Story?" subtitle="Let's build a strategy that drives real growth." />
+      <CtaSection />
     </div>
   );
 }

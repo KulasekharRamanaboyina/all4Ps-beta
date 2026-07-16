@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin, Twitter, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import { DetailedBlogPost } from "@/app/types";
 import { urlFor } from "@/lib/image";
 
@@ -90,7 +91,7 @@ export function AuthorWidget({ author }: AuthorWidgetProps) {
             target="_blank"
             className="w-8 h-8 rounded-lg bg-white/5 hover:bg-brand-purple/20 border border-white/5 hover:border-brand-purple/30 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
           >
-            <Twitter className="w-4 h-4" />
+            <FaXTwitter className="w-4 h-4" />
           </Link>
         )}
         {displayAuthor.socials?.email && (

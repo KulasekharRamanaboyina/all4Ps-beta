@@ -28,26 +28,34 @@ export default function PortfolioGrid() {
         );
 
   return (
-    <section id="all-case-studies" className="relative bg-[#05030A] py-16 border-b border-white/5 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-brand-purple/5 rounded-full blur-[140px] pointer-events-none" />
+    <section id="all-case-studies" className="relative bg-transparent py-16 border-b border-white/5 overflow-hidden">
+      {/* Dual ambient background glows */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.05),transparent_65%)] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[radial-gradient(circle_at_center,rgba(236,72,153,0.03),transparent_65%)] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         
+        {/* Section Headline */}
+        <div className="text-center mb-8">
+          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-brand-purple mb-3">
+            MORE CASE STUDIES
+          </p>
+        </div>
+
         {/* Filter bar section */}
-        <div className="flex flex-wrap items-center gap-4 mb-16 border-b border-white/5 pb-8 justify-center lg:justify-start">
-          <div className="flex items-center text-xs font-bold text-gray-500 uppercase tracking-widest mr-2 select-none">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 border-b border-white/5 pb-8">
+          <div className="flex items-center text-xs font-bold text-gray-500 uppercase tracking-widest select-none">
             <Filter className="w-3.5 h-3.5 mr-2 text-brand-purple" />
             Filter by:
           </div>
-          <div className="flex flex-wrap gap-2.5">
+          <div className="flex flex-wrap justify-center gap-2">
             {categories.map((cat) => {
               const isActive = activeCategory === cat;
               return (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${
+                  className={`px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 border ${
                     isActive
                       ? "bg-[#800080] border-[#800080] text-white shadow-md shadow-purple-500/20"
                       : "bg-[#0B0813] border-white/10 text-gray-400 hover:border-brand-purple/40 hover:text-white"
@@ -58,13 +66,6 @@ export default function PortfolioGrid() {
               );
             })}
           </div>
-        </div>
-
-        {/* Section Headline */}
-        <div className="text-center lg:text-left mb-12">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-[0.25em] text-brand-purple mb-3">
-            MORE CASE STUDIES
-          </p>
         </div>
 
         {/* Cards Grid */}
@@ -89,7 +90,7 @@ export default function PortfolioGrid() {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     loading="lazy"
                   />
-                  <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-white/10 text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider text-brand-purple select-none">
+                  <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-md border border-white/10 text-[9px] font-extrabold px-2.5 py-1 rounded-full uppercase tracking-wider text-white select-none">
                     {study.category}
                   </div>
                 </Link>
@@ -129,16 +130,7 @@ export default function PortfolioGrid() {
           </div>
         )}
 
-        {/* View All Button */}
-        <div className="flex justify-center mt-16">
-          <Link
-            href="/portfolio"
-            className="group flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-full border border-white/10 hover:border-brand-purple bg-[#0B0813]/60 text-xs font-bold tracking-wider uppercase text-white transition-all duration-300"
-          >
-            View All Case Studies
-            <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-          </Link>
-        </div>
+
 
       </div>
     </section>

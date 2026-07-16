@@ -1,9 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { CASE_STUDIES } from "@/app/constants";
+import { motion } from "framer-motion";
 
 interface RelatedCaseStudiesProps {
   currentId: string;
@@ -20,15 +22,27 @@ export default function RelatedCaseStudies({ currentId }: RelatedCaseStudiesProp
   if (!featuredStudy) return null;
 
   return (
-    <section className="relative bg-[#05030A] py-20 border-t border-white/5">
+    <section className="relative bg-transparent py-20 border-t border-white/5">
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Section Heading */}
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-display mb-10 tracking-tight text-center md:text-left">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl sm:text-3xl font-extrabold text-white font-display mb-10 tracking-tight text-center md:text-left"
+        >
           Case Studies & Resources
-        </h2>
+        </motion.h2>
 
         {/* Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start"
+        >
           {/* Featured Related Card (Left) */}
           <Link
             href={`/portfolio/${featuredStudy.id}`}
@@ -86,7 +100,7 @@ export default function RelatedCaseStudies({ currentId }: RelatedCaseStudiesProp
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

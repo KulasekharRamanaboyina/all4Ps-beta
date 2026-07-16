@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import PortfolioHero from "@/app/components/portfolio/PortfolioHero";
-import PortfolioStatsRibbon from "@/app/components/portfolio/PortfolioStatsRibbon";
 import PortfolioFeatured from "@/app/components/portfolio/PortfolioFeatured";
 import PortfolioGrid from "@/app/components/portfolio/PortfolioGrid";
 import ServicesTestimonials from "@/app/components/services/ServicesTestimonials";
@@ -47,10 +46,7 @@ export default function PortfolioPage() {
       {/* 1. Hero Landing Section */}
       <PortfolioHero />
 
-      {/* 2. Horizontal Metrics ribbon bar */}
-      <PortfolioStatsRibbon />
-
-      {/* 3. Featured Case Study visual player card block */}
+      {/* 2. Featured Case Study visual player card block */}
       <PortfolioFeatured />
 
       {/* 4. Filterable Grid list of remaining case studies */}
@@ -62,8 +58,8 @@ export default function PortfolioPage() {
       {/* 6. Delivering Impact 4-column summary section */}
       <PortfolioDeliveringImpact />
 
-      {/* 7. Starry Footer Success banner CTA */}
-      <CtaSection title="Ready to Create Your Success Story?" subtitle="Let's build a strategy that drives real growth." />
+      {/* 6. Starry Footer Success banner CTA */}
+      <CtaSection />
 
       {/* ================= Portfolio Collection Schema ================= */}
       <script

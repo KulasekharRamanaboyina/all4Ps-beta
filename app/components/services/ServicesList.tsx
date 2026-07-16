@@ -26,7 +26,7 @@ export default function ServicesList() {
         </div>
 
         {/* Services Grid (Reuses Home page ServiceCard component for identical animations and styles) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {SERVICES.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}

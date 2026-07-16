@@ -218,7 +218,7 @@ export default function BlogListingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-transparent text-white">
       {/* Background Accent Gradients */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-brand-purple/10 blur-[120px] pointer-events-none z-0" />
       <div className="absolute top-[40%] left-0 w-[500px] h-[500px] rounded-full bg-purple-900/5 blur-[100px] pointer-events-none z-0" />

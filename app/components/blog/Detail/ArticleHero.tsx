@@ -7,11 +7,11 @@ import {
   Calendar,
   Clock,
   Linkedin,
-  Twitter,
   Facebook,
   Link as LinkIcon,
   ChevronRight,
 } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 import { DetailedBlogPost } from "@/app/types";
 import { getImageUrl } from "@/lib/image";
 import { urlFor } from "@/lib/image";
@@ -143,7 +143,7 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-white/5 hover:bg-brand-purple/20 border border-white/5 hover:border-brand-purple/35 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300"
               >
-                <Twitter className="w-4 h-4" />
+                <FaXTwitter className="w-4 h-4" />
               </a>
               <a
                 href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
@@ -168,16 +168,13 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
           </div>
 
           {/* Hero Right image */}
-          <div className="lg:col-span-5 relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/30 to-transparent rounded-3xl blur-xl opacity-40 pointer-events-none" />
-            <div className="relative aspect-[16/10] lg:aspect-[4/3] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <Image
+          <div className="lg:col-span-5 relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/40 to-fuchsia-500/10 rounded-3xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500 pointer-events-none" />
+            <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-500 group-hover:border-brand-purple/30">
+              <img
                 src={getImageUrl(post)}
                 alt={post.title}
-                fill
-                sizes="(max-w-768px) 100vw, 500px"
-                className="object-cover"
-                priority
+                className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
               />
             </div>
           </div>

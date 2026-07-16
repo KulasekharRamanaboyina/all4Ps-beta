@@ -16,33 +16,43 @@ const slugify = (text: string) => {
     .replace(/\s+/g, "-");
 };
 
+const getChildrenText = (children: any): string => {
+  if (!children) return "";
+  if (typeof children === "string") return children;
+  if (Array.isArray(children)) {
+    return children.map(getChildrenText).join("");
+  }
+  if (children.props && children.props.children) {
+    return getChildrenText(children.props.children);
+  }
+  return "";
+};
+
 export default function ArticleBody({ post }: ArticleBodyProps) {
   // PortableText components overrides
   const portableTextComponents = {
     block: {
       h2: ({ children }: any) => {
-        const text = React.Children.toArray(children).join("");
-        const id = slugify(text);
+        const id = slugify(getChildrenText(children));
         return (
           <h2
             id={id}
-            className="text-2xl sm:text-3xl font-extrabold mt-12 mb-6 text-white scroll-mt-24"
+            className="text-2xl sm:text-3xl font-extrabold mt-12 mb-6 text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-fuchsia-400 scroll-mt-24 w-fit"
           >
             {children}
           </h2>
         );
       },
       h3: ({ children }: any) => {
-        const text = React.Children.toArray(children).join("");
-        const id = slugify(text);
+        const id = slugify(getChildrenText(children));
         return (
-          <h3 id={id} className="text-xl sm:text-2xl font-bold mt-8 mb-4 text-white scroll-mt-24">
+          <h3 id={id} className="text-xl sm:text-2xl font-bold mt-8 mb-4 text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-fuchsia-400 scroll-mt-24 w-fit">
             {children}
           </h3>
         );
       },
       h4: ({ children }: any) => (
-        <h4 className="text-lg font-bold mt-6 mb-3 text-white">{children}</h4>
+        <h4 className="text-lg font-bold mt-6 mb-3 text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-fuchsia-400 w-fit">{children}</h4>
       ),
       normal: ({ children }: any) => (
         <p className="text-gray-300 text-base leading-8 mb-6">{children}</p>
@@ -101,7 +111,7 @@ export default function ArticleBody({ post }: ArticleBodyProps) {
                   <h2
                     key={idx}
                     id={tagId}
-                    className="text-2xl sm:text-3xl font-extrabold mt-12 mb-6 text-white scroll-mt-24"
+                    className="text-2xl sm:text-3xl font-extrabold mt-12 mb-6 text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-fuchsia-400 scroll-mt-24 w-fit"
                   >
                     {block.text}
                   </h2>
@@ -111,7 +121,7 @@ export default function ArticleBody({ post }: ArticleBodyProps) {
                 <h3
                   key={idx}
                   id={tagId}
-                  className="text-xl sm:text-2xl font-bold mt-8 mb-4 text-white scroll-mt-24"
+                  className="text-xl sm:text-2xl font-bold mt-8 mb-4 text-transparent bg-clip-text bg-gradient-to-r from-brand-purple to-fuchsia-400 scroll-mt-24 w-fit"
                 >
                   {block.text}
                 </h3>

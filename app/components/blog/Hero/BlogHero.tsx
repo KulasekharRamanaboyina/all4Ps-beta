@@ -38,7 +38,7 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
           <span className="inline-flex items-center rounded-full border border-brand-purple/30 bg-brand-purple/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-brand-purple mb-6">
             Insights & Ideas
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight mb-6 font-display">
             Insights That Drive{" "}
             <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
               Smarter Growth.
@@ -49,81 +49,76 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
           </p>
         </motion.div>
 
-        {/* Right Column - Featured Card */}
+        {/* Right Column - Featured Image Frame */}
         {featuredPost && (
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="lg:col-span-6"
+            className="lg:col-span-6 w-full"
           >
-            <Link href={`/blog/${featuredPost.slug}`} className="group block">
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0d0d14] to-[#05030a] border border-brand-purple/20 p-8 shadow-2xl transition-all duration-300 hover:border-brand-purple/40 hover:shadow-purple-950/20">
-                {/* Glowing background */}
-                <div className="absolute top-0 right-0 w-80 h-80 bg-brand-purple/5 rounded-full blur-3xl pointer-events-none group-hover:bg-brand-purple/10 transition-colors duration-500" />
+            <Link href={`/blog/${featuredPost.slug}`} className="group block relative w-full space-y-4">
+              {/* Glow backdrop effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/30 to-transparent rounded-3xl blur-xl opacity-40 pointer-events-none" />
+              
+              {/* Image Frame */}
+              <div className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-300 group-hover:border-brand-purple/40">
+                <Image
+                  src={getImageUrl(featuredPost)}
+                  alt={featuredPost.title}
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 600px"
+                  className="object-cover transition-transform duration-500 group-hover:scale-102"
+                />
                 
-                {/* Background Image Overlay on right side */}
-                <div className="absolute right-0 bottom-0 top-0 w-1/3 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
-                  <Image
-                    src={getImageUrl(featuredPost)}
-                    alt="Featured Post Graphic"
-                    fill
-                    sizes="300px"
-                    className="object-cover"
-                  />
+                {/* Glassmorphic Featured Badge overlay */}
+                <div className="absolute top-4 left-4 bg-brand-purple/20 backdrop-blur-md border border-brand-purple/35 text-white text-[10px] font-bold tracking-widest uppercase px-3.5 py-1.5 rounded-full shadow-lg z-10">
+                  Featured Article
                 </div>
 
-                <div className="relative z-10 flex flex-col justify-between h-full min-h-[300px]">
-                  <div>
-                    <span className="inline-block bg-brand-purple text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-6">
-                      Featured Article
-                    </span>
-                    <h2 className="text-2xl sm:text-3xl font-bold leading-tight group-hover:text-brand-purple transition-colors duration-300 mb-4">
-                      {featuredPost.title}
-                    </h2>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6 max-w-md line-clamp-3">
-                      {featuredPost.excerpt}
-                    </p>
-                  </div>
-
-                  <div className="flex flex-wrap items-center justify-between gap-4 mt-6 border-t border-brand-purple/15 pt-6">
-                    {/* Author */}
-                    <div className="flex items-center gap-3">
-                      <div className="relative w-10 h-10 rounded-full overflow-hidden border border-brand-purple/30 bg-gray-900">
-                        <Image
-                          src={getAuthorAvatar(featuredPost.author)}
-                          alt={featuredPost.author.name}
-                          fill
-                          sizes="40px"
-                          className="object-cover object-top"
-                        />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold">{featuredPost.author.name}</p>
-                        <p className="text-xs text-gray-400">{featuredPost.author.role}</p>
-                      </div>
-                    </div>
-
-                    {/* Meta */}
-                    <div className="flex items-center gap-4 text-xs text-gray-400">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-brand-purple" />
-                        {featuredPost.publishedAt}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3.5 h-3.5 text-brand-purple" />
-                        {featuredPost.readTime}
-                      </span>
-                      <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center bg-white/5 group-hover:bg-brand-purple group-hover:border-brand-purple transition-all duration-300">
-                        <ArrowRight className="w-4 h-4 text-white" />
-                      </div>
-                    </div>
-                  </div>
+                {/* Bottom-right glassmorphic hover button */}
+                <div className="absolute bottom-4 right-4 w-9 h-9 rounded-full bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-center text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 shadow-lg">
+                  <ArrowRight className="w-4 h-4 text-brand-purple" />
                 </div>
+              </div>
+
+              {/* Metadata (Author, Published Date, Read Time) below the image */}
+              <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1 text-xs text-gray-400">
+                {/* Author */}
+                <div className="flex items-center gap-2">
+                  <div className="relative w-7 h-7 rounded-full overflow-hidden border border-white/10 group-hover:border-brand-purple/50 bg-gray-900 shrink-0 transition-colors duration-300">
+                    <Image
+                      src={getAuthorAvatar(featuredPost.author)}
+                      alt={featuredPost.author.name}
+                      fill
+                      sizes="28px"
+                      className="object-cover object-top"
+                    />
+                  </div>
+                  <span className="font-semibold text-white group-hover:text-brand-purple transition-colors duration-300">
+                    {featuredPost.author.name}
+                  </span>
+                </div>
+
+                <div className="w-1.5 h-1.5 rounded-full bg-white/10 hidden sm:block" />
+
+                <span className="flex items-center gap-1.5 group-hover:text-gray-300 transition-colors duration-300">
+                  <Calendar className="w-3.5 h-3.5 text-brand-purple/70 group-hover:text-brand-purple transition-colors duration-300" />
+                  {featuredPost.publishedAt}
+                </span>
+
+                <div className="w-1.5 h-1.5 rounded-full bg-white/10 hidden sm:block" />
+
+                <span className="flex items-center gap-1.5 group-hover:text-gray-300 transition-colors duration-300">
+                  <Clock className="w-3.5 h-3.5 text-brand-purple/70 group-hover:text-brand-purple transition-colors duration-300" />
+                  {featuredPost.readTime}
+                </span>
               </div>
             </Link>
           </motion.div>
         )}
+
       </div>
     </section>
   );

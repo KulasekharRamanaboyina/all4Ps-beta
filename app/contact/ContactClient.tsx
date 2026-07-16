@@ -114,7 +114,7 @@ export default function ContactClient() {
             </span>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight text-white">
               Let's Build What's{" "}
-              <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent block sm:inline">
+              <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent block sm:inline">
                 Next.
               </span>
             </h1>
@@ -227,7 +227,7 @@ export default function ContactClient() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="w-full bg-gradient-to-r from-brand-purple to-pink-500 hover:opacity-90 text-white font-bold py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(168,85,247,0.25)] hover:scale-[1.01] flex items-center justify-center gap-2 text-sm"
+                  className="w-full bg-gradient-to-r from-brand-purple to-fuchsia-400 hover:opacity-90 text-white font-bold py-3 rounded-xl transition-all shadow-[0_0_20px_rgba(168,85,247,0.25)] hover:scale-[1.01] flex items-center justify-center gap-2 text-sm"
                 >
                   {loading ? (
                     <div className="w-5 h-5 rounded-full border-t-2 border-white border-solid animate-spin" />
@@ -506,7 +506,7 @@ export default function ContactClient() {
         <div className="text-center mb-5">
           <p className="text-xs text-gray-400 uppercase tracking-widest font-bold">
             Trusted by{" "}
-            <span className="bg-gradient-to-r from-brand-purple to-pink-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
               Growth-Focused
             </span>{" "}
             Companies

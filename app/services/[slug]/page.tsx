@@ -285,12 +285,7 @@ export default async function ServiceDetail({ params }: PageProps) {
       )}
 
       {/* 8. Customized CTA Bottom banner */}
-      <CtaSection
-        title={service.bottomCTA?.heading || dynamicCtaDetails.title}
-        subtitle={service.bottomCTA?.subText || dynamicCtaDetails.subtitle}
-        buttonText={service.bottomCTA?.label}
-        buttonLink={service.bottomCTA?.link}
-      />
+      <CtaSection />
 
       {/* ================= Service Schema ================= */}
       <script

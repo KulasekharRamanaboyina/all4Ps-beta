@@ -13,8 +13,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        display: ["Manrope", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-manrope)", "sans-serif"],
       },
     },
   },

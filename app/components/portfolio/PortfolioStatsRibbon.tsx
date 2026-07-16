@@ -44,13 +44,13 @@ export default function PortfolioStatsRibbon() {
   return (
     <section className="relative bg-[#05030A] py-12 border-y border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-4 items-start divide-y md:divide-y-0 md:divide-x divide-white/5">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap lg:grid lg:grid-cols-5 gap-8 lg:gap-4 items-start divide-y sm:divide-y-0 lg:divide-x divide-white/5">
           {stats.map((stat, idx) => {
             const IconComponent = stat.icon;
             return (
               <div
                 key={idx}
-                className="group flex flex-col items-center md:items-start text-center md:text-left pt-6 md:pt-0 md:px-6 first:pt-0 first:pl-0"
+                className="group flex flex-col items-center lg:items-start text-center lg:text-left pt-6 sm:pt-0 sm:px-4 lg:px-6 first:pt-0 first:pl-0 sm:w-[45%] lg:w-auto"
               >
                 {/* Icon wrapper */}
                 <div className="w-10 h-10 rounded-xl bg-[#0B0813] border border-white/5 flex items-center justify-center mb-4 transition-colors group-hover:border-brand-purple/20">

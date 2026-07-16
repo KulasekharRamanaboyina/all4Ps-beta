@@ -42,7 +42,7 @@ export default function FounderCard() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent" />
               </div>
               <div className="mt-6 pl-2">
-                <p className={`${caveat.className} text-4xl text-brand-purple font-medium tracking-wide`}>
+                <p className={`${caveat.className} text-4xl text-white font-medium tracking-wide`}>
                   K. Pavani
                 </p>
                 <p className="text-xs text-brand-purple/80 font-bold uppercase tracking-wider mt-1.5">

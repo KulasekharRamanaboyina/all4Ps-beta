@@ -24,7 +24,7 @@ export default function BlogReaderClient({
   categories,
 }: BlogReaderClientProps) {
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-transparent text-white">
       {/* Background Glows */}
       <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-brand-purple/10 rounded-full blur-[150px] pointer-events-none" />
 
