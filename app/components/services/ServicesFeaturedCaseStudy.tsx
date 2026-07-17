@@ -8,6 +8,17 @@ interface ServicesFeaturedCaseStudyProps {
   caseStudy: CaseStudy;
 }
 
+const CASE_STUDY_METRICS: Record<string, { value: string; label: string }> = {
+  unbox: { value: "+312%", label: "Organic Growth" },
+  motherson: { value: "FY26", label: "GTM Launched" },
+  anscer: { value: "$1M+", label: "Revenue Sourced" },
+  anzo: { value: "+30%", label: "Traffic Uplift" },
+  kloudlite: { value: "Juspay", label: "Enterprise Wins" },
+  synergy: { value: "~100", label: "Google Calls/Unit" },
+  xpstays: { value: "7.5x", label: "Campaign ROAS" },
+  panchayath: { value: "1,000+", label: "App Installs" },
+};
+
 export default function ServicesFeaturedCaseStudy({ caseStudy }: ServicesFeaturedCaseStudyProps) {
   // Safe metadata mapper to display professional copywriting matching mockup
   const getCaseStudyMeta = (cs: CaseStudy) => {
@@ -79,6 +90,7 @@ export default function ServicesFeaturedCaseStudy({ caseStudy }: ServicesFeature
   };
 
   const meta = getCaseStudyMeta(caseStudy);
+  const statMetric = CASE_STUDY_METRICS[caseStudy.id] || { value: "Impact", label: "Delivered" };
 
   return (
     <section className="relative bg-transparent text-white py-20 border-t border-white/5 overflow-hidden">
@@ -109,70 +121,70 @@ export default function ServicesFeaturedCaseStudy({ caseStudy }: ServicesFeature
           </Link>
         </div>
 
-        {/* Wide Featured Card */}
-        <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#0B0813]/60 p-6 md:p-8 transition-all duration-300 hover:border-brand-purple/20 hover:shadow-[0_12px_30px_rgba(128,0,128,0.08)]">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(128,0,128,0.04),transparent_50%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+        {/* Cardless Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr] gap-8 lg:gap-14 items-center">
           
-          <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1.8fr] gap-8 items-center">
+          {/* Left Column: Image */}
+          <Link
+            href={`/portfolio/${caseStudy.id}`}
+            className="relative block aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/5 hover:border-brand-purple/20 transition-colors duration-300 group"
+          >
+            <img
+              src={caseStudy.imageUrl}
+              alt={caseStudy.client}
+              className="w-full h-full object-cover transition-transform duration-750 group-hover:scale-[1.02]"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-45" />
+          </Link>
+
+          {/* Right Column: Case study details (Text-based, zero boxes) */}
+          <div className="flex flex-col justify-between h-full space-y-5 text-left">
             
-            {/* Left Column: Image */}
-            <Link
-              href={`/portfolio/${caseStudy.id}`}
-              className="relative block aspect-[16/10] w-full overflow-hidden rounded-2xl border border-white/5"
-            >
-              <img
-                src={caseStudy.imageUrl}
-                alt={caseStudy.client}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-40" />
-            </Link>
+            {/* Header Details */}
+            <div className="space-y-1.5">
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white font-display tracking-tight leading-tight">
+                {caseStudy.client}
+              </h3>
+              <p className="text-xs text-gray-500 font-bold uppercase tracking-[0.15em] font-mono">
+                {caseStudy.industry}
+              </p>
+              {/* Highlight outcome stat as a premium gradient sub-headline */}
+              <p className="text-base sm:text-lg lg:text-xl font-extrabold bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent pt-1 leading-normal">
+                {meta.outcome}
+              </p>
+            </div>
+            
+            {/* Open Metadata List (Challenge, Approach, Execution) */}
+            <div className="border-t border-white/10 pt-6 space-y-4">
+              {[
+                { label: "Challenge", value: meta.challenge },
+                { label: "Approach",  value: meta.approach  },
+                { label: "Execution", value: meta.execution },
+              ].map(({ label, value }) => (
+                <div key={label} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-6">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] w-24 shrink-0 sm:pt-0.5 text-gray-500">
+                    {label}
+                  </span>
+                  <p className="text-sm leading-relaxed text-gray-300 font-medium">
+                    {value}
+                  </p>
+                </div>
+              ))}
+            </div>
 
-            {/* Right Column: Case study grid info */}
-            <div className="flex flex-col justify-between h-full space-y-6">
-              
-              {/* Header */}
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-display mb-1 group-hover:text-brand-purple transition-colors">
-                  {caseStudy.client}
-                </h3>
-                <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">
-                  {caseStudy.industry}
-                </p>
-                           {/* 4-row metadata breakdown */}
-              <div className="border-t border-white/5 pt-4 space-y-3">
-                {[
-                  { label: "Challenge", value: meta.challenge },
-                  { label: "Approach",  value: meta.approach  },
-                  { label: "Execution", value: meta.execution },
-                  { label: "Outcome",   value: meta.outcome,  highlight: true },
-                ].map(({ label, value, highlight }) => (
-                  <div key={label} className="flex items-start gap-3">
-                    <span className="shrink-0 mt-0.5 text-[9px] font-bold uppercase tracking-wider text-brand-purple bg-brand-purple/10 border border-brand-purple/20 rounded px-2 py-0.5 w-[72px] text-center">
-                      {label}
-                    </span>
-                    <p className={`text-[11px] leading-relaxed font-medium ${highlight ? "text-white font-semibold" : "text-gray-400"}`}>
-                      {value}
-                    </p>
-                  </div>
-                ))}
-              </div>
-              </div>
-
-              {/* Action Link */}
-              <div className="pt-2">
-                <Link
-                  href={`/portfolio/${caseStudy.id}`}
-                  className="group/btn inline-flex items-center gap-1.5 text-xs font-bold text-brand-purple group-hover:text-purple-400 transition"
-                >
-                  Read Case Study
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-1" />
-                </Link>
-              </div>
-
+            {/* Clean Text Action Link */}
+            <div className="pt-2">
+              <Link
+                href={`/portfolio/${caseStudy.id}`}
+                className="group/btn inline-flex items-center gap-2 text-sm font-extrabold text-brand-purple hover:text-fuchsia-400 transition-colors duration-300 border-b border-brand-purple/10 hover:border-fuchsia-400/30 pb-0.5"
+              >
+                <span>Read Case Study</span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+              </Link>
             </div>
 
           </div>
+
         </div>
 
       </div>

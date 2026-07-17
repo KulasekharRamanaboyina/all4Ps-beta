@@ -41,43 +41,31 @@ md:text-3xl lg:text-4xl leading-tight font-bold text-white">
 
 <div className="mb-4 md:mb-5 space-y-2 md:space-y-2.5">
 
-  <div className="flex items-center gap-3">
-    <h3 className="w-20
-md:w-24
-text-xl
-md:text-2xl lg:text-3xl font-extrabold text-brand-purple">
+  <div className="flex items-center gap-4 sm:gap-6">
+    <h3 className="w-24 md:w-28 lg:w-32 text-xl md:text-2xl lg:text-3xl font-extrabold text-brand-purple shrink-0">
       +312%
     </h3>
 
-<p className="flex-1 text-sm
-md:text-base font-medium text-white">
+    <p className="flex-1 text-sm md:text-base font-medium text-white">
       Organic Growth
     </p>
   </div>
 
-  <div className="flex items-center gap-3">
-<h3 className="w-20
-md:w-24
-text-xl
-md:text-2xl lg:text-3xl font-extrabold text-brand-purple">
+  <div className="flex items-center gap-4 sm:gap-6">
+    <h3 className="w-24 md:w-28 lg:w-32 text-xl md:text-2xl lg:text-3xl font-extrabold text-brand-purple shrink-0">
         +280%
     </h3>
 
-<p className="flex-1 text-sm
-md:text-base font-medium text-white">
+    <p className="flex-1 text-sm md:text-base font-medium text-white">
       Qualified Leads
     </p>
   </div>
 
-  <div className="flex items-center gap-3">
-<h3 className="w-20
-md:w-24
-text-xl
-md:text-2xl lg:text-3xl font-extrabold text-brand-purple">      ₹32Cr+
+  <div className="flex items-center gap-4 sm:gap-6">
+    <h3 className="w-24 md:w-28 lg:w-32 text-xl md:text-2xl lg:text-3xl font-extrabold text-brand-purple shrink-0">      ₹32Cr+
     </h3>
 
-<p className="flex-1 text-sm
-md:text-base font-medium text-white">
+    <p className="flex-1 text-sm md:text-base font-medium text-white">
       Pipeline Influenced
     </p>
   </div>

@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Formulate a strong B2B brand strategy to navigate competitive markets with certainty.",
     intro: "Formulate a strong B2B brand strategy to navigate competitive markets.",
     titleCTA: { label: "Define Brand Strategy", link: "/contact" },
-    features: ["Competitor Intelligence Analysis", "Brand Positioning Roadmap"],
+    features: ["Competitor Intelligence Analysis", "Brand Positioning Roadmap", "Ideal Customer ICP Definition", "Market Opportunity Mapping"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Improved", value: "Market Clarity" },
@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Translate deep technical value into crystal-clear messages for B2B buyers that convert.",
     intro: "Translate deep technical value into crystal-clear messages.",
     titleCTA: { label: "Clarify Positioning", link: "/contact" },
-    features: ["Core Message Hierarchy", "Technical Pitch Alignment"],
+    features: ["Core Message Hierarchy", "Technical Pitch Alignment", "Buyer Persona Playbooks", "Sales Conversation Guides"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Better", value: "Buyer Engagement" },
@@ -78,7 +78,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Establish founder and executive voices as industry-leading authorities across B2B spaces.",
     intro: "Establish founder and executive voices as leading authorities.",
     titleCTA: { label: "Build Authority", link: "/contact" },
-    features: ["Executive Narrative Building", "PR & Placement Support"],
+    features: ["Executive Narrative Building", "PR & Placement Support", "LinkedIn Platform Domination", "Keynote & Event Briefing"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Stronger", value: "Brand Trust" },
@@ -101,7 +101,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Create high-intent content like whitepapers, case studies, and blogs that drive pipeline.",
     intro: "Create high-intent content designed to capture interest and convert.",
     titleCTA: { label: "Accelerate Content", link: "/contact" },
-    features: ["Expert-Driven Content Creation", "Funnel Asset Library Construction"],
+    features: ["Expert-Driven Content Creation", "Funnel Asset Library Construction", "Technical Case Study Production", "Multi-Channel Distribution Strategy"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Increased", value: "Inbound Pipeline" },
@@ -126,7 +126,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Build predictable lead capture channels and steady inbound flow for B2B pipeline growth.",
     intro: "Build predictable lead capture channels and steady inbound flow.",
     titleCTA: { label: "Generate Inbound", link: "/contact" },
-    features: ["Inbound Lead Acquisition Engine", "Multi-Channel Program Scaling"],
+    features: ["Inbound Lead Acquisition Engine", "Multi-Channel Program Scaling", "Paid Retargeting Architecture", "High-Converting Landing Page Design"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Predictable", value: "Lead Acquisition" },
@@ -149,7 +149,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Target high-value enterprise accounts with tailored messaging and campaigns.",
     intro: "Target high-value enterprise accounts with tailored messaging.",
     titleCTA: { label: "Launch ABM Campaigns", link: "/contact" },
-    features: ["High-Value Target Mapping", "Multi-Touch Sales Sequence Playbooks"],
+    features: ["High-Value Target Mapping", "Multi-Touch Sales Sequence Playbooks", "Tier 1 Personalized Landing Pages", "ABM Orchestration & Reporting"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Higher", value: "Contract Values" },
@@ -172,7 +172,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Deploy multi-channel marketing campaigns to feed your pipeline with clean opportunities.",
     intro: "Deploy multi-channel campaigns to generate high-intent pipeline.",
     titleCTA: { label: "Run Campaigns", link: "/contact" },
-    features: ["Paid Social & Search Execution", "Lead Nurture Flow Operations"],
+    features: ["Paid Social & Search Execution", "Lead Nurture Flow Operations", "A/B Creative Experimentation", "Budget Optimization & Allocation"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Scalable", value: "Paid Acquisitions" },
@@ -195,7 +195,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Automate marketing operations, scoring, and trigger workflows for sales alignment.",
     intro: "Automate marketing operations and trigger-based nurturing workflows.",
     titleCTA: { label: "Optimize Automation", link: "/contact" },
-    features: ["Tech Stack Synchronization", "Behavior-Triggered Lead Scoring"],
+    features: ["Tech Stack Synchronization", "Behavior-Triggered Lead Scoring", "CRM Lifecycle Mapping", "Automated Sequence Implementation"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Aligned", value: "Sales & Marketing" },
@@ -220,7 +220,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Position your brand at the exact moment B2B buyers search for solutions online.",
     intro: "Position your brand at the exact moment buyers search for your keywords.",
     titleCTA: { label: "Optimize SEO", link: "/contact" },
-    features: ["High-Intent Keyword Dominance", "Technical Search Architecture Optimization"],
+    features: ["High-Intent Keyword Dominance", "Technical Search Architecture Optimization", "Authority Backlink Acquisition", "Organic CTR Enhancement Audits"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Sustained", value: "Organic Traffic" },
@@ -243,7 +243,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Convert static website traffic into high-value qualified sales meetings and signups.",
     intro: "Convert static website traffic into high-value qualified sales meetings.",
     titleCTA: { label: "Optimize Website", link: "/contact" },
-    features: ["Conversion Rate Optimisation (CRO)", "Interactive UX/UI Refining"],
+    features: ["Conversion Rate Optimisation (CRO)", "Interactive UX/UI Refining", "Page Speed & Core Web Vitals Optimization", "Form Friction & Drop-Off Analysis"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Improved", value: "Conversion Rates" },
@@ -266,7 +266,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Establish clean attribution loops to trace commercial pipeline ROI accurately.",
     intro: "Establish clean attribution loops to trace commercial pipeline ROI.",
     titleCTA: { label: "Configure Analytics", link: "/contact" },
-    features: ["GA4 & Attribution Configuration", "Custom Pipeline Dashboards"],
+    features: ["GA4 & Attribution Configuration", "Custom Pipeline Dashboards", "Multi-Touch Revenue Attribution Modeling", "Pipeline Bottleneck Diagnostics"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Accurate", value: "Marketing Attribution" },
@@ -289,7 +289,7 @@ export const SERVICES: Service[] = [
     fullDescription: "Scale organic growth, launch products, and expand commercial presence seamlessly.",
     intro: "Scale organic growth, launch products, and enter new markets.",
     titleCTA: { label: "Run GTM", link: "/contact" },
-    features: ["Product GTM Roadmap Playbooks", "Market Penetration Programs"],
+    features: ["Product GTM Roadmap Playbooks", "Market Penetration Programs", "Alpha/Beta Launch Management", "Sales Team Enablement Toolkits"],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
       { label: "Successful", value: "Product Launches" },
