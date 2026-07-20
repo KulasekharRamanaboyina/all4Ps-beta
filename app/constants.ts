@@ -28,15 +28,24 @@ export const SERVICES: Service[] = [
   {
     id: "brand-strategy",
     title: "Brand Strategy",
-    shortDescription: "Formulate a strong B2B brand strategy to navigate competitive markets.",
-    fullDescription: "Formulate a strong B2B brand strategy to navigate competitive markets with certainty.",
-    intro: "Formulate a strong B2B brand strategy to navigate competitive markets.",
+    heroHighlight: "That Drives Business Growth.",
+    shortDescription:
+      "Build a strong B2B marketing strategy that differentiates your brand and drives growth.",
+    fullDescription:
+      "Develop a strategic brand foundation that positions your business for sustainable growth.",
+    intro:
+      "Build a strong B2B brand strategy that differentiates your business, clarifies your positioning, and creates a foundation for sustainable growth.",
     titleCTA: { label: "Define Brand Strategy", link: "/contact" },
-    features: ["Competitor Intelligence Analysis", "Brand Positioning Roadmap", "Ideal Customer ICP Definition", "Market Opportunity Mapping"],
+    features: [
+      "Brand Positioning Strategy",
+      "Competitive Market Analysis ",
+      "Brand Messaging Framework",
+      "Market Opportunity Mapping",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Improved", value: "Market Clarity" },
-      { label: "Higher", value: "Competitive Edge" },
+      { label: "Improved", value: "Brand Positioning" },
+      { label: "Higher", value: "Customer Trust" },
     ],
     outComesHeadingImage: "/images/services/brand-identity.webp",
     iconName: "Target",
@@ -45,21 +54,30 @@ export const SERVICES: Service[] = [
       heading: "Ready for a Real Plan?",
       subText: "Let's build a strategy that actually guides growth.",
       label: "Start Building",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "positioning-messaging",
     title: "Positioning & Messaging",
-    shortDescription: "Translate deep technical value into crystal-clear messages for B2B buyers.",
-    fullDescription: "Translate deep technical value into crystal-clear messages for B2B buyers that convert.",
-    intro: "Translate deep technical value into crystal-clear messages.",
+    heroHighlight: "That Builds Buyer Trust.",
+    shortDescription:
+      "Simplify complex products with messaging that connects, differentiates, and converts.",
+    fullDescription:
+      "Craft clear messaging that helps B2B buyers understand, trust, and choose your brand.",
+    intro:
+      "Craft clear messaging that helps B2B buyers understand your value, trust your brand, and make confident purchasing decisions",
     titleCTA: { label: "Clarify Positioning", link: "/contact" },
-    features: ["Core Message Hierarchy", "Technical Pitch Alignment", "Buyer Persona Playbooks", "Sales Conversation Guides"],
+    features: [
+      "Messaging Framework",
+      "Positioning Strategy ",
+      "Technical Value Communication ",
+      "Sales Conversation Guides",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Better", value: "Buyer Engagement" },
-      { label: "Clearer", value: "Value Proposition" },
+      { label: "Improved", value: "Buyer Understanding" },
+      { label: "Stronger", value: "Brand Trust" },
     ],
     outComesHeadingImage: "/images/services/brand-identity.webp",
     iconName: "MessageSquare",
@@ -68,115 +86,164 @@ export const SERVICES: Service[] = [
       heading: "Ready to Speak Clearly?",
       subText: "We align your B2B messaging to resolve pipeline roadblocks.",
       label: "Clarify Now",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "thought-leadership",
     title: "Thought Leadership",
-    shortDescription: "Establish founder and executive voices as industry-leading authorities.",
-    fullDescription: "Establish founder and executive voices as industry-leading authorities across B2B spaces.",
-    intro: "Establish founder and executive voices as leading authorities.",
+    heroHighlight: "That Builds Industry Trust.",
+    shortDescription:
+      "Establish industry authority through strategic content and executive insights.",
+    fullDescription:
+      "Establish industry authority through strategic content and executive insights that build lasting credibility.",
+    intro:
+      "Establish industry authority through strategic content, executive insights, and technical storytelling that earns trust and drives influence.",
     titleCTA: { label: "Build Authority", link: "/contact" },
-    features: ["Executive Narrative Building", "PR & Placement Support", "LinkedIn Platform Domination", "Keynote & Event Briefing"],
+    features: [
+      "Executive Narrative Development",
+      "Technical Content Marketing",
+      "Industry Speaking Opportunities ",
+      "Keynote & Event Briefing",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Stronger", value: "Brand Trust" },
-      { label: "Higher", value: "Inbound Authority" },
+      { label: "Greater", value: "Industry Authority" },
+      { label: "Higher", value: "Audience Trust" },
     ],
     outComesHeadingImage: "/images/services/brand-identity.webp",
     iconName: "UserCheck",
     caseStudyIds: ["unbox"],
     bottomCTA: {
       heading: "Ready to Stand Out?",
-      subText: "Position your leadership team as standard-setters in the market.",
+      subText:
+        "Position your leadership team as standard-setters in the market.",
       label: "Get Positioned",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "content-marketing",
     title: "Content Marketing",
-    shortDescription: "Create high-intent content like whitepapers, case studies, and blogs.",
-    fullDescription: "Create high-intent content like whitepapers, case studies, and blogs that drive pipeline.",
-    intro: "Create high-intent content designed to capture interest and convert.",
+    heroHighlight: "That Builds Trust & Demand.",
+    shortDescription:
+      "Turn complex ideas into compelling content that attracts and converts buyers.",
+    fullDescription:
+      "Develop high-value content that builds trust and generates qualified demand.",
+    intro:
+      "Develop high-value content that educates buyers, builds trust, and generates qualified demand for your business",
     titleCTA: { label: "Accelerate Content", link: "/contact" },
-    features: ["Expert-Driven Content Creation", "Funnel Asset Library Construction", "Technical Case Study Production", "Multi-Channel Distribution Strategy"],
+    features: [
+      "B2B Content Marketing",
+      "Technical Content Marketing",
+      "Sales Enablement Content ",
+      "Multi-Channel Distribution Strategy",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Increased", value: "Inbound Pipeline" },
-      { label: "Higher", value: "Content ROI" },
+      { label: "Higher", value: "Buyer Engagement" },
+      { label: "Stronger", value: "Sales Enablement" },
     ],
     outComesHeadingImage: "/images/services/content-marketing.webp",
     iconName: "PenTool",
     caseStudyIds: ["kloudlite", "anzo"],
     bottomCTA: {
       heading: "Ready for Quality Content?",
-      subText: "We write B2B content that connects directly with enterprise decision makers.",
+      subText:
+        "We write B2B content that connects directly with enterprise decision makers.",
       label: "Start Producing",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
 
   // ROW 2: GENERATE DEMAND
   {
     id: "demand-generation",
     title: "Demand Generation",
-    shortDescription: "Build predictable lead capture channels and steady inbound flow.",
-    fullDescription: "Build predictable lead capture channels and steady inbound flow for B2B pipeline growth.",
-    intro: "Build predictable lead capture channels and steady inbound flow.",
+    heroHighlight: "That Accelerates Business Growth.",
+    shortDescription:
+      "Accelerate business growth with data-driven demand generation and lead acquisition.",
+    fullDescription:
+      "Accelerate business growth with data-driven demand generation and lead acquisition.",
+    intro:
+      "Accelerate business growth with data-driven demand generation strategies that capture high-quality leads and convert them into revenue opportunities",
     titleCTA: { label: "Generate Inbound", link: "/contact" },
-    features: ["Inbound Lead Acquisition Engine", "Multi-Channel Program Scaling", "Paid Retargeting Architecture", "High-Converting Landing Page Design"],
+    features: [
+      "Demand Generation Strategy",
+      "Lead Generation Programs",
+      "Account-Based Campaigns",
+      "High-Converting Landing Page Design",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Predictable", value: "Lead Acquisition" },
-      { label: "Enhanced", value: "Funnel Velocity" },
+      { label: "Faster", value: "Pipeline Growth" },
+      { label: "Higher", value: "Qualified Leads" },
     ],
     outComesHeadingImage: "/images/services/growth-marketing.webp",
     iconName: "Workflow",
     caseStudyIds: ["unbox", "synergy"],
     bottomCTA: {
       heading: "Ready to Capture Real Demand?",
-      subText: "Turn commercial strategy into high-intent inbound opportunities.",
+      subText:
+        "Turn commercial strategy into high-intent inbound opportunities.",
       label: "Launch Engine",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "abm",
     title: "Account-Based Marketing",
-    shortDescription: "Target high-value enterprise accounts with tailored messaging campaigns.",
-    fullDescription: "Target high-value enterprise accounts with tailored messaging and campaigns.",
-    intro: "Target high-value enterprise accounts with tailored messaging.",
+    heroHighlight: "That Wins Enterprise Accounts.",
+    shortDescription:
+      "Win enterprise accounts through personalized campaigns and strategic engagement.",
+    fullDescription:
+      "Win enterprise accounts through personalized campaigns and strategic engagement.",
+    intro:
+      "Win enterprise accounts through personalized campaigns, strategic engagement, and account-based marketing built to drive long-term business growth.",
     titleCTA: { label: "Launch ABM Campaigns", link: "/contact" },
-    features: ["High-Value Target Mapping", "Multi-Touch Sales Sequence Playbooks", "Tier 1 Personalized Landing Pages", "ABM Orchestration & Reporting"],
+    features: [
+      "Ideal Customer Profile (ICP) Mapping",
+      "B2B Lead Generation",
+      "Marketing Automation ",
+      "ABM Orchestration & Reporting",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Higher", value: "Contract Values" },
-      { label: "Increased", value: "Sales Conversion" },
+      { label: "Higher", value: "Enterprise Conversions" },
+      { label: "Stronger", value: "Account Relationships" },
     ],
     outComesHeadingImage: "/images/services/growth-marketing.webp",
     iconName: "Target",
     caseStudyIds: ["unbox", "anscer"],
     bottomCTA: {
       heading: "Ready to Target Key Accounts?",
-      subText: "We build and execute high-converting multi-touch ABM playbooks.",
+      subText:
+        "We build and execute high-converting multi-touch ABM playbooks.",
       label: "Start Targeting",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "campaign-execution",
     title: "Campaign Execution",
-    shortDescription: "Deploy multi-channel marketing campaigns to feed your pipeline.",
-    fullDescription: "Deploy multi-channel marketing campaigns to feed your pipeline with clean opportunities.",
-    intro: "Deploy multi-channel campaigns to generate high-intent pipeline.",
+    heroHighlight: "That Converts Prospects Into Opportunities.",
+    shortDescription:
+      "Deliver multi-channel campaigns that convert prospects into qualified opportunities.",
+    fullDescription:
+      "Deliver multi-channel campaigns that convert prospects into qualified opportunities.",
+    intro:
+      "Deliver multi-channel campaigns that engage prospects, nurture buyer journeys, and convert interest into qualified business opportunities",
     titleCTA: { label: "Run Campaigns", link: "/contact" },
-    features: ["Paid Social & Search Execution", "Lead Nurture Flow Operations", "A/B Creative Experimentation", "Budget Optimization & Allocation"],
+    features: [
+      "Campaign Management",
+      "Lead Nurture Workflows",
+      "Performance Optimization",
+      "Budget Optimization & Allocation",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Scalable", value: "Paid Acquisitions" },
-      { label: "Optimized", value: "Cost Per Lead" },
+      { label: "Higher", value: "Qualified Opportunities" },
+      { label: "Improved", value: "Conversion Rates" },
     ],
     outComesHeadingImage: "/images/services/growth-marketing.webp",
     iconName: "Send",
@@ -185,21 +252,30 @@ export const SERVICES: Service[] = [
       heading: "Ready to Deploy Campaigns?",
       subText: "Let us run your paid search, paid social, and lead flows.",
       label: "Deploy Now",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "marketing-automation",
     title: "Marketing Automation",
-    shortDescription: "Automate marketing operations, scoring, and trigger workflows.",
-    fullDescription: "Automate marketing operations, scoring, and trigger workflows for sales alignment.",
-    intro: "Automate marketing operations and trigger-based nurturing workflows.",
+    heroHighlight: "That Generates Qualified Leads.",
+    shortDescription:
+      "Automate customer journeys to improve engagement, lead nurturing, and conversions.",
+    fullDescription:
+      "Create automated marketing workflows that generate qualified leads and improve efficiency.",
+    intro:
+      "Create automated marketing workflows that generate qualified leads, improve operational efficiency, and accelerate business growth.",
     titleCTA: { label: "Optimize Automation", link: "/contact" },
-    features: ["Tech Stack Synchronization", "Behavior-Triggered Lead Scoring", "CRM Lifecycle Mapping", "Automated Sequence Implementation"],
+    features: [
+      "Marketing Automation Services",
+      "Lead Nurturing Workflows",
+      "CRM & Tech Stack Integration",
+      "Automated Sequence Implementation",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Aligned", value: "Sales & Marketing" },
-      { label: "Reduced", value: "Manual Overhead" },
+      { label: "Higher", value: "Qualified Leads" },
+      { label: "Improved", value: "Marketing Efficiency" },
     ],
     outComesHeadingImage: "/images/services/growth-marketing.webp",
     iconName: "Settings",
@@ -208,23 +284,32 @@ export const SERVICES: Service[] = [
       heading: "Ready to Automate Growth?",
       subText: "We configure, clean, and sync your B2B tech stack.",
       label: "Automate Now",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
 
   // ROW 3: ACCELERATE GROWTH
   {
     id: "seo-visibility",
     title: "SEO & Search Visibility",
-    shortDescription: "Position your brand at the exact moment buyers search for solutions.",
-    fullDescription: "Position your brand at the exact moment B2B buyers search for solutions online.",
-    intro: "Position your brand at the exact moment buyers search for your keywords.",
+    heroHighlight: "That Drives Qualified Traffic.",
+    shortDescription:
+      "Increase search visibility with strategic B2B SEO and Technical SEO.",
+    fullDescription:
+      "Increase search visibility with strategic B2B SEO and Technical SEO.",
+    intro:
+      "Improve rankings and attract qualified traffic with data-driven SEO strategies designed to increase visibility and generate business opportunities",
     titleCTA: { label: "Optimize SEO", link: "/contact" },
-    features: ["High-Intent Keyword Dominance", "Technical Search Architecture Optimization", "Authority Backlink Acquisition", "Organic CTR Enhancement Audits"],
+    features: [
+      "B2B SEO Strategy",
+      "Technical SEO Optimization",
+      "Keyword Research & Content Strategy",
+      "Organic CTR Enhancement Audits",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Sustained", value: "Organic Traffic" },
-      { label: "Higher", value: "Domain Authority" },
+      { label: "Higher", value: "Search Visibility" },
+      { label: "Increased", value: "Organic Traffic" },
     ],
     outComesHeadingImage: "/images/services/seo-sem.webp",
     iconName: "Search",
@@ -233,21 +318,30 @@ export const SERVICES: Service[] = [
       heading: "Ready to Dominate Search?",
       subText: "Show up in high-intent keyword directories and search queries.",
       label: "Boost Visibility",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "website-optimisation",
     title: "Website Optimisation",
-    shortDescription: "Convert static website traffic into high-value qualified sales meetings.",
-    fullDescription: "Convert static website traffic into high-value qualified sales meetings and signups.",
-    intro: "Convert static website traffic into high-value qualified sales meetings.",
+    heroHighlight: "That Drives Business Growth.",
+    shortDescription:
+      "Transform your website into a high-converting platform for sustainable business growth.",
+    fullDescription:
+      "Transform your website into a high-converting platform for sustainable business growth.",
+    intro:
+      "Transform your website into a high-converting platform that attracts qualified visitors, improves user experience, and supports sustainable business growth",
     titleCTA: { label: "Optimize Website", link: "/contact" },
-    features: ["Conversion Rate Optimisation (CRO)", "Interactive UX/UI Refining", "Page Speed & Core Web Vitals Optimization", "Form Friction & Drop-Off Analysis"],
+    features: [
+      "Website Performance Optimization",
+      "Landing Page Optimization",
+      "User Experience (UX) Enhancement",
+      "Form Friction & Drop-Off Analysis",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Improved", value: "Conversion Rates" },
-      { label: "Faster", value: "Loading Performance" },
+      { label: "Higher", value: "Website Conversions" },
+      { label: "Improved", value: "Website Performance" },
     ],
     outComesHeadingImage: "/images/services/web-designing.webp",
     iconName: "Monitor",
@@ -256,21 +350,30 @@ export const SERVICES: Service[] = [
       heading: "Ready to Convert Traffic?",
       subText: "Turn your website into a high-performance sales asset.",
       label: "Optimize Conversion",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "analytics-reporting",
     title: "Analytics & Reporting",
-    shortDescription: "Establish clean attribution loops to trace commercial pipeline ROI.",
-    fullDescription: "Establish clean attribution loops to trace commercial pipeline ROI accurately.",
-    intro: "Establish clean attribution loops to trace commercial pipeline ROI.",
+    heroHighlight: "That Drives Smarter Growth Decisions.",
+    shortDescription:
+      "Measure marketing performance with actionable insights that drive smarter growth decisions.",
+    fullDescription:
+      "Measure marketing performance with actionable insights that drive smarter growth decisions.",
+    intro:
+      "Measure marketing performance with actionable insights, custom dashboards, and ROI reporting that support data-driven business growth",
     titleCTA: { label: "Configure Analytics", link: "/contact" },
-    features: ["GA4 & Attribution Configuration", "Custom Pipeline Dashboards", "Multi-Touch Revenue Attribution Modeling", "Pipeline Bottleneck Diagnostics"],
+    features: [
+      "GA4 & Attribution Setup",
+      "Custom Performance Dashboards",
+      "Pipeline & ROI Reporting",
+      "Pipeline Bottleneck Diagnostics",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Accurate", value: "Marketing Attribution" },
-      { label: "Visible", value: "Pipeline Return" },
+      { label: "Improved", value: "Pipeline Visibility" },
+      { label: "Higher", value: "Marketing ROI" },
     ],
     outComesHeadingImage: "/images/services/marketing-strategy.webp",
     iconName: "PieChart",
@@ -279,21 +382,30 @@ export const SERVICES: Service[] = [
       heading: "Ready to Measure Outcomes?",
       subText: "Trace pipeline sourcing back to marketing touches.",
       label: "Setup Attribution",
-      link: "/contact"
-    }
+      link: "/contact",
+    },
   },
   {
     id: "gtm-execution",
     title: "GTM Execution",
-    shortDescription: "Scale organic growth, launch products, and expand commercial presence.",
-    fullDescription: "Scale organic growth, launch products, and expand commercial presence seamlessly.",
-    intro: "Scale organic growth, launch products, and enter new markets.",
+    heroHighlight: "That Drives Successful Product Launches.",
+    shortDescription:
+      "Launch products with a strategic go-to-market plan that accelerates business growth.",
+    fullDescription:
+      "Execute go-to-market strategies that generate demand and drive successful product launches.",
+    intro:
+      "Execute go-to-market strategies that generate demand, accelerate product adoption, and deliver successful product launches",
     titleCTA: { label: "Run GTM", link: "/contact" },
-    features: ["Product GTM Roadmap Playbooks", "Market Penetration Programs", "Alpha/Beta Launch Management", "Sales Team Enablement Toolkits"],
+    features: [
+      "Go-to-Market Strategy",
+      "Product Launch Planning",
+      "Market Expansion Programs",
+      "Sales Team Enablement Toolkits",
+    ],
     outcomesHeading: "Expected Outcomes",
     outcomesHeadingMetrics: [
-      { label: "Successful", value: "Product Launches" },
-      { label: "Expanded", value: "Market Presence" },
+      { label: "Stronger", value: "Product Adoption" },
+      { label: "Higher", value: "Market Demand" },
     ],
     outComesHeadingImage: "/images/services/marketing-strategy.webp",
     iconName: "Rocket",
@@ -302,9 +414,9 @@ export const SERVICES: Service[] = [
       heading: "Ready to Launch?",
       subText: "Let's validate and scale your product's commercial footprint.",
       label: "Launch GTM",
-      link: "/contact"
-    }
-  }
+      link: "/contact",
+    },
+  },
 ];
 
 /* ================= TEAM ================= */

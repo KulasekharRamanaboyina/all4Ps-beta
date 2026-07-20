@@ -1,44 +1,38 @@
-import {
-  Search,
-  Crosshair,
-  Users,
-  BarChart3,
-  TrendingUp,
-} from "lucide-react";
+import { Search, Crosshair, Users, BarChart3, TrendingUp } from "lucide-react";
 export const APPROACH_STEPS = [
   {
     number: "01",
     icon: Search,
-    title: "Problem",
+    title: " Understand the Brand",
     description:
-      "Great companies build amazing products, but the right audience can't find them.",
+      "Discover your business, audience, and market to build the right foundation.",
   },
   {
     number: "02",
     icon: Crosshair,
-    title: "Clarity",
+    title: "Build the Strategy",
     description:
-      "We uncover positioning, differentiation & messaging that resonates.",
+      "Develop a tailored marketing strategy aligned with your business goals.",
   },
   {
     number: "03",
     icon: Users,
-    title: "Demand",
+    title: "Create Meaningful Content",
     description:
-      "We build demand engines that attract, engage & convert ideal buyers.",
+      "Create compelling content that builds trust and engages the right audience.",
   },
   {
     number: "04",
     icon: BarChart3,
-    title: "Pipeline",
+    title: "Execute Growth Campaigns",
     description:
-      "Consistent qualified leads that convert into revenue.",
+      "Launch integrated campaigns that generate demand and accelerate pipeline growth.",
   },
   {
     number: "05",
     icon: TrendingUp,
-    title: "Scale",
+    title: " Optimize for Results",
     description:
-      "We continuously optimize campaigns and scale channels to compound growth.",
+      "Continuously improve performance using data, insights, and measurable outcomes",
   },
 ];

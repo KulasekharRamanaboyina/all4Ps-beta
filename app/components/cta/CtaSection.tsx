@@ -15,14 +15,13 @@ interface CtaSectionProps {
 
 export default function CtaSection({
   title,
-  subtitle = "Let's build a growth system that helps buyers find, trust, and choose your business.",
+  subtitle = "Accelerate business growth with strategic marketing built for ambitious B2B technology companies.",
   buttonText = "Book a Growth Call",
   buttonLink = "/contact",
 }: CtaSectionProps) {
   return (
     <section className="relative py-16 sm:py-24 bg-transparent border-t border-white/5 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Glow Effects */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-96 h-96 bg-brand-purple/10 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-96 h-96 bg-fuchsia-800/10 rounded-full blur-[120px] pointer-events-none" />
@@ -40,7 +39,6 @@ export default function CtaSection({
           </div>
 
           <div className="relative grid lg:grid-cols-[1.3fr_1fr] gap-10 items-center">
-            
             {/* Left Content */}
             <div className="space-y-4 text-center lg:text-left">
               {title ? (
@@ -49,9 +47,9 @@ export default function CtaSection({
                 </h2>
               ) : (
                 <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight tracking-tight font-display text-white">
-                  Great Products Need{" "}
+                  Great Ideas Deserve{" "}
                   <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
-                    Great Positioning.
+                    Greater Market Impact.
                   </span>
                 </h2>
               )}
@@ -76,13 +74,18 @@ export default function CtaSection({
               {/* Team Avatars + Tagline */}
               <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
                 <div className="flex -space-x-2.5 flex-shrink-0">
-                  {["Pavani.webp", "Tejeswini.webp", "Kulasekhar.webp", "shweta.webp"].map((img, idx) => (
+                  {[
+                    "kloudlite_io_logo.jpg",
+                    "mothersongroup_logo.jpg",
+                    "pinnacle-log.png",
+                    "panchayath-app-logo.jpg",
+                  ].map((img, idx) => (
                     <div
                       key={idx}
                       className="relative w-8 h-8 rounded-full border-2 border-[#05030a] overflow-hidden bg-gray-900"
                     >
                       <Image
-                        src={`/images/Team_Members/${img}`}
+                        src={`/logos/${img}`}
                         alt="Team Member avatar"
                         fill
                         sizes="32px"
@@ -92,11 +95,11 @@ export default function CtaSection({
                   ))}
                 </div>
                 <span className="text-[11px] font-semibold text-gray-400 max-w-[200px] sm:max-w-none leading-normal">
-                  Join 50+ companies scaling faster with all4Ps
+                  Trusted by leading B2B brands across SaaS, AI, Robotics, and
+                  Manufacturing.
                 </span>
               </div>
             </div>
-
           </div>
         </motion.div>
       </div>

@@ -48,23 +48,51 @@ function ValueCard({ icon: Icon, title, desc, delay }: ValueCardProps) {
 
       {/* Decorative Corner SVG pattern that pulses on hover */}
       <div className="absolute bottom-0 right-0 w-20 h-20 opacity-[0.02] group-hover:opacity-[0.06] text-brand-purple transition-all duration-500 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 100 100" fill="currentColor">
-          <circle cx="100" cy="100" r="80" stroke="currentColor" strokeWidth="2" fill="none" />
-          <circle cx="100" cy="100" r="60" stroke="currentColor" strokeWidth="2" fill="none" />
-          <circle cx="100" cy="100" r="40" stroke="currentColor" strokeWidth="2" fill="none" />
+        <svg
+          className="w-full h-full"
+          viewBox="0 0 100 100"
+          fill="currentColor"
+        >
+          <circle
+            cx="100"
+            cy="100"
+            r="80"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="60"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
+          <circle
+            cx="100"
+            cy="100"
+            r="40"
+            stroke="currentColor"
+            strokeWidth="2"
+            fill="none"
+          />
         </svg>
       </div>
 
       <div className="relative flex flex-col items-center text-center">
         {/* Animated Icon Circle */}
         <div className="w-11 h-11 rounded-xl border border-brand-purple/20 flex items-center justify-center bg-brand-purple/5 mb-4 group-hover:bg-brand-purple/10 group-hover:border-brand-purple/50 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-          <Icon className="w-5 h-5 text-brand-purple group-hover:text-fuchsia-400 transition-colors duration-300" strokeWidth={1.75} />
+          <Icon
+            className="w-5 h-5 text-brand-purple group-hover:text-fuchsia-400 transition-colors duration-300"
+            strokeWidth={1.75}
+          />
         </div>
 
         <h3 className="text-base sm:text-lg font-bold text-white mb-2 tracking-tight group-hover:text-fuchsia-100 transition-colors duration-300">
           {title}
         </h3>
-        
+
         <p className="text-xs text-gray-400 leading-relaxed max-w-[220px] group-hover:text-gray-300 transition-colors duration-300">
           {desc}
         </p>
@@ -76,51 +104,51 @@ function ValueCard({ icon: Icon, title, desc, delay }: ValueCardProps) {
 const values = [
   {
     icon: Target,
-    title: "Outcome Obsessed",
-    desc: "We measure success by pipeline impact and business growth.",
+    title: "Outcome Oriented",
+    desc: "We measure success by business outcomes, not vanity metrics or activity for activity's sake.",
   },
   {
     icon: Search,
-    title: "Radical Clarity",
-    desc: "Complex products deserve simple stories.",
+    title: "We Tell the Truth",
+    desc: "We communicate with honesty and transparency, even when the conversation is difficult.",
   },
   {
     icon: Handshake,
-    title: "Long-Term Partnerships",
-    desc: "We're invested in sustainable growth, not short-term spikes.",
+    title: "Clarity Over Complexity",
+    desc: "We simplify complex ideas into clear messaging that helps buyers understand and act.",
   },
   {
     icon: Cog,
-    title: "Systems Thinking",
-    desc: "Growth is engineered through repeatable, scalable systems.",
+    title: "Long-Term Thinking",
+    desc: "We build brands, marketing systems, and partnerships designed for sustainable growth.",
   },
 ];
 
 export default function ValuesGrid() {
   return (
     <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <p className="text-brand-purple text-xs font-semibold tracking-widest uppercase mb-3">
-            Our Core Values
-          </p>
-        </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="text-center mb-16"
+      >
+        <p className="text-brand-purple text-xs font-semibold tracking-widest uppercase mb-3">
+          Our Core Values
+        </p>
+      </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((v, i) => (
-            <ValueCard
-              key={i}
-              icon={v.icon}
-              title={v.title}
-              desc={v.desc}
-              delay={i * 0.1}
-            />
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {values.map((v, i) => (
+          <ValueCard
+            key={i}
+            icon={v.icon}
+            title={v.title}
+            desc={v.desc}
+            delay={i * 0.1}
+          />
+        ))}
+      </div>
     </div>
   );
 }

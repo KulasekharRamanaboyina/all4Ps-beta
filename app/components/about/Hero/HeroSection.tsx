@@ -14,11 +14,15 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
   const handleScrollToFounder = () => {
-    document.getElementById("founder-card")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("founder-card")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleScrollToTeam = () => {
-    document.getElementById("team-grid")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("team-grid")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -26,7 +30,6 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
       ref={ref}
       className="relative min-h-fit md:min-h-screen pt-20 pb-6 md:pb-12 md:pt-24 px-6 lg:px-12 flex flex-col justify-start items-center overflow-hidden bg-transparent"
     >
-
       {/* Scrollable Hero Content Container */}
       <motion.div
         style={{ y, opacity }}
@@ -54,10 +57,10 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="text-3xl sm:text-4xl md:text-6xl lg:text-[72px] font-extrabold leading-[1.1] text-white tracking-tight mb-5 md:mb-8 font-display"
           >
-            We Turn Complexity <br />
+            Strategy That Drives <br />
             Into{" "}
             <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
-              Commercial Growth.
+              Sustainable Growth.
             </span>
           </motion.h1>
 
@@ -68,9 +71,9 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-gray-400 text-sm md:text-base lg:text-lg leading-relaxed max-w-3xl mb-8 md:mb-12 px-2"
           >
-            We help deep-tech companies clarify their value, connect with the right buyers,{" "}
-            <br className="hidden md:inline" />
-            and build systems that generate predictable revenue.
+            Helping SaaS, AI, robotics, and industrial businesses build
+            authority, generate demand, <br className="hidden md:inline" />
+            and accelerate business growth.
           </motion.p>
 
           <motion.div
@@ -84,7 +87,9 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
               className="group bg-brand-purple hover:bg-purple-600 w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg shadow-purple-500/20"
             >
               Discover Our Story
-              <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+              <span className="transform group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </button>
 
             <button
@@ -92,7 +97,9 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
               className="group border border-gray-700 hover:border-white w-full sm:w-auto px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg text-sm sm:text-base font-semibold text-white transition flex items-center justify-center gap-2"
             >
               Meet Our Team
-              <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+              <span className="transform group-hover:translate-x-1 transition-transform">
+                →
+              </span>
             </button>
           </motion.div>
         </div>
@@ -117,7 +124,10 @@ export default function HeroSection({ scrollYProgress }: HeroSectionProps) {
               e.currentTarget.style.background = "transparent";
             }}
           >
-            <ChevronDown className="w-4 h-4 transition-all group-hover:translate-y-0.5" style={{ color: "#800080" }} />
+            <ChevronDown
+              className="w-4 h-4 transition-all group-hover:translate-y-0.5"
+              style={{ color: "#800080" }}
+            />
           </div>
           <span className="text-[10px] tracking-[0.25em] text-gray-500 font-semibold group-hover:text-gray-400 transition-colors">
             SCROLL TO EXPLORE

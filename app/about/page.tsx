@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import HeroSection from "../components/about/Hero/HeroSection";
 import FounderCard from "../components/about/Founder/FounderCard";
-import JourneyTimeline from "../components/about/Journey/JourneyTimeline";
+//import JourneyTimeline from "../components/about/Journey/JourneyTimeline";
 import ValuesGrid from "../components/about/Values/ValuesGrid";
 import TeamGrid from "../components/about/Team/TeamGrid";
 import IndustriesSection from "../components/about/Industries/IndustriesSection";
@@ -19,10 +19,13 @@ export default function AboutPage() {
   });
 
   return (
-    <main ref={containerRef} className="bg-transparent text-white overflow-x-hidden">
+    <main
+      ref={containerRef}
+      className="bg-transparent text-white overflow-x-hidden"
+    >
       <HeroSection scrollYProgress={scrollYProgress} />
       <FounderCard />
-      <JourneyTimeline />
+      {/* <JourneyTimeline /> */}
       <TeamGrid />
       <section className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10">
         <ValuesGrid />

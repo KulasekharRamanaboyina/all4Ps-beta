@@ -7,6 +7,7 @@ import { useRef } from "react";
 
 interface ServicesHeroProps {
   title?: string;
+  heroHighlight?: string;
   description?: string;
   badges?: string[];
   breadcrumbs?: { label: string; link?: string }[];
@@ -14,8 +15,14 @@ interface ServicesHeroProps {
 
 export default function ServicesHero({
   title = "Services",
+  heroHighlight = "",
   description = "Strategy-led B2B growth services designed to turn clarity into pipeline, revenue, and long-term scale.",
-  badges = ["Clear Positioning", "Demand Generation", "Scalable Results", "Growth Systems"],
+  badges = [
+    "Clear Positioning",
+    "Demand Generation",
+    "Scalable Results",
+    "Growth Systems",
+  ],
   breadcrumbs = [
     { label: "Home", link: "/" },
     { label: "Services", link: "/services" },
@@ -37,33 +44,129 @@ export default function ServicesHero({
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] h-[600px] sm:h-[800px] pointer-events-none opacity-40 -z-10 select-none">
         <svg viewBox="0 0 800 800" className="w-full h-full text-brand-purple">
           {/* Outer glow aura */}
-          <circle cx="400" cy="400" r="300" fill="url(#hero-glow)" opacity="0.15" />
-          
+          <circle
+            cx="400"
+            cy="400"
+            r="300"
+            fill="url(#hero-glow)"
+            opacity="0.15"
+          />
+
           {/* Orbital rings */}
-          <ellipse cx="400" cy="400" rx="260" ry="100" transform="rotate(-25 400 400)" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.12" fill="none" />
-          <ellipse cx="400" cy="400" rx="320" ry="130" transform="rotate(35 400 400)" stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.08" fill="none" />
-          <ellipse cx="400" cy="400" rx="360" ry="160" transform="rotate(-55 400 400)" stroke="currentColor" strokeWidth="1" strokeOpacity="0.06" fill="none" />
-          
+          <ellipse
+            cx="400"
+            cy="400"
+            rx="260"
+            ry="100"
+            transform="rotate(-25 400 400)"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeOpacity="0.12"
+            fill="none"
+          />
+          <ellipse
+            cx="400"
+            cy="400"
+            rx="320"
+            ry="130"
+            transform="rotate(35 400 400)"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeOpacity="0.08"
+            fill="none"
+          />
+          <ellipse
+            cx="400"
+            cy="400"
+            rx="360"
+            ry="160"
+            transform="rotate(-55 400 400)"
+            stroke="currentColor"
+            strokeWidth="1"
+            strokeOpacity="0.06"
+            fill="none"
+          />
+
           {/* Animated dashes */}
-          <ellipse cx="400" cy="400" rx="260" ry="100" transform="rotate(-25 400 400)" stroke="url(#dash-glow-1)" strokeWidth="2" strokeDasharray="40 400" fill="none" className="animate-orbit-line" />
-          <ellipse cx="400" cy="400" rx="320" ry="130" transform="rotate(35 400 400)" stroke="url(#dash-glow-2)" strokeWidth="2" strokeDasharray="50 500" fill="none" className="animate-orbit-line" style={{ animationDirection: 'reverse', animationDuration: '40s' }} />
+          <ellipse
+            cx="400"
+            cy="400"
+            rx="260"
+            ry="100"
+            transform="rotate(-25 400 400)"
+            stroke="url(#dash-glow-1)"
+            strokeWidth="2"
+            strokeDasharray="40 400"
+            fill="none"
+            className="animate-orbit-line"
+          />
+          <ellipse
+            cx="400"
+            cy="400"
+            rx="320"
+            ry="130"
+            transform="rotate(35 400 400)"
+            stroke="url(#dash-glow-2)"
+            strokeWidth="2"
+            strokeDasharray="50 500"
+            fill="none"
+            className="animate-orbit-line"
+            style={{ animationDirection: "reverse", animationDuration: "40s" }}
+          />
 
           {/* Glowing node dots at intersections */}
-          <circle cx="210" cy="310" r="4" className="fill-fuchsia-400 animate-pulse" />
-          <circle cx="590" cy="490" r="3" className="fill-indigo-400 animate-ping" style={{ animationDuration: '3s' }} />
-          <circle cx="340" cy="220" r="5" className="fill-pink-500 animate-pulse" style={{ animationDuration: '2.5s' }} />
-          <circle cx="460" cy="580" r="4.5" className="fill-brand-purple animate-pulse" style={{ animationDuration: '4s' }} />
+          <circle
+            cx="210"
+            cy="310"
+            r="4"
+            className="fill-fuchsia-400 animate-pulse"
+          />
+          <circle
+            cx="590"
+            cy="490"
+            r="3"
+            className="fill-indigo-400 animate-ping"
+            style={{ animationDuration: "3s" }}
+          />
+          <circle
+            cx="340"
+            cy="220"
+            r="5"
+            className="fill-pink-500 animate-pulse"
+            style={{ animationDuration: "2.5s" }}
+          />
+          <circle
+            cx="460"
+            cy="580"
+            r="4.5"
+            className="fill-brand-purple animate-pulse"
+            style={{ animationDuration: "4s" }}
+          />
 
           <defs>
             <radialGradient id="hero-glow" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#A855F7" stopOpacity="1" />
               <stop offset="100%" stopColor="#A855F7" stopOpacity="0" />
             </radialGradient>
-            <linearGradient id="dash-glow-1" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="dash-glow-1"
+              x1="0"
+              y1="0"
+              x2="800"
+              y2="0"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop offset="0%" stopColor="#A855F7" />
               <stop offset="100%" stopColor="#EC4899" stopOpacity="0" />
             </linearGradient>
-            <linearGradient id="dash-glow-2" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+            <linearGradient
+              id="dash-glow-2"
+              x1="0"
+              y1="0"
+              x2="800"
+              y2="0"
+              gradientUnits="userSpaceOnUse"
+            >
               <stop offset="0%" stopColor="#EC4899" />
               <stop offset="100%" stopColor="#6366F1" stopOpacity="0" />
             </linearGradient>
@@ -73,7 +176,6 @@ export default function ServicesHero({
 
       {/* Hero Content Container */}
       <div className="relative max-w-7xl w-full mx-auto flex flex-col justify-between flex-grow z-10 pt-20 pb-6">
-        
         {/* Top Left Breadcrumbs */}
         <div className="w-full flex justify-start">
           {!isMainServicesPage ? (
@@ -88,11 +190,16 @@ export default function ServicesHero({
                 {breadcrumbs.map((crumb, idx) => (
                   <li key={idx} className="flex items-center gap-2">
                     {crumb.link ? (
-                      <Link href={crumb.link} className="hover:text-white transition">
+                      <Link
+                        href={crumb.link}
+                        className="hover:text-white transition"
+                      >
                         {crumb.label}
                       </Link>
                     ) : (
-                      <span className="text-white font-semibold">{crumb.label}</span>
+                      <span className="text-white font-semibold">
+                        {crumb.label}
+                      </span>
                     )}
                     {idx < breadcrumbs.length - 1 && <span>/</span>}
                   </li>
@@ -132,9 +239,9 @@ export default function ServicesHero({
               </>
             ) : (
               <>
-                {title} That <br />
+                {title}{" "}
                 <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
-                  Actually Converts.
+                  {heroHighlight}
                 </span>
               </>
             )}
@@ -149,8 +256,8 @@ export default function ServicesHero({
           >
             {isMainServicesPage ? (
               <>
-                Strategy-led B2B growth services designed to turn clarity into pipeline, revenue,{" "}
-                <br className="hidden md:inline" />
+                Strategy-led B2B growth services designed to turn clarity into
+                pipeline, revenue, <br className="hidden md:inline" />
                 and long-term scale.
               </>
             ) : (

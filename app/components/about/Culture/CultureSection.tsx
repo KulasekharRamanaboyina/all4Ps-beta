@@ -4,10 +4,26 @@ import { motion } from "framer-motion";
 import { Brain, BarChart3, Rocket, Users } from "lucide-react";
 
 const culture = [
-  { icon: Brain, title: "Think Deeply", desc: "We ask better questions and build strategies that last." },
-  { icon: BarChart3, title: "Measure Everything", desc: "We believe in data, insights, and continuous improvement." },
-  { icon: Rocket, title: "Move Fast", desc: "We act with urgency and adapt quickly to drive results." },
-  { icon: Users, title: "Win Together", desc: "We collaborate closely and celebrate your wins as our own." },
+  {
+    icon: Brain,
+    title: "Think Strategically",
+    desc: "Every recommendation is backed by research, strategy, and business goals.",
+  },
+  {
+    icon: BarChart3,
+    title: "Measure What Matters",
+    desc: "We focus on pipeline, revenue, and measurable business outcomes- not vanity metrics.",
+  },
+  {
+    icon: Rocket,
+    title: "Execute with Agility",
+    desc: "We move quickly, adapt continuously, and keep growth initiatives on track.",
+  },
+  {
+    icon: Users,
+    title: "Grow Together",
+    desc: "We build long-term partnerships grounded in trust, collaboration, and shared success.",
+  },
 ];
 
 export default function CultureSection() {
@@ -44,13 +60,14 @@ export default function CultureSection() {
               whileHover={{ y: -6 }}
               className="group relative bg-gradient-to-br from-brand-purple/15 to-brand-purple/5 border border-brand-purple/15 rounded-2xl p-6 hover:border-brand-purple/40 transition-all duration-500"
             >
-              <c.icon className="w-10 h-10 text-brand-purple mb-4" strokeWidth={1.5} />
+              <c.icon
+                className="w-10 h-10 text-brand-purple mb-4"
+                strokeWidth={1.5}
+              />
               <h3 className="text-lg font-bold text-white mb-2 tracking-tight">
                 {c.title}
               </h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                {c.desc}
-              </p>
+              <p className="text-sm text-gray-400 leading-relaxed">{c.desc}</p>
             </motion.div>
           ))}
         </div>

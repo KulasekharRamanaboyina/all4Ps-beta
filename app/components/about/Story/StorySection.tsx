@@ -7,11 +7,26 @@ export default function StorySection() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   const problems = [
-    { text: "Brilliant companies were building exceptional products.", severity: "high" },
-    { text: "But buyers couldn't understand them.", severity: "high" },
-    { text: "Technical founders struggled to explain value.", severity: "medium" },
-    { text: "Marketing focused on activity instead of outcomes.", severity: "medium" },
-    { text: "Sales teams were forced to fight uphill battles.", severity: "low" },
+    {
+      text: "Innovative companies built exceptional products but struggled to communicate their value.",
+      severity: "high",
+    },
+    {
+      text: "Complex technologies failed to connect with the right buyers.",
+      severity: "high",
+    },
+    {
+      text: "Marketing often focused on activities instead of measurable business outcomes.",
+      severity: "medium",
+    },
+    {
+      text: "Sales teams lacked clear positioning and compelling messaging.",
+      severity: "medium",
+    },
+    {
+      text: "Great products deserved growth strategies built around business impact.",
+      severity: "low",
+    },
   ];
 
   const severityColors: Record<string, string> = {
@@ -29,7 +44,9 @@ export default function StorySection() {
       <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-2 tracking-tight">
         The Problem We Saw
       </h2>
-      <p className="text-sm text-gray-500 mb-8">Hover each insight to explore</p>
+      <p className="text-sm text-gray-500 mb-8">
+        Hover each insight to explore
+      </p>
 
       <ul className="space-y-3">
         {problems.map((problem, index) => (
@@ -38,9 +55,11 @@ export default function StorySection() {
             className={`
               relative flex items-center gap-4 rounded-xl border p-4 cursor-default
               transition-all duration-300 overflow-hidden
-              ${hovered === index
-                ? `${severityColors[problem.severity]} -translate-x-1 shadow-lg`
-                : "border-white/8 bg-white/[0.015] text-gray-400"}
+              ${
+                hovered === index
+                  ? `${severityColors[problem.severity]} -translate-x-1 shadow-lg`
+                  : "border-white/8 bg-white/[0.015] text-gray-400"
+              }
             `}
             onMouseEnter={() => setHovered(index)}
             onMouseLeave={() => setHovered(null)}
@@ -52,8 +71,8 @@ export default function StorySection() {
                   ? problem.severity === "high"
                     ? "bg-red-500"
                     : problem.severity === "medium"
-                    ? "bg-amber-500"
-                    : "bg-orange-500"
+                      ? "bg-amber-500"
+                      : "bg-orange-500"
                   : "bg-transparent"
               }`}
             />
@@ -61,21 +80,29 @@ export default function StorySection() {
             {/* icon */}
             <div className="flex-shrink-0">
               {hovered === index ? (
-                <XCircle className={`w-5 h-5 ${severityColors[problem.severity].split(" ")[0]}`} />
+                <XCircle
+                  className={`w-5 h-5 ${severityColors[problem.severity].split(" ")[0]}`}
+                />
               ) : (
                 <CheckCircle2 className="w-5 h-5 text-brand-purple/40" />
               )}
             </div>
 
-            <p className={`text-sm leading-relaxed flex-1 transition-colors duration-300 ${
-              hovered === index ? "text-white font-medium" : "text-gray-400"
-            }`}>
+            <p
+              className={`text-sm leading-relaxed flex-1 transition-colors duration-300 ${
+                hovered === index ? "text-white font-medium" : "text-gray-400"
+              }`}
+            >
               {problem.text}
             </p>
 
-            <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-all duration-300 ${
-              hovered === index ? "translate-x-1 opacity-100 text-white" : "opacity-0"
-            }`} />
+            <ChevronRight
+              className={`w-4 h-4 flex-shrink-0 transition-all duration-300 ${
+                hovered === index
+                  ? "translate-x-1 opacity-100 text-white"
+                  : "opacity-0"
+              }`}
+            />
           </li>
         ))}
       </ul>

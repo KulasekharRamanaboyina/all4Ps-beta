@@ -6,7 +6,9 @@ export default function MissionSection() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText("We don't chase buzzwords. We build clarity that converts.");
+    navigator.clipboard.writeText(
+      "We don't chase buzzwords. We build clarity that converts.",
+    );
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -18,11 +20,10 @@ export default function MissionSection() {
       </span>
 
       <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-8">
-        To make B2B marketing{" "}
-        <span className="text-white font-semibold">measurable</span>,{" "}
-        <span className="text-white font-semibold">strategic</span>, and aligned with business
-        growth — so innovative companies can reach the right buyers, start better conversations,
-        and win more deals.
+        Turn Expertise into Pipeline & Revenue Transforming complex products{" "}
+        <span className="text-white font-semibold">into compelling</span>,{" "}
+        <span className="text-white font-semibold"> market opportunities</span>
+        through strategy-led execution.
       </p>
 
       {/* Interactive Quote Card */}
@@ -37,8 +38,10 @@ export default function MissionSection() {
         <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-brand-purple to-fuchsia-400" />
 
         {/* animated shimmer on hover */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/5 to-transparent
-          opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-brand-purple/5 to-transparent
+          opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+        />
 
         {/* Quote Mark */}
         <span className="absolute -top-3 right-4 text-8xl font-serif text-brand-purple/8 pointer-events-none select-none">
@@ -53,7 +56,9 @@ export default function MissionSection() {
         <div className="flex items-center gap-2 mt-2">
           <span
             className={`text-[10px] font-bold uppercase tracking-wider transition-all duration-300 ${
-              copied ? "text-emerald-400" : "text-gray-600 group-hover:text-brand-purple"
+              copied
+                ? "text-emerald-400"
+                : "text-gray-600 group-hover:text-brand-purple"
             }`}
           >
             {copied ? "✓ Copied!" : "Click to copy"}

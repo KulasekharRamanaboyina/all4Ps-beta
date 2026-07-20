@@ -89,31 +89,22 @@ export default function Page() {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-
           <div className="grid lg:grid-cols-2 items-center gap-6 md:gap-10 lg:gap-14 min-h-screen pt-20 md:pt-24 lg:pt-0 pb-4">
-
             {/* LEFT CONTENT */}
             <div className="text-center lg:text-left lg:self-center">
-
               {/* <span className="inline-flex items-center rounded-full border border-brand-purple/40 bg-brand-purple/10 px-4 py-2 text-sm font-semibold text-brand-purple"> */}
-              <span className="inline-flex items-center rounded-full border border-brand-purple/30 bg-brand-purple/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple" >
-                Precision-Built B2B Growth
+              <span className="inline-flex items-center rounded-full border border-brand-purple/30 bg-brand-purple/10 px-5 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-brand-purple">
+                STRATEGY. EXECUTION. GROWTH.
               </span>
 
               <h1 className="mt-3 max-w-2xl text-2xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.1] sm:leading-[0.95] tracking-tight">
-
-                Marketing that
-
+                Growth Marketing
                 <br />
-
                 <span className="bg-gradient-to-r from-brand-purple to-fuchsia-400 bg-clip-text text-transparent">
-                  Moves Pipelines.
+                  for Innovative
                 </span>
-
                 <br />
-
-                Not Just Metrics.
-
+                B2B Technology Companies.
               </h1>
 
               {/* <p className="mt-8 max-w-xl text-lg text-gray-300 leading-8">
@@ -122,14 +113,13 @@ export default function Page() {
           produce measurable revenue growth.
         </p> */}
               <p className="mt-3 max-w-lg text-sm sm:text-sm md:text-base leading-6 md:leading-7 text-gray-300">
-                We build positioning, demand generation and sales enablement
-                systems that help industrial, SaaS and technology companies
-                generate measurable pipeline and revenue growth.
+                We help B2B technology companies build authority, generate
+                demand, and accelerate growth by turning expertise into market
+                leadership and measurable business results.
               </p>
 
               {/* CTA Buttons */}
               <div className="mt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-
                 <Link
                   href="/contact"
                   // className="bg-brand-purple hover:bg-purple-600 text-white px-8 py-4 rounded-md font-semibold transition"
@@ -144,23 +134,16 @@ export default function Page() {
                 >
                   Explore Our Work
                 </Link>
-
               </div>
-
             </div>
 
             {/* RIGHT CONTENT */}
             <div className="relative flex justify-center lg:justify-end">
-
               {/* <GrowthChart /> */}
               <HeroVisual />
-
             </div>
-
           </div>
-
         </div>
-
       </section>
       <LogoRibbon />
       {/* ================= WHAT WE DO ================= */}

@@ -1,6 +1,7 @@
 export interface Service {
   id: string;
   title: string;
+  heroHighlight?: string;
   shortDescription: string;
   fullDescription: string;
   titleCTA: {

@@ -8,16 +8,19 @@ import { Caveat } from "next/font/google";
 const caveat = Caveat({ subsets: ["latin"], weight: ["400"] });
 
 const problems = [
-  "Brilliant companies were building exceptional products.",
-  "But buyers couldn't understand them.",
-  "Technical founders struggled to explain value.",
-  "Marketing focused on activity instead of outcomes.",
-  "Sales teams were forced to fight uphill battles.",
+  "Innovative companies built exceptional products but struggled to communicate their value.",
+  "Complex technologies failed to connect with the right buyers.",
+  "Marketing often focused on activities instead of measurable business outcomes.",
+  "Sales teams lacked clear positioning and compelling messaging.",
+  "Great products deserved growth strategies built around business impact.",
 ];
 
 export default function FounderCard() {
   return (
-    <section id="founder-card" className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10">
+    <section
+      id="founder-card"
+      className="relative py-12 md:py-16 px-6 lg:px-12 border-t border-brand-purple/10"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start">
           {/* Founder Photo */}
@@ -42,7 +45,9 @@ export default function FounderCard() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f]/40 via-transparent to-transparent" />
               </div>
               <div className="mt-6 pl-2">
-                <p className={`${caveat.className} text-4xl text-white font-medium tracking-wide`}>
+                <p
+                  className={`${caveat.className} text-4xl text-white font-medium tracking-wide`}
+                >
                   K. Pavani
                 </p>
                 <p className="text-xs text-brand-purple/80 font-bold uppercase tracking-wider mt-1.5">
@@ -79,7 +84,9 @@ export default function FounderCard() {
                   <div className="w-6 h-6 rounded-full border border-brand-purple/30 flex items-center justify-center bg-brand-purple/10 flex-shrink-0 mt-0.5">
                     <CheckCircle2 className="w-3.5 h-3.5 text-brand-purple" />
                   </div>
-                  <span className="text-gray-300 text-sm leading-relaxed">{p}</span>
+                  <span className="text-gray-300 text-sm leading-relaxed">
+                    {p}
+                  </span>
                 </motion.li>
               ))}
             </ul>
@@ -100,9 +107,9 @@ export default function FounderCard() {
               </p>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed mb-8">
-              To make B2B marketing measurable, strategic, and aligned with
-              business growth — so innovative companies can reach the right
-              buyers, start better conversations, and win more deals.
+              Turn Expertise into Pipeline & Revenue Transforming complex
+              products into compelling market opportunities through strategy-led
+              execution.
             </p>
 
             <motion.div
@@ -110,8 +117,10 @@ export default function FounderCard() {
               className="relative bg-gradient-to-br from-[#0d0d14] to-[#0a0a0f] border border-brand-purple/20 rounded-2xl p-6 pl-8 shadow-xl shadow-purple-950/5 overflow-hidden"
             >
               <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/4 w-32 h-32 bg-brand-purple/10 rounded-full blur-2xl" />
-              
-              <span className="text-6xl font-serif text-brand-purple/20 absolute top-2 left-3 select-none">“</span>
+
+              <span className="text-6xl font-serif text-brand-purple/20 absolute top-2 left-3 select-none">
+                “
+              </span>
               <div className="relative pt-4">
                 <p className="text-base font-semibold text-gray-200 leading-relaxed italic">
                   We don't chase buzzwords.
