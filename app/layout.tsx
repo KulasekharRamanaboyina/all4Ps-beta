@@ -23,7 +23,7 @@ const manrope = Manrope({
   variable: "--font-manrope",
 });
 
-/* ================= METADATA ================= */
+/* ================= METADATA -added ================= */
 export const metadata: Metadata = {
   metadataBase: new URL("https://all4ps.co"),
 
