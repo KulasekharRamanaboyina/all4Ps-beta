@@ -45,32 +45,32 @@ md:text-3xl lg:text-4xl leading-tight font-bold text-white"
           <div className="mb-4 md:mb-5 space-y-2 md:space-y-2.5">
             <div className="flex items-center gap-4 sm:gap-6">
               <h3 className="w-24 md:w-28 lg:w-32 text-xl md:text-2xl lg:text-3xl font-extrabold text-brand-purple shrink-0">
-                +312%
+                Brand
               </h3>
 
               <p className="flex-1 text-sm md:text-base font-medium text-white">
-                Organic Growth
+                Foundation Built
               </p>
             </div>
 
             <div className="flex items-center gap-4 sm:gap-6">
               <h3 className="w-24 md:w-28 lg:w-32 text-xl md:text-2xl lg:text-3xl font-extrabold text-brand-purple shrink-0">
-                +280%
+                2×
               </h3>
 
               <p className="flex-1 text-sm md:text-base font-medium text-white">
-                Qualified Leads
+                Brand Clarity
               </p>
             </div>
 
             <div className="flex items-center gap-4 sm:gap-6">
               <h3 className="w-24 md:w-28 lg:w-32 text-xl md:text-2xl lg:text-3xl font-extrabold text-brand-purple shrink-0">
                 {" "}
-                ₹32Cr+
+                100%
               </h3>
 
               <p className="flex-1 text-sm md:text-base font-medium text-white">
-                Pipeline Influenced
+                Touchpoint Alignment
               </p>
             </div>
           </div>
@@ -79,9 +79,8 @@ md:text-3xl lg:text-4xl leading-tight font-bold text-white"
             className="max-w-full
 lg:max-w-[340px] text-xs md:text-sm leading-relaxed text-gray-400"
           >
-            Delivered a B2B growth marketing strategy that improved visibility,
-            accelerated demand generation, and increased qualified pipeline for
-            a robotics innovator.
+            Strengthened brand positioning, messaging, and digital consistency
+            for long-term growth.
           </p>
         </div>
 
