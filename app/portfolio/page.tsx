@@ -53,7 +53,7 @@ export default function PortfolioPage() {
       <PortfolioGrid />
 
       {/* 5. Client Testimonials Marquee Carousel grid */}
-      <ServicesTestimonials />
+      {/* <ServicesTestimonials /> */}
 
       {/* 6. Delivering Impact 4-column summary section */}
       <PortfolioDeliveringImpact />

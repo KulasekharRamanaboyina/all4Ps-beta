@@ -20,7 +20,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Unbox Robotics",
           middle: " Scaled ",
           highlight2: "Growth",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       case "motherson":
         return {
@@ -28,7 +28,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Motherson Group",
           middle: " Positioned for ",
           highlight2: "Enterprise Value",
-          suffix: ""
+          suffix: "",
         };
       case "anscer":
         return {
@@ -36,7 +36,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Anscer Robotics",
           middle: " Supported ",
           highlight2: "$1M Lead Conversion",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       case "anzo":
         return {
@@ -44,7 +44,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Anzo Controls",
           middle: " Built ",
           highlight2: "Digital Visibility",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       case "kloudlite":
         return {
@@ -52,7 +52,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Kloudlite Labs",
           middle: " Converted ",
           highlight2: "High-Value Leads",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       case "synergy":
         return {
@@ -60,7 +60,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Synergy Homecare",
           middle: " Drove ",
           highlight2: "Local Lead Growth",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       case "xpstays":
         return {
@@ -68,7 +68,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "XPStays",
           middle: " Achieved ",
           highlight2: "~7.5× ROAS",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       case "panchayath":
         return {
@@ -76,7 +76,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Panchayath App",
           middle: " Enabled ",
           highlight2: "Citizen Engagement",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
       default:
         return {
@@ -84,30 +84,30 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: cs.client,
           middle: " Partnered for ",
           highlight2: "Success",
-          suffix: " with all4ps"
+          suffix: " with all4ps",
         };
     }
   };
 
   const titleDetails = getHeroTitleDetails(client);
 
-  // Author & Date mapping
-  const getAuthorDetails = (cs: CaseStudy) => {
-    if (cs.id === "unbox") {
-      return {
-        name: "Neel Shukla",
-        avatar: "/images/Team_Members/Kulasekhar.webp",
-        date: "May 29, 2023"
-      };
-    }
-    return {
-      name: "K. Pavani",
-      avatar: "/images/Team_Members/Pavani.webp",
-      date: "May 26, 2026"
-    };
-  };
+  // // Author & Date mapping
+  // const getAuthorDetails = (cs: CaseStudy) => {
+  //   if (cs.id === "unbox") {
+  //     return {
+  //       name: "Neel Shukla",
+  //       avatar: "/images/Team_Members/Kulasekhar.webp",
+  //       date: "May 29, 2023",
+  //     };
+  //   }
+  //   return {
+  //     name: "K. Pavani",
+  //     avatar: "/images/Team_Members/Pavani.webp",
+  //     date: "May 26, 2026",
+  //   };
+  // };
 
-  const author = getAuthorDetails(client);
+  // const author = getAuthorDetails(client);
 
   return (
     <section className="relative pt-20 pb-16 md:pt-24 bg-transparent text-white border-b border-brand-purple/10">
@@ -125,14 +125,21 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
         >
           <ol className="flex items-center gap-2 text-xs md:text-sm text-gray-400 font-medium">
             <li>
-              <Link href="/" className="hover:text-white transition">Home</Link>
+              <Link href="/" className="hover:text-white transition">
+                Home
+              </Link>
             </li>
             <li>/</li>
             <li>
-              <Link href="/portfolio" className="hover:text-white transition">Portfolio</Link>
+              <Link href="/portfolio" className="hover:text-white transition">
+                Portfolio
+              </Link>
             </li>
             <li>/</li>
-            <li aria-current="page" className="text-white font-semibold truncate max-w-[200px]">
+            <li
+              aria-current="page"
+              className="text-white font-semibold truncate max-w-[200px]"
+            >
               {client.client}
             </li>
           </ol>
@@ -140,7 +147,6 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
 
         {/* Hero Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
           {/* Left Column: Details & Title */}
           <div className="lg:col-span-7 space-y-6">
             {/* Category Tag */}
@@ -152,7 +158,6 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
             >
               {client.category || client.industry}
             </motion.span>
-
             {/* Hero Title */}
             <motion.h1
               initial={{ opacity: 0, y: 15 }}
@@ -170,7 +175,6 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
               </span>
               {titleDetails.suffix}
             </motion.h1>
-
             {/* Subtitle / Key Result */}
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -181,8 +185,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
               {client.title}
             </motion.p>
 
-            {/* Author / Date Info */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -201,7 +204,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
                 <p className="text-sm font-bold text-white">{author.name}</p>
                 <p className="text-xs text-gray-400">{author.date}</p>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Right Column: Hero Visual Cover */}
@@ -220,7 +223,6 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
               />
             </motion.div>
           </div>
-
         </div>
       </div>
     </section>
