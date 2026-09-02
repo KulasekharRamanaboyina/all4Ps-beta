@@ -27,7 +27,10 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   metadataBase: new URL("https://all4ps.co"),
 
-  title: "all4Ps | B2B Growth & Marketing Strategy Agency",
+  title: {
+    default: "all4Ps | B2B Growth & Marketing Strategy Agency",
+    template: "%s | all4Ps",
+  },
   description:
     "We help SaaS, tech, and industrial companies drive pipeline and revenue through intentional B2B marketing.",
 

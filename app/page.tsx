@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
 import { SERVICES, ICONS_MAP, CASE_STUDIES } from "./constants";
 import FAQSection from "./components/FAQSection";
+import { homeFaqs } from "../lib/faqs";
 import LogoRibbon from "./components/home/hero/LogoRibbon";
 import ApproachSection from "./components/home/Approach/ApproachSection";
 import ServicesSection from "./components/home/Services/ServicesSection";
@@ -22,62 +24,56 @@ import ServicesGrid from "./components/ServicesGrid";
 import GrowthChart from "./components/GrowthChart";
 import HeroVisual from "./components/home/hero/HeroVisual";
 
-/* ================= SEO (NEXT.JS – SERVER) ================= */
-export const metadata = {
-  title: "all4Ps | B2B Growth & Marketing Strategy Agency",
+/* ================= SEO ================= */
+export const metadata: Metadata = {
+  title: "B2B Growth Marketing Agency for Technology Companies | all4Ps",
+
   description:
-    "We help SaaS, tech, and industrial companies drive pipeline and revenue through intentional B2B marketing, GTM strategy, and brand clarity.",
+    "all4Ps is a B2B growth marketing partner helping technology companies build authority, generate demand, and accelerate measurable business growth.",
+
   alternates: {
     canonical: "https://www.all4ps.co/",
   },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+
   openGraph: {
-    title: "all4Ps | B2B Growth & Marketing Strategy Agency",
+    title: "B2B Growth Marketing Agency for Technology Companies | all4Ps",
+
     description:
-      "We help SaaS, tech, and industrial companies drive pipeline and revenue through intentional B2B marketing, GTM strategy, and brand clarity.",
+      "all4Ps is a B2B growth marketing partner helping technology companies build authority, generate demand, and accelerate measurable business growth.",
+
     url: "https://www.all4ps.co/",
+
     siteName: "all4Ps",
+
+    type: "website",
+
     images: [
       {
-        url: "https://www.all4ps.co/images/home/all4ps-b2b-marketing-sales-enablement.jpg",
+        url: "/images/og/home-og.jpg",
         width: 1200,
         height: 630,
-        alt: "all4Ps B2B Growth Agency",
+        alt: "all4Ps B2B Growth Marketing Agency",
       },
     ],
-    type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "all4Ps | B2B Growth & Marketing Strategy Agency",
+
+    title: "B2B Growth Marketing Agency for Technology Companies | all4Ps",
+
     description:
-      "Revenue-focused B2B marketing, SEO, and GTM strategy for SaaS & tech brands.",
-    images: [
-      "https://www.all4ps.co/images/home/all4ps-b2b-marketing-sales-enablement.jpg",
-    ],
+      "all4Ps is a B2B growth marketing partner helping technology companies build authority, generate demand, and accelerate measurable business growth.",
+
+    images: ["/images/og/home-og.jpg"],
   },
 };
-const homeFaqs = [
-  {
-    q: "What does all4Ps do?",
-    a: "We help B2B companies grow their pipeline through SEO, content, and structured marketing strategies.",
-  },
-  {
-    q: "Who is all4Ps best suited for?",
-    a: "We work with B2B companies, startups, and service businesses aiming to scale inbound leads.",
-  },
-  {
-    q: "How are you different from other agencies?",
-    a: "We focus on long-term growth systems instead of short-term campaigns.",
-  },
-  {
-    q: "How soon can I see results?",
-    a: "Most clients start seeing measurable traction within 8–12 weeks.",
-  },
-  {
-    q: "Do you offer customized solutions?",
-    a: "Yes, every strategy is tailored to your business goals and audience.",
-  },
-];
+
 export default function Page() {
   return (
     <div className="animate-hero">

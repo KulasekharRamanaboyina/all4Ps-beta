@@ -9,6 +9,8 @@ import ValuesGrid from "../components/about/Values/ValuesGrid";
 import TeamGrid from "../components/about/Team/TeamGrid";
 import IndustriesSection from "../components/about/Industries/IndustriesSection";
 import CultureSection from "../components/about/Culture/CultureSection";
+import FAQSection from "../components/FAQSection";
+import { aboutFaqs } from "../../lib/faqs";
 import CtaSection from "../components/cta/CtaSection";
 
 export default function AboutPage() {
@@ -21,7 +23,7 @@ export default function AboutPage() {
   return (
     <main
       ref={containerRef}
-      className="bg-transparent text-white overflow-x-hidden"
+      className="bg-transparent text-white overflow-x-clip"
     >
       <HeroSection scrollYProgress={scrollYProgress} />
       <FounderCard />
@@ -32,6 +34,8 @@ export default function AboutPage() {
         <IndustriesSection />
       </section>
       <CultureSection />
+      {/* ================= FAQ ================= */}
+      {/* <FAQSection faqs={aboutFaqs} /> */}
       <CtaSection />
     </main>
   );

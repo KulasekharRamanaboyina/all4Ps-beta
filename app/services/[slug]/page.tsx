@@ -2,6 +2,8 @@ import React from "react";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import FAQSection from "@/app/components/FAQSection";
+import { serviceFaqs } from "@/lib/faqs";
+import { servicesMeta } from "@/lib/servicesMeta";
 
 import { SERVICES, CASE_STUDIES } from "@/app/constants";
 import { Service } from "@/app/types";
@@ -28,15 +30,19 @@ export async function generateMetadata({
 
   if (!service) return { title: "Service Not Found | all4Ps" };
 
-  const pageTitle = `${service.title} Services | all4Ps`;
-  const pageDescription =
-    service.shortDescription ||
-    `${service.title} by all4Ps – B2B growth marketing.`;
-  const pageUrl = `https://www.all4ps.co/services/${slug}`;
+  const normalizedSlug = slug?.toLowerCase().trim();
+  const meta = servicesMeta[normalizedSlug as keyof typeof servicesMeta];
 
-  const ogImage = `https://www.all4ps.co${service.outComesHeadingImage}`
-    .replace("/services/", "/og/")
-    .replace(".webp", ".jpg");
+  if (!meta) {
+    return {
+      title: "Service Not Found | all4Ps",
+    };
+  }
+
+  const pageTitle = meta.title;
+  const pageDescription = meta.description;
+  const pageUrl = meta.canonical;
+  const ogImage = `https://www.all4ps.co${meta.ogImage}`;
 
   return {
     title: pageTitle,
@@ -656,298 +662,7 @@ export default async function ServiceDetail({ params }: PageProps) {
   }
 
   // ===== Dynamic FAQs mapping =====
-  const brandStrategyFaqs = [
-    {
-      q: "What does your Brand Strategy service include?",
-      a: "It includes market research, brand audits, competitive analysis, value proposition design, and a long-term GTM roadmap.",
-    },
-    {
-      q: "How is brand strategy different from brand identity?",
-      a: "Strategy defines why your brand exists, who it targets, and what it says. Identity is the visual expression (logo, colors, typography) of that strategy.",
-    },
-    {
-      q: "How long does it take to develop a brand strategy?",
-      a: "Usually 4 to 6 weeks, depending on the complexity of your market and target audiences.",
-    },
-    {
-      q: "Will this align our sales and marketing teams?",
-      a: "Yes, a core benefit of a unified brand strategy is ensuring all departments speak the same language.",
-    },
-    {
-      q: "How do you measure the success of a brand strategy?",
-      a: "Through increases in brand awareness, consistency across marketing channels, and improved conversion rates in sales funnels.",
-    },
-  ];
-
-  const positioningMessagingFaqs = [
-    {
-      q: "What is a messaging house?",
-      a: "A structured blueprint that contains your primary brand promise, key value pillars, and supporting proof points.",
-    },
-    {
-      q: "Why is B2B positioning so difficult?",
-      a: "Because it requires translating complex, technical product features into business outcomes that busy decision-makers actually care about.",
-    },
-    {
-      q: "How do you validate positioning?",
-      a: "Through customer interviews, sales call reviews, and conversion tests on landing pages.",
-    },
-    {
-      q: "Do you write sales scripts with this service?",
-      a: "Yes, we provide boilerplate messaging templates and sales talk tracks for your teams.",
-    },
-    {
-      q: "How often should positioning be updated?",
-      a: "We recommend reviewing it annually or whenever there is a major product release or market shift.",
-    },
-  ];
-
-  const thoughtLeadershipFaqs = [
-    {
-      q: "Why is executive thought leadership important for B2B?",
-      a: "B2B buyers trust individuals more than faceless brands. A strong founder brand builds trust and drives organic inbound interest.",
-    },
-    {
-      q: "Do your writers interview the executives?",
-      a: "Yes, we run 30-minute monthly briefing calls to capture your insights, tone, and authentic voice.",
-    },
-    {
-      q: "Which platforms do you focus on?",
-      a: "We primarily focus on LinkedIn, industry blogs, and respected B2B trade publications.",
-    },
-    {
-      q: "Do we need to do the writing ourselves?",
-      a: "No, our team handles research, copywriting, and formatting, but you retain full editorial control and final sign-off.",
-    },
-    {
-      q: "How do you measure thought leadership ROI?",
-      a: "Through increases in profile engagement, inbound media inquiries, and pipeline opportunities influenced by executive content.",
-    },
-  ];
-
-  const contentMarketingFaqs = [
-    {
-      q: "What type of content do you write?",
-      a: "We focus on high-intent B2B assets: case studies, whitepapers, technical blogs, and email newsletters.",
-    },
-    {
-      q: "Is your content SEO-friendly?",
-      a: "Yes, every piece is built on keyword research and structured to rank while remaining engaging to human readers.",
-    },
-    {
-      q: "How do you source subject matter expertise?",
-      a: "We interview your technical team members and study internal resources to ensure accurate, expert-level copywriting.",
-    },
-    {
-      q: "Do you design the assets as well?",
-      a: "Yes, we provide full graphic design support for PDF whitepapers, infographics, and social media banners.",
-    },
-    {
-      q: "How long does content marketing take to show results?",
-      a: "Generally, organic traffic and inbound leads scale over a 3 to 6-month period of consistent publishing.",
-    },
-  ];
-
-  const demandGenerationFaqs = [
-    {
-      q: "What is the difference between lead generation and demand generation?",
-      a: "Lead gen captures email addresses (often low quality). Demand gen builds genuine market interest, resulting in high-intent inbound pipeline.",
-    },
-    {
-      q: "Which channels do you use for demand generation?",
-      a: "A mix of LinkedIn Ads, Google Search Ads, retargeting, SEO, and email marketing.",
-    },
-    {
-      q: "How do you qualify leads?",
-      a: "We implement lead scoring based on firmographic data (company size, industry) and behavioral cues (visits, downloads).",
-    },
-    {
-      q: "Do you provide creative assets for ads?",
-      a: "Yes, we handle ad copywriting, visual design, and landing page builds.",
-    },
-    {
-      q: "What budget do we need to start?",
-      a: "We recommend starting with a minimum ad spend of $2,000/month to ensure sufficient testing data.",
-    },
-  ];
-
-  const abmFaqs = [
-    {
-      q: "What is Account-Based Marketing (ABM)?",
-      a: "ABM is a strategic B2B marketing strategy where marketing and sales treat a target account as a market of one.",
-    },
-    {
-      q: "Is ABM right for our company?",
-      a: "If your average deal size is over $25k and you have a clear list of target companies, ABM is highly effective.",
-    },
-    {
-      q: "How do you identify target accounts?",
-      a: "We collaborate with your sales team and analyze historical customer data to define the Ideal Customer Profile (ICP).",
-    },
-    {
-      q: "How personalized are the campaigns?",
-      a: "We run Tier 1 (1:1 hyper-personalized), Tier 2 (1:few segment-specific), and Tier 3 (1:many industry-specific) programs.",
-    },
-    {
-      q: "What tools do we need for ABM?",
-      a: "We work with standard B2B tools like LinkedIn Campaign Manager, HubSpot/Salesforce, and enrichment platforms like Apollo or ZoomInfo.",
-    },
-  ];
-
-  const campaignExecutionFaqs = [
-    {
-      q: "Which advertising platforms do you manage?",
-      a: "We specialize in LinkedIn Ads, Google Ads (Search & Display), Meta Ads, and YouTube.",
-    },
-    {
-      q: "How do you handle ad creative and copy?",
-      a: "We handle everything from graphic design and video editing to professional copywriting.",
-    },
-    {
-      q: "How do you prevent wasted ad spend?",
-      a: "By using tight negative keyword lists, precise firmographic exclusions, and strict daily budget caps.",
-    },
-    {
-      q: "Do we get regular reports?",
-      a: "Yes, we build live Looker Studio dashboards and run bi-weekly syncs to review pipeline impacts.",
-    },
-    {
-      q: "What is your fee structure?",
-      a: "We work on a monthly retainer base, sometimes combined with a percentage of managed ad spend.",
-    },
-  ];
-
-  const marketingAutomationFaqs = [
-    {
-      q: "Which CRM and automation systems do you support?",
-      a: "We primarily work with HubSpot, Salesforce, Marketo, ActiveCampaign, and Zapier.",
-    },
-    {
-      q: "What is lead scoring?",
-      a: "A system that assigns points to leads based on company details (fit) and page views/downloads (interest), flagging hot leads for sales.",
-    },
-    {
-      q: "Can you clean up our messy CRM?",
-      a: "Yes, we build data mapping guides, remove duplicates, and build automated standardization rules.",
-    },
-    {
-      q: "Will you build our email newsletters?",
-      a: "Yes, we design responsive templates and set up behavioral triggers (e.g., download -> nurture sequence).",
-    },
-    {
-      q: "How long does a full setup take?",
-      a: "Standard CRM and automation alignments take between 4 to 8 weeks to deploy and test.",
-    },
-  ];
-
-  const seoVisibilityFaqs = [
-    {
-      q: "How long does it take to rank on Google?",
-      a: "Initial technical improvements show impact in 4–8 weeks; competitive keywords take 4–6 months of sustained optimization.",
-    },
-    {
-      q: "What is technical SEO?",
-      a: "Optimizing site architecture, crawlability, mobile responsiveness, schemas, and page loading speed.",
-    },
-    {
-      q: "Do you build backlinks?",
-      a: "Yes, we run organic PR outreach to earn links from high-authority industry sites, avoiding spam networks.",
-    },
-    {
-      q: "Can you help us recover from a ranking drop?",
-      a: "Yes, we diagnose penalty issues, audit search index errors, and submit cleanup requests.",
-    },
-    {
-      q: "How do you track SEO conversion?",
-      a: "We set up event tracking in GA4 to measure how much organic traffic converts into booked meetings.",
-    },
-  ];
-
-  const websiteOptimisationFaqs = [
-    {
-      q: "Do we need to rebuild our website from scratch?",
-      a: "Not always. We run a technical assessment to see if simple layout changes and speed cleanups can achieve your goals.",
-    },
-    {
-      q: "How do you improve site speed?",
-      a: "By compressing images, cleaning legacy scripts, optimizing CSS/JS loading, and using fast CDNs.",
-    },
-    {
-      q: "What is Conversion Rate Optimization (CRO)?",
-      a: "The scientific process of testing different headings, forms, and layouts to turn more visitors into booked sales calls.",
-    },
-    {
-      q: "Can we manage the website after you finish?",
-      a: "Yes, we build on easy-to-use CMS platforms (Framer, Webflow, WordPress) and provide custom training videos.",
-    },
-    {
-      q: "Do you write the copy for our web pages?",
-      a: "Yes, we craft clear, benefit-driven value propositions and call-to-actions tailored to your buyers.",
-    },
-  ];
-
-  const analyticsReportingFaqs = [
-    {
-      q: "Why is B2B attribution so difficult?",
-      a: "B2B buying cycles are long, involve multiple stakeholders, and happen across many touchpoints (both online and offline).",
-    },
-    {
-      q: "Do you set up Google Analytics 4 (GA4)?",
-      a: "Yes, we fully configure GA4, custom event conversions, and sync it with Google Tag Manager.",
-    },
-    {
-      q: "What are custom reports or dashboards?",
-      a: "We compile complex analytics data into a clean, easy-to-read Looker Studio or dashboard.",
-    },
-    {
-      q: "Can you track offline sales conversions?",
-      a: "Yes, we map CRM status changes back to the original digital marketing campaign source.",
-    },
-    {
-      q: "How often do reports update?",
-      a: "Our dashboards update in near real-time, giving you access to performance data whenever you need it.",
-    },
-  ];
-
-  const gtmExecutionFaqs = [
-    {
-      q: "What does GTM stand for?",
-      a: "Go-To-Market. It is the plan for how a company launches a product, enters a new market, or reaches new buyer segments.",
-    },
-    {
-      q: "Who is this service for?",
-      a: "Tech startups launching new features, B2B brands expanding into international regions, or industrial firms entering new verticals.",
-    },
-    {
-      q: "Do you design pricing strategies?",
-      a: "Yes, we conduct competitor pricing audits and help structure packaging models.",
-    },
-    {
-      q: "What GTM collateral do you build?",
-      a: "One-pagers, product demo video scripts, launch landing pages, pitch decks, and email outreach lists.",
-    },
-    {
-      q: "How do you measure a successful GTM launch?",
-      a: "By tracking pipeline generated, initial customer signups, and buyer feedback validation.",
-    },
-  ];
-
-  const faqsMap: Record<string, typeof brandStrategyFaqs> = {
-    "brand-strategy": brandStrategyFaqs,
-    "positioning-messaging": positioningMessagingFaqs,
-    "thought-leadership": thoughtLeadershipFaqs,
-    "content-marketing": contentMarketingFaqs,
-    "demand-generation": demandGenerationFaqs,
-    abm: abmFaqs,
-    "campaign-execution": campaignExecutionFaqs,
-    "marketing-automation": marketingAutomationFaqs,
-    "seo-visibility": seoVisibilityFaqs,
-    "website-optimisation": websiteOptimisationFaqs,
-    "analytics-reporting": analyticsReportingFaqs,
-    "gtm-execution": gtmExecutionFaqs,
-  };
-
-  const currentFaqs = faqsMap[slug] || [];
+  const currentFaqs = serviceFaqs[slug] || [];
 
   // Fetch related case study to display as featured card (from services.png/brand-identity.png mockup layout)
   const relatedCaseStudies =
@@ -976,23 +691,16 @@ export default async function ServiceDetail({ params }: PageProps) {
         badges={dynamicBadges}
         breadcrumbs={breadcrumbs}
       />
-
       {/* 2. Detailed overview, capabilities, and outcomes of the service */}
       <ServiceDetailsSection service={service} />
-
       {/* 5. Featured Case Study layout matching the single wide card mockup */}
       {featuredCaseStudy && (
         <ServicesFeaturedCaseStudy caseStudy={featuredCaseStudy} />
       )}
-
       {/* 6. Client Partnerships Testimonials */}
       {/* <ServicesTestimonials /> */}
-
       {/* 7. Specific Service FAQ Section */}
-      {/* {currentFaqs.length > 0 && (
-        <FAQSection faqs={currentFaqs} />
-      )} */}
-
+      {/* {currentFaqs.length > 0 && <FAQSection faqs={currentFaqs} />} */}
       {/* 8. Customized CTA Bottom banner */}
       <CtaSection
         title={service.bottomCTA?.heading}
@@ -1000,7 +708,6 @@ export default async function ServiceDetail({ params }: PageProps) {
         buttonText={service.bottomCTA?.label}
         buttonLink={service.bottomCTA?.link}
       />
-
       {/* ================= Service Schema ================= */}
       <script
         type="application/ld+json"
@@ -1028,7 +735,6 @@ export default async function ServiceDetail({ params }: PageProps) {
           }),
         }}
       />
-
       {/* ================= Breadcrumb Schema ================= */}
       <script
         type="application/ld+json"

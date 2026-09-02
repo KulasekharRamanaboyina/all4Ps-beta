@@ -76,10 +76,10 @@ export default function ServicesPage() {
       <ServicesFramework />
       <ServicesCaseStudies />
       <ServicesTestimonials />
-      
+
       {/* FAQ Section */}
-      <FAQSection faqs={servicesFaqs} />
-      
+      {/* <FAQSection faqs={servicesFaqs} /> */}
+
       {/* CTA Section */}
       <CtaSection />
 
