@@ -700,7 +700,7 @@ export default async function ServiceDetail({ params }: PageProps) {
       {/* 6. Client Partnerships Testimonials */}
       {/* <ServicesTestimonials /> */}
       {/* 7. Specific Service FAQ Section */}
-      {/* {currentFaqs.length > 0 && <FAQSection faqs={currentFaqs} />} */}
+      {currentFaqs.length > 0 && <FAQSection faqs={currentFaqs} />}
       {/* 8. Customized CTA Bottom banner */}
       <CtaSection
         title={service.bottomCTA?.heading}

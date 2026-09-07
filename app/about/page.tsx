@@ -35,7 +35,7 @@ export default function AboutPage() {
       </section>
       <CultureSection />
       {/* ================= FAQ ================= */}
-      {/* <FAQSection faqs={aboutFaqs} /> */}
+      <FAQSection faqs={aboutFaqs} />
       <CtaSection />
     </main>
   );

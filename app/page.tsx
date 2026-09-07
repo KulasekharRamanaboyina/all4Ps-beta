@@ -228,7 +228,7 @@ export default function Page() {
       {/* ================= SUCCESS STORIES ================= */}
       <SuccessStoriesSection />
       {/* ================= FAQ ================= */}
-      {/* <FAQSection faqs={homeFaqs} /> */}
+      <FAQSection faqs={homeFaqs} />
       {/* ================= FINAL CTA ================= */}
       <CTASection />
       {/* <section className="py-24 bg-brand-purple text-center px-4">

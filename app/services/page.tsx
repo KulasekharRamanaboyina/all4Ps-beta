@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FAQSection from "@/app/components/FAQSection";
+// import FAQSection from "@/app/components/FAQSection";
 import ServicesHero from "@/app/components/services/ServicesHero";
 import ServicesFramework from "@/app/components/services/ServicesFramework";
 import ServicesList from "@/app/components/services/ServicesList";
@@ -39,33 +39,6 @@ export const metadata: Metadata = {
     images: ["https://www.all4ps.co/images/og/marketing-strategy.jpg"],
   },
 };
-
-const servicesFaqs = [
-  {
-    q: "What services does all4Ps offer?",
-    a: "We offer brand identity, marketing strategy, growth marketing, content marketing, SEO & SEM, and website services.",
-  },
-  {
-    q: "Can I choose individual services or do I need a full package?",
-    a: "You can choose individual services or combine them based on your needs.",
-  },
-  {
-    q: "Which service is right for my business?",
-    a: "It depends on your goals and growth stage. We help you decide during the discovery process.",
-  },
-  {
-    q: "Do you provide both strategy and execution?",
-    a: "Yes, we offer end-to-end support from strategy and planning to execution and optimization.",
-  },
-  {
-    q: "How long does it take to see results?",
-    a: "Most clients start seeing measurable improvements within 8–12 weeks.",
-  },
-  {
-    q: "How do we get started?",
-    a: "You can book a strategy call with us, and we’ll guide you through the next steps.",
-  },
-];
 
 export default function ServicesPage() {
   return (
