@@ -122,7 +122,7 @@ export default function RoboticsMarketingAgencyPage() {
             </a>
 
             <a
-              href="/portfolio"
+              href="/portfolio/unbox"
               className="
                 inline-flex
                 items-center
@@ -372,6 +372,8 @@ export default function RoboticsMarketingAgencyPage() {
                 name: "Unbox Robotics",
                 category: "Robotics & Warehouse Automation",
                 text: "Marketing and digital initiatives for a robotics company operating in warehouse automation.",
+                image: "/images/portfolio/unbox.webp",
+                link: "/portfolio/unbox",
               },
 
               {
@@ -379,6 +381,8 @@ export default function RoboticsMarketingAgencyPage() {
                 name: "ANSCER Robotics",
                 category: "Robotics & Automation",
                 text: "Marketing support for a robotics technology company focused on industrial applications.",
+                image: "/images/portfolio/anscer.webp",
+                link: "/portfolio/anscer",
               },
 
               {
@@ -386,76 +390,97 @@ export default function RoboticsMarketingAgencyPage() {
                 name: "ROBIS Motherson",
                 category: "Industrial Robotics",
                 text: "Marketing and communication work for robotics and industrial automation initiatives.",
+                image: "/images/portfolio/motherson.webp",
+                link: "/portfolio/motherson",
               },
             ].map((client) => (
               <div
                 key={client.name}
                 className="
-                  group
-                  relative
-                  overflow-hidden
-                  rounded-2xl
-                  border
-                  border-white/10
-                  bg-[#09060d]
-                  p-7
-                  transition-all
-                  duration-300
-                  hover:border-[#800080]/40
-                "
+            group
+            relative
+            overflow-hidden
+            rounded-2xl
+            border
+            border-white/10
+            bg-[#09060d]
+            transition-all
+            duration-300
+            hover:border-[#800080]/40
+          "
               >
-                {/* Subtle background glow */}
+                {/* Client Image */}
+                <div className="relative h-52 w-full overflow-hidden">
+                  <img
+                    src={client.image}
+                    alt={client.name}
+                    className="
+                h-full
+                w-full
+                object-cover
+                object-center
+                transition-transform
+                duration-700
+                group-hover:scale-105
+              "
+                  />
+                </div>
 
-                <div
-                  className="
-                    pointer-events-none
-                    absolute
-                    right-0
-                    top-0
-                    h-32
-                    w-32
-                    rounded-full
-                    bg-[#800080]/10
-                    blur-3xl
-                    transition-all
-                    duration-500
-                    group-hover:bg-[#800080]/20
-                  "
-                />
+                {/* Card Content */}
+                <div className="relative p-7">
+                  <div
+                    className="
+                pointer-events-none
+                absolute
+                right-0
+                top-0
+                h-32
+                w-32
+                rounded-full
+                bg-[#800080]/10
+                blur-3xl
+                transition-all
+                duration-500
+                group-hover:bg-[#800080]/20
+              "
+                  />
 
-                <div className="relative">
-                  <div className="mb-6 flex items-center justify-between">
-                    <p className="text-xs font-bold tracking-wider text-[#800080]">
-                      {client.number}
+                  <div className="relative">
+                    <div className="mb-6 flex items-center justify-between">
+                      <p className="text-xs font-bold tracking-wider text-[#800080]">
+                        {client.number}
+                      </p>
+
+                      <span className="text-xs text-gray-600">ROBOTICS</span>
+                    </div>
+
+                    <p className="mb-3 text-xs font-medium uppercase tracking-wider text-[#800080]">
+                      {client.category}
                     </p>
 
-                    <span className="text-xs text-gray-600">ROBOTICS</span>
+                    <h3 className="mb-4 text-2xl font-bold text-white">
+                      {client.name}
+                    </h3>
+
+                    <p className="text-sm leading-6 text-gray-400">
+                      {client.text}
+                    </p>
+
+                    <a
+                      href={client.link}
+                      className="
+                  mt-6
+                  inline-block
+                  text-sm
+                  font-semibold
+                  text-white
+                  transition
+                  hover:text-[#800080]
+                "
+                    >
+                      View Work →
+                    </a>
                   </div>
-
-                  <p className="mb-3 text-xs font-medium uppercase tracking-wider text-[#800080]">
-                    {client.category}
-                  </p>
-
-                  <h3 className="mb-4 text-2xl font-bold">{client.name}</h3>
-
-                  <p className="text-sm leading-6 text-gray-400">
-                    {client.text}
-                  </p>
-
-                  <a
-                    href="/portfolio"
-                    className="
-                      mt-6
-                      inline-block
-                      text-sm
-                      font-semibold
-                      text-white
-                      transition
-                      hover:text-[#800080]
-                    "
-                  >
-                    View Work →
-                  </a>
                 </div>
               </div>
             ))}
@@ -622,7 +647,7 @@ export default function RoboticsMarketingAgencyPage() {
               </a>
 
               <a
-                href="/portfolio"
+                href="/portfolio/anscer"
                 className="
                   rounded-lg
                   border
