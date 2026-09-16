@@ -10,24 +10,28 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ================= NavLink Active Class ================= */
 const navLinkClass = (isActive: boolean) =>
-  `transition-all duration-300 ${isActive
-    ? "text-brand-purple font-semibold"
-    : "text-white hover:text-brand-purple"
+  `transition-all duration-300 ${
+    isActive
+      ? "text-brand-purple font-semibold"
+      : "text-white hover:text-brand-purple"
   }`;
 
 /* ================= Navbar Component ================= */
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
 
   const router = useRouter();
   const pathname = usePathname();
 
   const isServicesActive = pathname.startsWith("/services");
+  const isIndustriesActive = pathname.startsWith("/industries");
 
   const handleLinkClick = () => {
     setIsOpen(false);
     setIsServicesOpen(false);
+    setIsIndustriesOpen(false);
   };
 
   const navigateTo = (path: string) => {
@@ -52,7 +56,6 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-
           {/* ================= Logo ================= */}
           <div
             className="flex-shrink-0 flex items-center cursor-pointer"
@@ -82,10 +85,11 @@ const Navbar: React.FC = () => {
             {/* ================= Services Dropdown ================= */}
             <div className="relative group">
               <button
-                className={`flex items-center transition-all duration-300 ${isServicesActive
-                  ? "text-brand-purple font-semibold"
-                  : "text-white hover:text-brand-purple"
-                  }`}
+                className={`flex items-center transition-all duration-300 ${
+                  isServicesActive
+                    ? "text-brand-purple font-semibold"
+                    : "text-white hover:text-brand-purple"
+                }`}
               >
                 Services <ChevronDown className="ml-1 w-4 h-4" />
               </button>
@@ -133,12 +137,15 @@ const Navbar: React.FC = () => {
                             key={service.id}
                             href={`/services/${service.id}`}
                             onClick={handleLinkClick}
-                            className={`block py-1.5 transition-all duration-200 ${isActive
-                              ? "text-brand-purple font-bold"
-                              : "text-gray-300 hover:text-brand-purple"
-                              }`}
+                            className={`block py-1.5 transition-all duration-200 ${
+                              isActive
+                                ? "text-brand-purple font-bold"
+                                : "text-gray-300 hover:text-brand-purple"
+                            }`}
                           >
-                            <span className="block font-bold text-xs">{service.title}</span>
+                            <span className="block font-bold text-xs">
+                              {service.title}
+                            </span>
                           </Link>
                         );
                       })}
@@ -158,12 +165,15 @@ const Navbar: React.FC = () => {
                             key={service.id}
                             href={`/services/${service.id}`}
                             onClick={handleLinkClick}
-                            className={`block py-1.5 transition-all duration-200 ${isActive
-                              ? "text-brand-purple font-bold"
-                              : "text-gray-300 hover:text-brand-purple"
-                              }`}
+                            className={`block py-1.5 transition-all duration-200 ${
+                              isActive
+                                ? "text-brand-purple font-bold"
+                                : "text-gray-300 hover:text-brand-purple"
+                            }`}
                           >
-                            <span className="block font-bold text-xs">{service.title}</span>
+                            <span className="block font-bold text-xs">
+                              {service.title}
+                            </span>
                           </Link>
                         );
                       })}
@@ -183,12 +193,15 @@ const Navbar: React.FC = () => {
                             key={service.id}
                             href={`/services/${service.id}`}
                             onClick={handleLinkClick}
-                            className={`block py-1.5 transition-all duration-200 ${isActive
-                              ? "text-brand-purple font-bold"
-                              : "text-gray-300 hover:text-brand-purple"
-                              }`}
+                            className={`block py-1.5 transition-all duration-200 ${
+                              isActive
+                                ? "text-brand-purple font-bold"
+                                : "text-gray-300 hover:text-brand-purple"
+                            }`}
                           >
-                            <span className="block font-bold text-xs">{service.title}</span>
+                            <span className="block font-bold text-xs">
+                              {service.title}
+                            </span>
                           </Link>
                         );
                       })}
@@ -198,10 +211,73 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            <Link href="/portfolio" className={navLinkClass(pathname === "/portfolio")} onClick={handleLinkClick}>
+            {/* Industries Dropdown */}
+            <div className="relative group">
+              <button
+                className={`flex items-center transition-all duration-300 ${
+                  isIndustriesActive
+                    ? "text-brand-purple font-semibold"
+                    : "text-white hover:text-brand-purple"
+                }`}
+              >
+                Industries
+                <ChevronDown className="ml-1 w-4 h-4" />
+              </button>
+
+              <div
+                className="
+                  absolute
+                  left-1/2
+                  -translate-x-1/2
+                  top-full
+                  mt-3
+                  w-[280px]
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-white/10
+                  bg-[#0C0814]/95
+                  backdrop-blur-xl
+                  p-4
+                  shadow-[0_20px_50px_rgba(0,0,0,0.6)]
+                  opacity-0
+                  invisible
+                  translate-y-2
+                  transition-all
+                  duration-300
+                  group-hover:opacity-100
+                  group-hover:visible
+                  group-hover:translate-y-0
+                "
+              >
+                <div className="pt-2">
+                  <Link
+                    href="/industries/robotics-marketing-agency"
+                    onClick={handleLinkClick}
+                    className="block rounded-lg px-4 py-3 text-gray-300 hover:bg-brand-purple/10 hover:text-brand-purple transition-all"
+                  >
+                    <span className="block font-bold text-sm">
+                      Robotics & Automation
+                    </span>
+
+                    <span className="mt-1 block text-xs text-gray-500">
+                      Marketing for robotics businesses
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Portfolio */}
+            <Link href="/portfolio" className="...">
               Portfolio
             </Link>
-            <Link href="/blog" className={navLinkClass(pathname === "/blog")} onClick={handleLinkClick}>
+
+            <Link
+              href="/blog"
+              className={navLinkClass(pathname === "/blog")}
+              onClick={handleLinkClick}
+            >
               Blogs
             </Link>
 
@@ -235,16 +311,24 @@ const Navbar: React.FC = () => {
             aria-label="Toggle menu"
           >
             {/* Line 1 */}
-            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isOpen ? "rotate-45" : "-translate-y-1.5"
-              }`} />
+            <span
+              className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
+                isOpen ? "rotate-45" : "-translate-y-1.5"
+              }`}
+            />
             {/* Line 2 */}
-            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isOpen ? "opacity-0" : ""
-              }`} />
+            <span
+              className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
+                isOpen ? "opacity-0" : ""
+              }`}
+            />
             {/* Line 3 */}
-            <span className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${isOpen ? "-rotate-45" : "translate-y-1.5"
-              }`} />
+            <span
+              className={`block absolute h-0.5 w-6 bg-white transform transition duration-300 ease-in-out ${
+                isOpen ? "-rotate-45" : "translate-y-1.5"
+              }`}
+            />
           </button>
-
         </div>
       </div>
 
@@ -275,7 +359,6 @@ const Navbar: React.FC = () => {
 
               {/* Navigation list items */}
               <div className="space-y-6">
-
                 {/* Home */}
                 <motion.div
                   initial={{ opacity: 0, y: 15 }}
@@ -317,8 +400,9 @@ const Navbar: React.FC = () => {
                   >
                     Services
                     <ChevronDown
-                      className={`w-6 h-6 transform transition-transform duration-300 text-brand-purple ${isServicesOpen ? "rotate-180" : ""
-                        }`}
+                      className={`w-6 h-6 transform transition-transform duration-300 text-brand-purple ${
+                        isServicesOpen ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
 
@@ -339,7 +423,9 @@ const Navbar: React.FC = () => {
                             {SERVICES.slice(0, 4).map((service) => (
                               <button
                                 key={service.id}
-                                onClick={() => navigateTo(`/services/${service.id}`)}
+                                onClick={() =>
+                                  navigateTo(`/services/${service.id}`)
+                                }
                                 className="block w-full text-left text-sm text-gray-300 hover:text-brand-purple transition-colors py-1"
                               >
                                 {service.title}
@@ -357,7 +443,9 @@ const Navbar: React.FC = () => {
                             {SERVICES.slice(4, 8).map((service) => (
                               <button
                                 key={service.id}
-                                onClick={() => navigateTo(`/services/${service.id}`)}
+                                onClick={() =>
+                                  navigateTo(`/services/${service.id}`)
+                                }
                                 className="block w-full text-left text-sm text-gray-300 hover:text-brand-purple transition-colors py-1"
                               >
                                 {service.title}
@@ -375,7 +463,9 @@ const Navbar: React.FC = () => {
                             {SERVICES.slice(8, 12).map((service) => (
                               <button
                                 key={service.id}
-                                onClick={() => navigateTo(`/services/${service.id}`)}
+                                onClick={() =>
+                                  navigateTo(`/services/${service.id}`)
+                                }
                                 className="block w-full text-left text-sm text-gray-300 hover:text-brand-purple transition-colors py-1"
                               >
                                 {service.title}
@@ -422,13 +512,10 @@ const Navbar: React.FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.35 }}
                 >
-                  <span
-                    className="block w-full text-left text-2xl font-bold text-gray-600 cursor-not-allowed select-none font-display"
-                  >
+                  <span className="block w-full text-left text-2xl font-bold text-gray-600 cursor-not-allowed select-none font-display">
                     Careers
                   </span>
                 </motion.div>
-
               </div>
 
               {/* Book Call button at drawer bottom */}
@@ -445,7 +532,6 @@ const Navbar: React.FC = () => {
                   Book a Call
                 </button>
               </motion.div>
-
             </motion.div>
           </>
         )}

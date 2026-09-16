@@ -402,3 +402,29 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     },
   ],
 };
+export const roboticsFaqs: FAQItem[] = [
+  {
+    q: "What is robotics marketing?",
+    a: "Robotics marketing focuses on positioning, demand generation, content, SEO, and campaigns that help robotics companies reach and engage the right B2B decision-makers.",
+  },
+  {
+    q: "Why do robotics companies need specialized marketing?",
+    a: "Robotics products are often technically complex and involve longer buying cycles and multiple stakeholders. Specialized marketing helps translate that complexity into clear business value.",
+  },
+  {
+    q: "How can all4Ps help robotics companies generate demand?",
+    a: "We combine positioning, content, SEO, paid campaigns, and growth strategy to build authority and generate qualified B2B demand.",
+  },
+  {
+    q: "Do you work with automation and industrial robotics companies?",
+    a: "Yes. Our approach is designed for robotics, automation, industrial technology, and other technically complex B2B businesses.",
+  },
+  {
+    q: "How long does robotics marketing take to show results?",
+    a: "The timeline depends on the channels, market, and starting point. Paid campaigns can generate early signals, while SEO and content typically require a longer period to build momentum.",
+  },
+  {
+    q: "How do we get started with all4Ps?",
+    a: "You can start with a strategy call where we understand your business, audience, positioning, and growth goals before recommending the right approach.",
+  },
+];
