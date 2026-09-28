@@ -31,24 +31,15 @@ export default function LatestArticlesSection({
   onLoadMore,
   author,
 }: LatestArticlesSectionProps) {
-  const getAuthorAvatar = (itemAuthor: any) => {
-    if (!itemAuthor || !itemAuthor.avatar) return "/images/Team_Members/Pavani.webp";
-    if (typeof itemAuthor.avatar === "string") return itemAuthor.avatar;
-    try {
-      return urlFor(itemAuthor.avatar).width(80).url();
-    } catch {
-      return "/images/Team_Members/Pavani.webp";
-    }
-  };
-
   return (
     <section className="pt-8 pb-24 px-6 lg:px-12 z-10 max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-12 gap-12">
-        
         {/* LEFT: Articles List */}
         <div className="lg:col-span-8">
           <h2 className="text-2xl font-bold mb-8">
-            {selectedCategory ? `${selectedCategory} Articles` : "Latest Articles"}
+            {selectedCategory
+              ? `${selectedCategory} Articles`
+              : "Latest Articles"}
           </h2>
 
           <div className="space-y-6">
@@ -62,7 +53,10 @@ export default function LatestArticlesSection({
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
                   className="relative overflow-hidden border-b border-white/10 pb-8 pt-8 first:pt-0"
                 >
-                  <Link href={`/blog/${post.slug}`} className="group flex flex-col md:flex-row gap-6">
+                  <Link
+                    href={`/blog/${post.slug}`}
+                    className="group flex flex-col md:flex-row gap-6"
+                  >
                     {/* Image container */}
                     <div className="relative md:w-2/5 aspect-[16/10] md:aspect-auto md:h-44 rounded-xl overflow-hidden bg-gray-900 flex-shrink-0">
                       <Image
@@ -91,22 +85,6 @@ export default function LatestArticlesSection({
                       </div>
 
                       <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/5 pt-4 mt-auto">
-                        {/* Author info */}
-                        <div className="flex items-center gap-2.5">
-                          <div className="relative w-8 h-8 rounded-full overflow-hidden bg-gray-900 border border-brand-purple/20">
-                            <Image
-                              src={getAuthorAvatar(post.author)}
-                              alt={post.author.name}
-                              fill
-                              sizes="32px"
-                              className="object-cover object-top"
-                            />
-                          </div>
-                          <span className="text-xs text-gray-300 font-medium">
-                            {post.author.name}
-                          </span>
-                        </div>
-
                         {/* Metadata */}
                         <div className="flex items-center gap-4 text-[11px] text-gray-400">
                           <span className="flex items-center gap-1">
@@ -128,7 +106,9 @@ export default function LatestArticlesSection({
               ))
             ) : (
               <div className="text-center py-12 bg-[#0d0d14] rounded-2xl border border-white/5">
-                <p className="text-gray-400">No articles found in this category yet.</p>
+                <p className="text-gray-400">
+                  No articles found in this category yet.
+                </p>
               </div>
             )}
           </div>
@@ -157,7 +137,6 @@ export default function LatestArticlesSection({
             <PopularArticlesWidget popularPosts={posts} />
           </div>
         </aside>
-
       </div>
     </section>
   );

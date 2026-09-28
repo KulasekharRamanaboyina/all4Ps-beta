@@ -14,20 +14,19 @@ interface BlogHeroProps {
 }
 
 export default function BlogHero({ featuredPost }: BlogHeroProps) {
-  const getAuthorAvatar = (author: any) => {
-    if (!author || !author.avatar) return "/images/Team_Members/Pavani.webp";
-    if (typeof author.avatar === "string") return author.avatar;
-    try {
-      return urlFor(author.avatar).width(80).url();
-    } catch {
-      return "/images/Team_Members/Pavani.webp";
-    }
-  };
+  // const getAuthorAvatar = (author: any) => {
+  //   if (!author || !author.avatar) return "/images/Team_Members/Pavani.webp";
+  //   if (typeof author.avatar === "string") return author.avatar;
+  //   try {
+  //     return urlFor(author.avatar).width(80).url();
+  //   } catch {
+  //     return "/images/Team_Members/Pavani.webp";
+  //   }
+  // };
 
   return (
     <section className="relative pt-20 pb-16 md:pt-24 px-6 lg:px-12 z-10 max-w-7xl mx-auto border-b border-brand-purple/10">
       <div className="grid lg:grid-cols-12 gap-12 items-center">
-        
         {/* Left Column - Intro */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +44,9 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
             </span>
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
-            Practical thinking, methodologies, and blueprints on B2B demand generation, positioning, and marketing strategies designed for technology and industrial companies.
+            Practical thinking, methodologies, and blueprints on B2B demand
+            generation, positioning, and marketing strategies designed for
+            technology and industrial companies.
           </p>
         </motion.div>
 
@@ -57,10 +58,13 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
             transition={{ duration: 0.8, delay: 0.1 }}
             className="lg:col-span-6 w-full"
           >
-            <Link href={`/blog/${featuredPost.slug}`} className="group block relative w-full space-y-4">
+            <Link
+              href={`/blog/${featuredPost.slug}`}
+              className="group block relative w-full space-y-4"
+            >
               {/* Glow backdrop effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-brand-purple/30 to-transparent rounded-3xl blur-xl opacity-40 pointer-events-none" />
-              
+
               {/* Image Frame */}
               <div className="relative aspect-[16/10] rounded-3xl overflow-hidden border border-white/10 shadow-2xl transition-all duration-300 group-hover:border-brand-purple/40">
                 <Image
@@ -71,7 +75,7 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
                   sizes="(max-width: 768px) 100vw, 600px"
                   className="object-cover transition-transform duration-500 group-hover:scale-102"
                 />
-                
+
                 {/* Glassmorphic Featured Badge overlay */}
                 <div className="absolute top-4 left-4 bg-brand-purple/20 backdrop-blur-md border border-brand-purple/35 text-white text-[10px] font-bold tracking-widest uppercase px-3.5 py-1.5 rounded-full shadow-lg z-10">
                   Featured Article
@@ -86,20 +90,6 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
               {/* Metadata (Author, Published Date, Read Time) below the image */}
               <div className="flex flex-wrap items-center gap-4 sm:gap-6 pt-1 text-xs text-gray-400">
                 {/* Author */}
-                <div className="flex items-center gap-2">
-                  <div className="relative w-7 h-7 rounded-full overflow-hidden border border-white/10 group-hover:border-brand-purple/50 bg-gray-900 shrink-0 transition-colors duration-300">
-                    <Image
-                      src={getAuthorAvatar(featuredPost.author)}
-                      alt={featuredPost.author.name}
-                      fill
-                      sizes="28px"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <span className="font-semibold text-white group-hover:text-brand-purple transition-colors duration-300">
-                    {featuredPost.author.name}
-                  </span>
-                </div>
 
                 <div className="w-1.5 h-1.5 rounded-full bg-white/10 hidden sm:block" />
 
@@ -118,7 +108,6 @@ export default function BlogHero({ featuredPost }: BlogHeroProps) {
             </Link>
           </motion.div>
         )}
-
       </div>
     </section>
   );

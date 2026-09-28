@@ -14,7 +14,6 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import { DetailedBlogPost } from "@/app/types";
 import { getImageUrl } from "@/lib/image";
-import { urlFor } from "@/lib/image";
 
 interface ArticleHeroProps {
   post: DetailedBlogPost;
@@ -34,16 +33,6 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
     navigator.clipboard.writeText(shareUrl);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  };
-
-  const getAuthorAvatar = (author: any) => {
-    if (!author || !author.avatar) return "/images/Team_Members/Pavani.webp";
-    if (typeof author.avatar === "string") return author.avatar;
-    try {
-      return urlFor(author.avatar).width(120).url();
-    } catch {
-      return "/images/Team_Members/Pavani.webp";
-    }
   };
 
   const renderTitle = (title: string) => {
@@ -66,7 +55,10 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
       {/* ================= BREADCRUMBS ================= */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 md:pt-24 relative z-10">
         <nav className="flex items-center gap-2 text-xs text-gray-400 font-medium">
-          <Link href="/blog" className="hover:text-brand-purple transition-colors">
+          <Link
+            href="/blog"
+            className="hover:text-brand-purple transition-colors"
+          >
             Blogs & Insights
           </Link>
           <ChevronRight className="w-3.5 h-3.5" />
@@ -79,7 +71,6 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
       {/* ================= HERO CONTENT ================= */}
       <header className="max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16 relative z-10 border-b border-brand-purple/10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
-          
           {/* Left Column Content */}
           <div className="lg:col-span-7">
             <span className="inline-block bg-brand-purple/20 border border-brand-purple/40 text-brand-purple text-[10px] font-bold tracking-widest uppercase px-3.5 py-1.5 rounded-full mb-6">
@@ -94,24 +85,6 @@ export default function ArticleHero({ post }: ArticleHeroProps) {
 
             {/* Author / Metadata Row */}
             <div className="flex flex-wrap items-center gap-6 border-y border-white/5 py-5 mb-8">
-              <div className="flex items-center gap-3">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden border border-brand-purple/30 bg-gray-900">
-                  <Image
-                    src={getAuthorAvatar(post.author)}
-                    alt={post.author.name}
-                    fill
-                    sizes="48px"
-                    className="object-cover object-top"
-                  />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-white">{post.author.name}</p>
-                  <p className="text-xs text-gray-400">{post.author.role}</p>
-                </div>
-              </div>
-
-              <div className="h-8 w-px bg-white/10 hidden sm:block" />
-
               <div className="flex items-center gap-4 text-xs text-gray-400">
                 <span className="flex items-center gap-1.5">
                   <Calendar className="w-4 h-4 text-brand-purple" />
