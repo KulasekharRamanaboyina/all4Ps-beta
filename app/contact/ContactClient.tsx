@@ -18,7 +18,7 @@ import {
   CheckSquare,
   Target,
   ExternalLink,
-  Info
+  Info,
 } from "lucide-react";
 import CtaSection from "../components/cta/CtaSection";
 
@@ -38,7 +38,13 @@ export default function ContactClient() {
   const [selectedDay, setSelectedDay] = useState<number>(21);
   const [selectedTime, setSelectedTime] = useState<string>("11:30 AM");
 
-  const availableSlots = ["10:00 AM", "11:30 AM", "01:00 PM", "03:30 PM", "05:00 PM"];
+  const availableSlots = [
+    "10:00 AM",
+    "11:30 AM",
+    "01:00 PM",
+    "03:30 PM",
+    "05:00 PM",
+  ];
 
   // May 2026 Calendar Layout
   const calendarDays = useMemo(() => {
@@ -59,7 +65,7 @@ export default function ContactClient() {
 
     emailjs
       .send(
-        "service_obbqdvf",
+        "service_xe237sd",
         "template_k6x0b7g",
         {
           name: formData.name,
@@ -69,26 +75,24 @@ export default function ContactClient() {
         },
         "Jkr6JdoCrHYeiNbqg",
       )
-      .then(
-        () => {
-          setToast("success");
-          setFormData({
-            name: "",
-            email: "",
-            company: "",
-            concern: "",
-          });
-          setLoading(false);
-          setTimeout(() => setToast(null), 4000);
-        },
-        () => {
-          setToast("error");
-          setLoading(false);
-          setTimeout(() => setToast(null), 4000);
-        },
-      );
+      .then(() => {
+        setToast("success");
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          concern: "",
+        });
+        setLoading(false);
+        setTimeout(() => setToast(null), 4000);
+      })
+      .catch((error) => {
+        console.error("EmailJS Error:", error);
+        setToast("error");
+        setLoading(false);
+        setTimeout(() => setToast(null), 4000);
+      });
   };
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -106,7 +110,6 @@ export default function ContactClient() {
       {/* ================= HERO & FORM SECTION ================= */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 pt-4 pb-10 relative z-10">
         <div className="grid lg:grid-cols-12 gap-10 items-center">
-          
           {/* Left Column: Heading and Info */}
           <div className="lg:col-span-6 space-y-5">
             <span className="inline-block bg-brand-purple/20 border border-brand-purple/40 text-brand-purple text-[10px] font-bold tracking-widest uppercase px-3.5 py-1.5 rounded-full">
@@ -119,7 +122,8 @@ export default function ContactClient() {
               </span>
             </h1>
             <p className="text-gray-300 text-sm sm:text-base leading-relaxed max-w-xl">
-              Have a project in mind or want to explore how we can accelerate your growth? We'd love to hear from you.
+              Have a project in mind or want to explore how we can accelerate
+              your growth? We'd love to hear from you.
             </p>
 
             {/* Direct Contacts List */}
@@ -129,8 +133,13 @@ export default function ContactClient() {
                   <Mail className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">Email Us</p>
-                  <a href="mailto:grow@all4ps.co" className="text-white hover:text-brand-purple text-sm font-semibold transition-colors">
+                  <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">
+                    Email Us
+                  </p>
+                  <a
+                    href="mailto:grow@all4ps.co"
+                    className="text-white hover:text-brand-purple text-sm font-semibold transition-colors"
+                  >
                     grow@all4ps.co
                   </a>
                 </div>
@@ -141,8 +150,13 @@ export default function ContactClient() {
                   <Phone className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">Call Us</p>
-                  <a href="tel:+919871749916" className="text-white hover:text-brand-purple text-sm font-semibold transition-colors">
+                  <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">
+                    Call Us
+                  </p>
+                  <a
+                    href="tel:+919871749916"
+                    className="text-white hover:text-brand-purple text-sm font-semibold transition-colors"
+                  >
                     +91 98717 49916
                   </a>
                 </div>
@@ -153,7 +167,9 @@ export default function ContactClient() {
                   <MapPin className="w-4.5 h-4.5" />
                 </div>
                 <div>
-                  <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">Our HQ</p>
+                  <p className="text-[9px] text-gray-500 font-bold uppercase tracking-wider">
+                    Our HQ
+                  </p>
                   <p className="text-white text-sm font-semibold">
                     Bangalore, Karnataka, India
                   </p>
@@ -166,14 +182,20 @@ export default function ContactClient() {
           <div className="lg:col-span-6">
             <div className="rounded-3xl border border-white/5 bg-[#0d0d14]/80 backdrop-blur-md p-6 sm:p-8 relative overflow-hidden shadow-[0_0_50px_-12px_rgba(168,85,247,0.15)]">
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-purple/5 rounded-full blur-3xl pointer-events-none" />
-              
-              <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">Send us a message</h2>
-              <p className="text-gray-400 text-xs mb-6">We'll get back to you within 24 hours.</p>
+
+              <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                Send us a message
+              </h2>
+              <p className="text-gray-400 text-xs mb-6">
+                We'll get back to you within 24 hours.
+              </p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">Your Name *</label>
+                    <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">
+                      Your Name *
+                    </label>
                     <input
                       name="name"
                       type="text"
@@ -185,7 +207,9 @@ export default function ContactClient() {
                     />
                   </div>
                   <div>
-                    <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">Work Email *</label>
+                    <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">
+                      Work Email *
+                    </label>
                     <input
                       name="email"
                       type="email"
@@ -199,7 +223,9 @@ export default function ContactClient() {
                 </div>
 
                 <div>
-                  <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">Company Name *</label>
+                  <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">
+                    Company Name *
+                  </label>
                   <input
                     name="company"
                     type="text"
@@ -212,7 +238,9 @@ export default function ContactClient() {
                 </div>
 
                 <div>
-                  <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">Tell us more about your requirements *</label>
+                  <label className="block text-[9px] text-gray-400 font-bold uppercase tracking-wider mb-1.5">
+                    Tell us more about your requirements *
+                  </label>
                   <textarea
                     name="concern"
                     rows={3}
@@ -242,7 +270,10 @@ export default function ContactClient() {
                 <Lock className="w-3.5 h-3.5 text-brand-purple flex-shrink-0" />
                 <p>
                   Your information is safe with us. We respect your{" "}
-                  <a href="/privacy" className="text-brand-purple hover:underline">
+                  <a
+                    href="/privacy"
+                    className="text-brand-purple hover:underline"
+                  >
                     privacy
                   </a>
                   .
@@ -250,28 +281,33 @@ export default function ContactClient() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* ================= SECONDARY WIDGETS (3 COLUMNS) ================= */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-10 relative z-10 border-t border-white/5">
         <div className="grid lg:grid-cols-12 gap-12">
-          
           {/* Column 1: Book a Strategy Call */}
           <div className="lg:col-span-4 space-y-4">
             <div>
-              <span className="text-[10px] text-brand-purple font-bold tracking-widest uppercase block mb-1">Book a Strategy Call</span>
-              <h3 className="text-xl font-bold text-white mb-1.5">Schedule a 30-min Consultation</h3>
+              <span className="text-[10px] text-brand-purple font-bold tracking-widest uppercase block mb-1">
+                Book a Strategy Call
+              </span>
+              <h3 className="text-xl font-bold text-white mb-1.5">
+                Schedule a 30-min Consultation
+              </h3>
               <p className="text-gray-400 text-xs leading-relaxed">
-                Discuss your goals, challenges, and explore how all4Ps can help you grow.
+                Discuss your goals, challenges, and explore how all4Ps can help
+                you grow.
               </p>
             </div>
 
             {/* Calendar Card Widget */}
             <div className="rounded-2xl border border-white/5 bg-[#0d0d14] p-4">
               <div className="flex items-center justify-between mb-3 pb-2 border-b border-white/5">
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider">May 2026</h4>
+                <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                  May 2026
+                </h4>
                 <div className="flex gap-2">
                   <button className="p-1 rounded bg-white/5 hover:bg-white/10 text-gray-400 hover:text-white transition-colors">
                     <ChevronLeft className="w-3.5 h-3.5" />
@@ -319,7 +355,9 @@ export default function ContactClient() {
               {/* Time Slots Side Panel */}
               <div className="mt-4 pt-3 border-t border-white/5 space-y-2">
                 <div className="flex items-center justify-between text-xs text-gray-400">
-                  <span className="font-semibold text-white">Thursday, May {selectedDay}</span>
+                  <span className="font-semibold text-white">
+                    Thursday, May {selectedDay}
+                  </span>
                   <span>Available slots</span>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
@@ -350,10 +388,15 @@ export default function ContactClient() {
           {/* Column 2: Other Ways to Connect */}
           <div className="lg:col-span-4 space-y-4">
             <div>
-              <span className="text-[10px] text-brand-purple font-bold tracking-widest uppercase block mb-1">Other Ways to Connect</span>
-              <h3 className="text-xl font-bold text-white mb-1.5">Prefer instant chat?</h3>
+              <span className="text-[10px] text-brand-purple font-bold tracking-widest uppercase block mb-1">
+                Other Ways to Connect
+              </span>
+              <h3 className="text-xl font-bold text-white mb-1.5">
+                Prefer instant chat?
+              </h3>
               <p className="text-gray-400 text-xs leading-relaxed">
-                Connect with our teams directly across your preferred business channels.
+                Connect with our teams directly across your preferred business
+                channels.
               </p>
             </div>
 
@@ -370,8 +413,12 @@ export default function ContactClient() {
                     <MessageSquare className="w-4 h-4 fill-green-500/10" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-white">WhatsApp Chat</h4>
-                    <p className="text-[9px] text-gray-500">Chat with our team instantly</p>
+                    <h4 className="text-xs font-bold text-white">
+                      WhatsApp Chat
+                    </h4>
+                    <p className="text-[9px] text-gray-500">
+                      Chat with our team instantly
+                    </p>
                   </div>
                 </div>
                 <ChevronRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-white transition-colors" />
@@ -389,7 +436,9 @@ export default function ContactClient() {
                   </div>
                   <div>
                     <h4 className="text-xs font-bold text-white">LinkedIn</h4>
-                    <p className="text-[9px] text-gray-500">Connect with us on LinkedIn</p>
+                    <p className="text-[9px] text-gray-500">
+                      Connect with us on LinkedIn
+                    </p>
                   </div>
                 </div>
                 <ChevronRight className="w-3.5 h-3.5 text-gray-500 group-hover:text-white transition-colors" />
@@ -404,7 +453,9 @@ export default function ContactClient() {
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-xs font-bold text-white">Send an Email</h4>
+                    <h4 className="text-xs font-bold text-white">
+                      Send an Email
+                    </h4>
                     <p className="text-[9px] text-gray-500">grow@all4ps.co</p>
                   </div>
                 </div>
@@ -432,25 +483,32 @@ export default function ContactClient() {
           {/* Column 3: What Happens Next? */}
           <div className="lg:col-span-4 space-y-4">
             <div>
-              <span className="text-[10px] text-brand-purple font-bold tracking-widest uppercase block mb-1">What Happens Next?</span>
-              <h3 className="text-xl font-bold text-white mb-1.5">Our Engagement Roadmap</h3>
+              <span className="text-[10px] text-brand-purple font-bold tracking-widest uppercase block mb-1">
+                What Happens Next?
+              </span>
+              <h3 className="text-xl font-bold text-white mb-1.5">
+                Our Engagement Roadmap
+              </h3>
               <p className="text-gray-400 text-xs leading-relaxed">
-                Here is the step-by-step process of starting a partnership with all4Ps.
+                Here is the step-by-step process of starting a partnership with
+                all4Ps.
               </p>
             </div>
 
             {/* Timeline component */}
             <div className="relative pl-6 border-l border-brand-purple/20 space-y-5.5 py-1">
-              
               {/* Step 1 */}
               <div className="relative">
                 <div className="absolute -left-[33px] top-0.5 w-4.5 h-4.5 rounded-full bg-[#0a0a0f] border border-brand-purple flex items-center justify-center text-brand-purple text-[8px] font-bold">
                   01
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white mb-1">Submit Enquiry</h4>
+                  <h4 className="text-xs font-bold text-white mb-1">
+                    Submit Enquiry
+                  </h4>
                   <p className="text-[10px] text-gray-400 leading-relaxed">
-                    Fill out the contact form or select a call slot using the consultation booking widget.
+                    Fill out the contact form or select a call slot using the
+                    consultation booking widget.
                   </p>
                 </div>
               </div>
@@ -461,9 +519,12 @@ export default function ContactClient() {
                   02
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white mb-1">Discovery Call</h4>
+                  <h4 className="text-xs font-bold text-white mb-1">
+                    Discovery Call
+                  </h4>
                   <p className="text-[10px] text-gray-400 leading-relaxed">
-                    We schedule an initial meeting to review your targets, technical products, and core marketing metrics.
+                    We schedule an initial meeting to review your targets,
+                    technical products, and core marketing metrics.
                   </p>
                 </div>
               </div>
@@ -474,9 +535,12 @@ export default function ContactClient() {
                   03
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white mb-1">Growth Audit</h4>
+                  <h4 className="text-xs font-bold text-white mb-1">
+                    Growth Audit
+                  </h4>
                   <p className="text-[10px] text-gray-400 leading-relaxed">
-                    Our performance and branding teams audit your positioning, SEO coverage, and conversion funnels.
+                    Our performance and branding teams audit your positioning,
+                    SEO coverage, and conversion funnels.
                   </p>
                 </div>
               </div>
@@ -487,16 +551,17 @@ export default function ContactClient() {
                   04
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-white mb-1">Strategy & Proposal</h4>
+                  <h4 className="text-xs font-bold text-white mb-1">
+                    Strategy & Proposal
+                  </h4>
                   <p className="text-[10px] text-gray-400 leading-relaxed">
-                    We pitch a customized growth strategy, timeline details, and proposal options to begin partnership execution.
+                    We pitch a customized growth strategy, timeline details, and
+                    proposal options to begin partnership execution.
                   </p>
                 </div>
               </div>
-
             </div>
           </div>
-
         </div>
       </section>
 
@@ -513,11 +578,21 @@ export default function ContactClient() {
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-center opacity-40 hover:opacity-60 transition-opacity duration-300 mb-10">
-          <div className="flex justify-center text-base font-extrabold text-white select-none">A</div>
-          <div className="flex justify-center text-sm font-semibold tracking-wider text-white select-none font-mono">Flexdi</div>
-          <div className="flex justify-center text-xs font-bold tracking-widest text-white uppercase select-none">unbox ROBOTICS</div>
-          <div className="flex justify-center text-xs font-bold tracking-widest text-white uppercase select-none">anscer ROBOTICS</div>
-          <div className="flex justify-center text-sm font-extrabold tracking-widest text-white uppercase select-none">vedanta</div>
+          <div className="flex justify-center text-base font-extrabold text-white select-none">
+            A
+          </div>
+          <div className="flex justify-center text-sm font-semibold tracking-wider text-white select-none font-mono">
+            Flexdi
+          </div>
+          <div className="flex justify-center text-xs font-bold tracking-widest text-white uppercase select-none">
+            unbox ROBOTICS
+          </div>
+          <div className="flex justify-center text-xs font-bold tracking-widest text-white uppercase select-none">
+            anscer ROBOTICS
+          </div>
+          <div className="flex justify-center text-sm font-extrabold tracking-widest text-white uppercase select-none">
+            vedanta
+          </div>
         </div>
 
         {/* Metrics grid */}
@@ -527,8 +602,12 @@ export default function ContactClient() {
               <Users className="w-4 h-4" />
             </div>
             <div>
-              <h4 className="text-2xl font-extrabold text-white leading-tight">50+</h4>
-              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">Companies Served</p>
+              <h4 className="text-2xl font-extrabold text-white leading-tight">
+                50+
+              </h4>
+              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">
+                Companies Served
+              </p>
             </div>
           </div>
           <div className="p-4 rounded-2xl border border-white/5 bg-[#0d0d14] flex items-center gap-3 group hover:border-brand-purple/20 transition-all duration-300">
@@ -536,8 +615,12 @@ export default function ContactClient() {
               <Clock className="w-4 h-4 animate-pulse" />
             </div>
             <div>
-              <h4 className="text-2xl font-extrabold text-white leading-tight">24 hrs</h4>
-              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">Avg Response Time</p>
+              <h4 className="text-2xl font-extrabold text-white leading-tight">
+                24 hrs
+              </h4>
+              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">
+                Avg Response Time
+              </p>
             </div>
           </div>
           <div className="p-4 rounded-2xl border border-white/5 bg-[#0d0d14] flex items-center gap-3 group hover:border-brand-purple/20 transition-all duration-300">
@@ -545,8 +628,12 @@ export default function ContactClient() {
               <CheckSquare className="w-4 h-4" />
             </div>
             <div>
-              <h4 className="text-2xl font-extrabold text-white leading-tight">95%</h4>
-              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">Retention Rate</p>
+              <h4 className="text-2xl font-extrabold text-white leading-tight">
+                95%
+              </h4>
+              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">
+                Retention Rate
+              </p>
             </div>
           </div>
           <div className="p-4 rounded-2xl border border-white/5 bg-[#0d0d14] flex items-center gap-3 group hover:border-brand-purple/20 transition-all duration-300">
@@ -554,8 +641,12 @@ export default function ContactClient() {
               <Target className="w-4 h-4" />
             </div>
             <div>
-              <h4 className="text-2xl font-extrabold text-white leading-tight">100%</h4>
-              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">Tailored Strategy</p>
+              <h4 className="text-2xl font-extrabold text-white leading-tight">
+                100%
+              </h4>
+              <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider mt-0.5">
+                Tailored Strategy
+              </p>
             </div>
           </div>
         </div>
@@ -564,7 +655,6 @@ export default function ContactClient() {
       {/* ================= OFFICE LOCATION & MAP ================= */}
       <section className="max-w-7xl mx-auto px-6 lg:px-12 py-8 relative z-10 border-t border-white/5">
         <div className="grid lg:grid-cols-12 gap-8 items-center">
-          
           {/* Map Embed Column */}
           <div className="lg:col-span-8">
             <div className="rounded-3xl overflow-hidden border border-white/5 shadow-2xl relative h-[300px] bg-[#0d0d14]">
@@ -576,7 +666,8 @@ export default function ContactClient() {
                 height="100%"
                 style={{
                   border: 0,
-                  filter: "invert(1) hue-rotate(220deg) saturate(3) brightness(0.55) contrast(1.1)",
+                  filter:
+                    "invert(1) hue-rotate(220deg) saturate(3) brightness(0.55) contrast(1.1)",
                 }}
                 allowFullScreen={true}
                 loading="lazy"
@@ -592,7 +683,8 @@ export default function ContactClient() {
                 <h3 className="font-bold text-white text-sm">Our Office</h3>
               </div>
               <p className="text-gray-300 text-sm leading-relaxed font-semibold">
-                Evolve - Coworking Space In Whitefield, Doddanakundi, Industrial Area 2, Bengaluru, Karnataka 560048
+                Evolve - Coworking Space In Whitefield, Doddanakundi, Industrial
+                Area 2, Bengaluru, Karnataka 560048
               </p>
               <a
                 href="https://maps.google.com/?q=Evolve+-+Coworking+Space+In+Whitefield,+Doddanakundi,+Industrial+Area+2,+Bengaluru,+Karnataka+560048"
@@ -604,7 +696,6 @@ export default function ContactClient() {
               </a>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -627,7 +718,11 @@ export default function ContactClient() {
                   : "bg-red-500/10 text-red-500 border border-red-500/20"
               }`}
             >
-              {toast === "success" ? <CheckCircle2 className="w-5 h-5" /> : <Info className="w-5 h-5" />}
+              {toast === "success" ? (
+                <CheckCircle2 className="w-5 h-5" />
+              ) : (
+                <Info className="w-5 h-5" />
+              )}
             </div>
             <div>
               <h5 className="font-bold text-white text-sm">
