@@ -20,10 +20,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const title = `${client.client} Case Study | all4Ps`;
-  const description = client.description;
+  const isMotherson =
+    client.client.toLowerCase().includes("motherson") ||
+    id.toLowerCase().includes("motherson");
+
+  const title = isMotherson
+    ? "ROBIS Motherson | GTM & Marketing Strategy Case Study | all4Ps"
+    : `${client.client} Case Study | all4Ps`;
+
+  const description = isMotherson
+    ? "See how all4Ps helped ROBIS Motherson build a market-ready GTM strategy, strengthen positioning, improve digital visibility, and support global commercialization."
+    : client.description;
+
   const url = `https://www.all4ps.co/portfolio/${id}`;
-  const image = `https://www.all4ps.co/images/og/${id}-hero.jpg`;
+
+  const image = isMotherson
+    ? "https://www.all4ps.co/images/portfolio/motherson-hero.webp"
+    : `https://www.all4ps.co/images/og/${id}-hero.jpg`;
 
   return {
     title,

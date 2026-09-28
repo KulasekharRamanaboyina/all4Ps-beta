@@ -1,41 +1,129 @@
-import type { Metadata } from "next";
+"use client";
+import React, { useEffect, useState } from "react";
+
 import FAQSection from "@/app/components/FAQSection";
 import CtaSection from "@/app/components/cta/CtaSection";
 import { roboticsFaqs } from "@/lib/faqs";
-
-/* =========================================================
-   SEO METADATA
-========================================================= */
-
-export const metadata: Metadata = {
-  title: "Robotics Marketing Agency & Demand Generation Partner | all4Ps",
-
-  description:
-    "all4Ps helps robotics and automation companies build authority, generate qualified B2B demand, strengthen positioning, and accelerate growth through strategy-led marketing.",
-
-  alternates: {
-    canonical: "https://www.all4ps.co/industries/robotics-marketing-agency",
-  },
-
-  openGraph: {
-    title: "Robotics Marketing Agency & Demand Generation Partner | all4Ps",
-
-    description:
-      "Demand generation, ABM, content, SEO, GTM and marketing automation for robotics and automation companies.",
-
-    url: "https://www.all4ps.co/industries/robotics-marketing-agency",
-
-    siteName: "all4Ps",
-
-    type: "website",
-  },
-};
-
+import RoboticsLatestBlogs from "@/app/industries/robotics-marketing-agency/RoboticsLatestBlogs";
+import { client } from "@/lib/sanity";
+import { DetailedBlogPost } from "@/app/types";
 /* =========================================================
    PAGE
 ========================================================= */
 
 export default function RoboticsMarketingAgencyPage() {
+  const [latestBlogs, setLatestBlogs] = useState<DetailedBlogPost[]>([]);
+
+  useEffect(() => {
+    async function fetchRoboticsBlogs() {
+      try {
+        const posts = await client.fetch(`
+          *[_type == "post"] | order(publishedAt desc) {
+            _id,
+            title,
+            "slug": slug.current,
+            publishedAt,
+            excerpt,
+            mainImage,
+            featured,
+            "readTime": select(
+              defined(readTime) => readTime,
+              "6 min read"
+            ),
+            "author": author-> {
+              name,
+              role,
+              image,
+              bio,
+              socials {
+                linkedin,
+                twitter,
+                email
+              }
+            },
+            "categories": categories[]-> {
+              title,
+              "slug": slug.current
+            }
+          }
+        `);
+
+        const roboticsPosts: DetailedBlogPost[] = posts
+          .filter((p: any) => {
+            const slug = (p.slug || "").toLowerCase();
+            const title = (p.title || "").toLowerCase();
+
+            const categoryText = (p.categories || [])
+              .map((c: any) => `${c.title || ""} ${c.slug || ""}`)
+              .join(" ")
+              .toLowerCase();
+
+            return (
+              slug.includes("robotics") ||
+              slug.includes("robot") ||
+              slug.includes("automation") ||
+              slug.includes("deep-tech") ||
+              title.includes("robotics") ||
+              title.includes("robot") ||
+              title.includes("automation") ||
+              categoryText.includes("robotics") ||
+              categoryText.includes("robot") ||
+              categoryText.includes("automation") ||
+              categoryText.includes("deep-tech")
+            );
+          })
+          .slice(0, 3)
+          .map((p: any) => ({
+            id: p._id || p.slug,
+            slug: p.slug,
+            title: p.title,
+            subtitle: p.excerpt || "",
+            excerpt: p.excerpt || "",
+            category: p.categories?.[0]?.title || "Robotics & Automation",
+            publishedAt: p.publishedAt
+              ? new Date(p.publishedAt).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })
+              : "",
+            readTime: p.readTime || "6 min read",
+            mainImage: p.mainImage,
+            featured: p.featured || false,
+            author: p.author
+              ? {
+                  name: p.author.name || "all4Ps Team",
+                  role: p.author.role || "B2B growth experts",
+                  avatar: p.author.image,
+                  bio: Array.isArray(p.author.bio)
+                    ? p.author.bio
+                        .map((block: any) =>
+                          block.children?.map((c: any) => c.text).join(""),
+                        )
+                        .join(" ")
+                    : p.author.bio || "",
+                  socials: p.author.socials || {},
+                }
+              : {
+                  name: "all4Ps Team",
+                  role: "B2B growth experts",
+                  avatar: "/images/Team_Members/Pavani.webp",
+                  bio: "",
+                  socials: {},
+                },
+            takeaways: [],
+            body: [],
+          }));
+
+        setLatestBlogs(roboticsPosts);
+      } catch (error) {
+        console.error("Failed to load robotics blogs:", error);
+      }
+    }
+
+    fetchRoboticsBlogs();
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#050308] text-white">
       {/* =====================================================
@@ -570,8 +658,12 @@ export default function RoboticsMarketingAgencyPage() {
       <FAQSection faqs={roboticsFaqs} />
 
       {/* =====================================================
-          SECTION 8 — CTA
-      ===================================================== */}
+    SECTION 8 — LATEST INSIGHTS or blogs
+===================================================== */}
+      <RoboticsLatestBlogs posts={latestBlogs} />
+      {/* =====================================================
+    SECTION 9 — CTA
+===================================================== */}
 
       <section className="relative px-6 pb-24 pt-10 lg:px-12">
         <div

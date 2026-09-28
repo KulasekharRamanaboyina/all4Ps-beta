@@ -24,10 +24,10 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
         };
       case "motherson":
         return {
-          prefix: "How ",
-          highlight1: "Motherson Group",
-          middle: " Positioned for ",
-          highlight2: "Enterprise Value",
+          prefix: "",
+          highlight1: "ROBIS Motherson:",
+          middle: " GTM & Marketing Strategy for ",
+          highlight2: "Enterprise Growth",
           suffix: "",
         };
       case "anscer":

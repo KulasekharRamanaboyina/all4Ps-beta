@@ -493,7 +493,8 @@ export const CASE_STUDIES: CaseStudy[] = [
 As the business moved toward commercializing its robotics solutions and expanding globally, it needed a clearly defined go-to-market strategy to establish positioning, identify target customer segments, and enable sustainable external growth.`,
     challengeImage: "/images/portfolio/motherson.webp",
     industry: "Robotics",
-    title: "We helped their marketing work better.",
+    title:
+      "How all4Ps helped ROBIS Motherson build a market-ready GTM foundation for global growth.",
     result: "FY26 GTM Strategy Launched",
     category: "GTM & Marketing Strategy",
     performanceMetrics: [
