@@ -477,6 +477,51 @@ const Navbar: React.FC = () => {
                     )}
                   </AnimatePresence>
                 </motion.div>
+                {/* Industries Collapsible Dropdown */}
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                  className="space-y-3"
+                >
+                  <button
+                    onClick={() => setIsIndustriesOpen(!isIndustriesOpen)}
+                    className="flex w-full justify-between items-center text-2xl font-bold text-white hover:text-brand-purple transition-colors font-display"
+                  >
+                    Industries
+                    <ChevronDown
+                      className={`w-6 h-6 transform transition-transform duration-300 text-brand-purple ${
+                        isIndustriesOpen ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  <AnimatePresence>
+                    {isIndustriesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="overflow-hidden pl-4 border-l border-brand-purple/20 space-y-3 text-left"
+                      >
+                        <button
+                          onClick={() =>
+                            navigateTo("/industries/robotics-marketing-agency")
+                          }
+                          className="block w-full text-left text-sm text-gray-300 hover:text-brand-purple transition-colors py-2"
+                        >
+                          <span className="block font-bold">
+                            Robotics & Automation
+                          </span>
+
+                          <span className="mt-1 block text-xs text-gray-500">
+                            Marketing for robotics businesses
+                          </span>
+                        </button>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.div>
 
                 {/* Portfolio */}
                 <motion.div
