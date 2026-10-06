@@ -171,7 +171,7 @@ export default function RoboticsMarketingAgencyPage() {
           {/* Main Heading */}
 
           <h1 className="text-4xl font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            Demand Generation
+            B2B Marketing & Demand Generation
             <br />
             <span className="bg-gradient-to-r from-[#800080] via-[#c026d3] to-[#f472b6] bg-clip-text text-transparent">
               for Robotics &amp; Automation Companies.
@@ -254,6 +254,11 @@ export default function RoboticsMarketingAgencyPage() {
                   Your marketing shouldn’t be.
                 </span>
               </h2>
+
+              <p className="mt-6 max-w-xl text-base leading-7 text-gray-400 md:text-lg">
+                Robotics marketing needs to translate complex technology into
+                clear business value for technical and commercial buyers.
+              </p>
             </div>
 
             <div className="space-y-5 text-base leading-7 text-gray-400 md:text-lg">
