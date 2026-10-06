@@ -19,6 +19,13 @@ export const postType = defineType({
       },
     }),
     defineField({
+      name: "excerpt",
+      title: "Meta Description",
+      type: "text",
+      rows: 3,
+      validation: (Rule) => Rule.max(160),
+    }),
+    defineField({
       name: "author",
       type: "reference",
       to: { type: "author" },
