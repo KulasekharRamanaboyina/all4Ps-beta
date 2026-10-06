@@ -26,6 +26,11 @@ export const postType = defineType({
       validation: (Rule) => Rule.max(160),
     }),
     defineField({
+      name: "primaryKeyword",
+      title: "Primary Keyword",
+      type: "string",
+    }),
+    defineField({
       name: "author",
       type: "reference",
       to: { type: "author" },
