@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { CASE_STUDIES } from "../../constants";
 import ClientPageUI from "../[id]/ClientPageUI";
 
