@@ -11,7 +11,9 @@ interface RelatedCaseStudiesProps {
   currentId: string;
 }
 
-export default function RelatedCaseStudies({ currentId }: RelatedCaseStudiesProps) {
+export default function RelatedCaseStudies({
+  currentId,
+}: RelatedCaseStudiesProps) {
   // Get other case studies
   const otherStudies = CASE_STUDIES.filter((cs) => cs.id !== currentId);
 
@@ -30,10 +32,14 @@ export default function RelatedCaseStudies({ currentId }: RelatedCaseStudiesProp
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-2xl sm:text-3xl font-extrabold text-white font-display mb-10 tracking-tight text-center md:text-left"
+          className="text-2xl sm:text-3xl font-extrabold text-white font-display mb-4 tracking-tight text-center md:text-left"
         >
-          Case Studies & Resources
+          Related Case Studies
         </motion.h2>
+        <p className="max-w-2xl text-sm sm:text-base text-white/60 leading-relaxed mb-10">
+          Explore how all4Ps has helped other B2B technology and robotics
+          companies build stronger market visibility and growth.
+        </p>
 
         {/* Layout Grid */}
         <motion.div
