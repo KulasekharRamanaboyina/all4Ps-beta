@@ -6,7 +6,47 @@ type PageProps = {
     id: string;
   }>;
 };
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { id } = await params;
 
+  const client = CASE_STUDIES.find((c) => c.id === id);
+
+  if (!client) {
+    return {
+      title: "Case Study Not Found | all4Ps",
+      description: "The requested all4Ps case study could not be found.",
+    };
+  }
+
+  if (id === "motherson") {
+    return {
+      title: "ROBIS Motherson GTM & Marketing Strategy | all4Ps",
+      description:
+        "See how all4Ps helped ROBIS Motherson build a market-ready GTM and marketing foundation for global robotics and automation growth.",
+      alternates: {
+        canonical: `https://www.all4ps.co/portfolio/${id}`,
+      },
+      openGraph: {
+        title: "ROBIS Motherson GTM & Marketing Strategy | all4Ps",
+        description:
+          "See how all4Ps helped ROBIS Motherson build a market-ready GTM and marketing foundation for global robotics and automation growth.",
+        url: `https://www.all4ps.co/portfolio/${id}`,
+        siteName: "all4Ps",
+        type: "article",
+      },
+    };
+  }
+
+  return {
+    title: `${client.client} Case Study | all4Ps`,
+    description: client.description,
+    alternates: {
+      canonical: `https://www.all4ps.co/portfolio/${id}`,
+    },
+  };
+}
 export default async function Page({ params }: PageProps) {
   const { id } = await params;
 
