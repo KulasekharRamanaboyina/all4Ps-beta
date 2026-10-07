@@ -356,8 +356,8 @@ export default function RoboticsMarketingAgencyPage() {
       </section>
 
       {/* =====================================================
-          SECTION 4 — WHAT WE DO
-      ===================================================== */}
+    SECTION 4 — WHAT WE DO
+===================================================== */}
 
       <section className="px-6 py-20 lg:px-12">
         <div className="mx-auto max-w-6xl">
@@ -381,56 +381,80 @@ export default function RoboticsMarketingAgencyPage() {
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              "Brand Positioning",
-              "GTM Strategy",
-              "Demand Generation",
-              "Account-Based Marketing",
-              "Content Marketing",
-              "SEO & Search Visibility",
-              "Website Optimisation",
-              "Marketing Automation",
+              {
+                title: "Brand Positioning",
+                href: "/services/positioning-messaging",
+              },
+              {
+                title: "GTM Strategy",
+                href: "/services/gtm-execution",
+              },
+              {
+                title: "Demand Generation",
+                href: "/services/demand-generation",
+              },
+              {
+                title: "Account-Based Marketing",
+                href: "/services/abm",
+              },
+              {
+                title: "Content Marketing",
+                href: "/services/content-marketing",
+              },
+              {
+                title: "SEO & Search Visibility",
+                href: "/services/seo-visibility",
+              },
+              {
+                title: "Website Optimisation",
+                href: "/services/website-optimisation",
+              },
+              {
+                title: "Marketing Automation",
+                href: "/services/marketing-automation",
+              },
             ].map((service) => (
-              <div
-                key={service}
+              <a
+                key={service.title}
+                href={service.href}
                 className="
-                  group
-                  rounded-xl
-                  border
-                  border-white/10
-                  bg-white/[0.02]
-                  p-6
-                  transition-all
-                  duration-300
-                  hover:-translate-y-1
-                  hover:border-[#800080]/50
-                  hover:bg-[#800080]/5
-                "
+            group
+            rounded-xl
+            border
+            border-white/10
+            bg-white/[0.02]
+            p-6
+            transition-all
+            duration-300
+            hover:-translate-y-1
+            hover:border-[#800080]/50
+            hover:bg-[#800080]/5
+          "
               >
                 <div
                   className="
-                    mb-5
-                    flex
-                    h-9
-                    w-9
-                    items-center
-                    justify-center
-                    rounded-lg
-                    bg-[#800080]/10
-                    text-[#800080]
-                  "
+              mb-5
+              flex
+              h-9
+              w-9
+              items-center
+              justify-center
+              rounded-lg
+              bg-[#800080]/10
+              text-[#800080]
+            "
                 >
                   →
                 </div>
 
                 <h3 className="text-base font-semibold group-hover:text-[#800080]">
-                  {service}
+                  {service.title}
                 </h3>
-              </div>
+              </a>
             ))}
           </div>
         </div>
       </section>
-
       {/* =====================================================
           SECTION 5 — ROBOTICS EXPERIENCE
       ===================================================== */}
@@ -578,11 +602,6 @@ export default function RoboticsMarketingAgencyPage() {
               </div>
             ))}
           </div>
-
-          <p className="mt-6 text-xs leading-5 text-gray-500">
-            Client work, logos, results and testimonials should be published
-            only where approved by the respective client.
-          </p>
         </div>
       </section>
 
