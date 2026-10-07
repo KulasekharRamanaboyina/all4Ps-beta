@@ -45,6 +45,13 @@ export async function generateMetadata({
           },
         ],
       },
+      twitter: {
+        card: "summary_large_image",
+        title: "ROBIS Motherson GTM & Marketing Strategy | all4Ps",
+        description:
+          "See how all4Ps helped ROBIS Motherson build a market-ready GTM and marketing foundation for global robotics and automation growth.",
+        images: ["https://www.all4ps.co/images/og/motherson-hero.jpg"],
+      },
     };
   }
   if (id === "kloudlite") {
@@ -72,6 +79,14 @@ export async function generateMetadata({
             alt: "Kloudlite Labs Case Study | all4Ps",
           },
         ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title:
+          "Kloudlite Labs Case Study | B2B Marketing & Lead Generation | all4Ps",
+        description:
+          "See how all4Ps helped Kloudlite Labs build a developer-first brand, improve search visibility, and convert high-value B2B leads.",
+        images: ["https://www.all4ps.co/images/og/kloudlite-hero.jpg"],
       },
     };
   }
