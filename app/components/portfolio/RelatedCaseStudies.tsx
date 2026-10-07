@@ -101,7 +101,7 @@ export default function RelatedCaseStudies({
                 href="/portfolio"
                 className="group inline-flex items-center gap-2 text-sm font-bold text-brand-purple hover:text-purple-400 transition"
               >
-                View More Studio
+                View More Case Studies
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
