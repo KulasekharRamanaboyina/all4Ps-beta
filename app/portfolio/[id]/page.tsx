@@ -36,6 +36,42 @@ export async function generateMetadata({
         url: `https://www.all4ps.co/portfolio/${id}`,
         siteName: "all4Ps",
         type: "article",
+        images: [
+          {
+            url: "https://www.all4ps.co/images/og/motherson-hero.jpg",
+            width: 1200,
+            height: 630,
+            alt: "ROBIS Motherson Case Study | all4Ps",
+          },
+        ],
+      },
+    };
+  }
+  if (id === "kloudlite") {
+    return {
+      title:
+        "Kloudlite Labs Case Study | B2B Marketing & Lead Generation | all4Ps",
+      description:
+        "See how all4Ps helped Kloudlite Labs build a developer-first brand, improve search visibility, and convert high-value B2B leads.",
+      alternates: {
+        canonical: `https://www.all4ps.co/portfolio/${id}`,
+      },
+      openGraph: {
+        title:
+          "Kloudlite Labs Case Study | B2B Marketing & Lead Generation | all4Ps",
+        description:
+          "See how all4Ps helped Kloudlite Labs build a developer-first brand, improve search visibility, and convert high-value B2B leads.",
+        url: `https://www.all4ps.co/portfolio/${id}`,
+        siteName: "all4Ps",
+        type: "article",
+        images: [
+          {
+            url: "https://www.all4ps.co/images/og/kloudlite-hero.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Kloudlite Labs Case Study | all4Ps",
+          },
+        ],
       },
     };
   }
