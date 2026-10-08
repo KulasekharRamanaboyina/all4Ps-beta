@@ -413,7 +413,7 @@ export const roboticsFaqs: FAQItem[] = [
   },
   {
     q: "How can all4Ps help robotics companies generate demand?",
-    a: "We combine positioning, content, SEO, paid campaigns, and growth strategy to build authority and generate qualified B2B demand.",
+    a: "We combine positioning, content, SEO, ABM, paid campaigns and growth strategy to reach target accounts, build authority and generate qualified B2B demand.",
   },
   {
     q: "Do you work with automation and industrial robotics companies?",

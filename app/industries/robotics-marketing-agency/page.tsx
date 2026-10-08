@@ -181,8 +181,9 @@ export default function RoboticsMarketingAgencyPage() {
           {/* Description */}
 
           <p className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg">
-            We help robotics and automation companies build authority, generate
-            qualified demand, and accelerate B2B growth.
+            all4Ps is a B2B demand generation and ABM agency helping robotics
+            and automation companies build pipeline, reach target accounts and
+            generate qualified opportunities.
           </p>
 
           {/* CTA */}
@@ -373,9 +374,9 @@ export default function RoboticsMarketingAgencyPage() {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-gray-400">
-              From positioning and GTM strategy to demand generation and
-              measurement, we connect the pieces required to build a stronger
-              B2B growth engine.
+              From positioning and GTM strategy to demand generation, ABM and
+              measurement, we help robotics and automation companies build a
+              stronger B2B growth engine.
             </p>
           </div>
 
@@ -475,9 +476,9 @@ export default function RoboticsMarketingAgencyPage() {
               </h2>
 
               <p className="max-w-xl text-gray-400">
-                We have worked with robotics and technology-led businesses,
-                helping translate complex products and capabilities into
-                stronger marketing communication and growth initiatives.
+                We help robotics, automation and technology-led businesses turn
+                complex products into clear market positioning, qualified demand
+                and stronger B2B growth.
               </p>
             </div>
           </div>
