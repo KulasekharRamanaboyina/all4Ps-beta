@@ -182,6 +182,10 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
       q: "How do you optimize demand generation campaigns?",
       a: "We continuously monitor campaign performance, audience engagement, landing page conversions, and channel effectiveness to improve results and maximize marketing efficiency.",
     },
+    {
+      q: "Can you help robotics and automation companies generate demand?",
+      a: "Yes. We help robotics and automation companies build demand by combining positioning, content, SEO, LinkedIn, paid campaigns and account-based marketing to reach target buyers and generate qualified pipeline.",
+    },
   ],
   abm: [
     {

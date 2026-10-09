@@ -8,20 +8,23 @@ const featuredStudies = [
     id: "unbox",
     client: "Unbox Robotics",
     image: "/images/portfolio/unbox.webp",
-    description: "Re-positioned B2B brand and built marketing systems to drive +312% organic growth and ₹32Cr+ pipeline."
+    description:
+      "Re-positioned the B2B brand and strengthened its marketing foundation through strategic content, SEO, and digital marketing initiatives.",
   },
   {
     id: "motherson",
     client: "ROBIS Motherson",
     image: "/images/portfolio/motherson.webp",
-    description: "Launched global GTM strategy and executed complete website redesign to scale product launches."
+    description:
+      "Launched global GTM strategy and executed complete website redesign to scale product launches.",
   },
   {
     id: "panchayath",
     client: "Panchayath App",
     image: "/images/portfolio/panchayath.webp",
-    description: "Developed community engagement strategy and user-centric messaging to drive 1,000+ app downloads."
-  }
+    description:
+      "Developed community engagement strategy and user-centric messaging to drive 1,000+ app downloads.",
+  },
 ];
 
 export default function ServicesCaseStudies() {
@@ -31,7 +34,6 @@ export default function ServicesCaseStudies() {
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-brand-purple/5 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-        
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-16">
           <div className="text-center md:text-left">
@@ -57,8 +59,10 @@ export default function ServicesCaseStudies() {
         {/* 3 Columns Case Studies Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
           {featuredStudies.map((study) => (
-            <div key={study.id} className="group flex flex-col justify-between space-y-6">
-              
+            <div
+              key={study.id}
+              className="group flex flex-col justify-between space-y-6"
+            >
               {/* Image & Title Card */}
               <div className="space-y-4">
                 <Link
@@ -93,11 +97,9 @@ export default function ServicesCaseStudies() {
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>
-
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );

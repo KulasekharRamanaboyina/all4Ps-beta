@@ -147,8 +147,8 @@ const DETAILED_OVERVIEWS: Record<string, string> = {
   "content-marketing":
     "We create B2B content that simplifies technical concepts, showcases your expertise, and enables sales conversations. From technical articles to sales enablement assets, every piece of content is designed to educate, engage, and convert the right audience.",
   "demand-generation":
-    "We combine demand generation strategy, lead generation programs, and account-based campaigns to attract high-value buyers, accelerate pipeline growth, and create predictable revenue opportunities.",
-  abm: "We combine ICP mapping, B2B lead generation, and marketing automation to engage the right decision-makers with personalized experiences. Our account-based marketing approach helps shorten sales cycles, improve conversion rates, and win high-value enterprise accounts.",
+    "We combine demand generation, lead generation and account-based campaigns to reach high-value buyers, build pipeline and create qualified revenue opportunities. For robotics, automation and technology-led companies, we connect positioning, content, campaigns and buyer intent to turn market attention into measurable demand.",
+  abm: "We combine ICP mapping, account research, personalized content, demand generation and marketing automation to engage the right decision-makers. Our ABM approach helps B2B technology, robotics and automation companies reach target accounts, strengthen engagement and generate qualified pipeline.",
   "campaign-execution":
     "We execute integrated campaigns across multiple channels, combining campaign management, lead nurture workflows, and performance optimization to engage prospects, improve conversions, and accelerate pipeline growth.",
   "marketing-automation":

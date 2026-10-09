@@ -34,7 +34,7 @@ export const SERVICES: Service[] = [
     fullDescription:
       "Develop a strategic brand foundation that positions your business for sustainable growth.",
     intro:
-      "Build a strong B2B brand strategy that differentiates your business, clarifies your positioning, and creates a foundation for sustainable growth.",
+      "Help B2B technology, robotics and automation companies reach high-value accounts through targeted ABM campaigns, personalized engagement, and strategic account activation.",
     titleCTA: { label: "Define Brand Strategy", link: "/contact" },
     features: [
       "Brand Positioning Strategy",
@@ -166,7 +166,7 @@ export const SERVICES: Service[] = [
     fullDescription:
       "Accelerate business growth with data-driven demand generation and lead acquisition.",
     intro:
-      "Accelerate business growth with data-driven demand generation strategies that capture high-quality leads and convert them into revenue opportunities",
+      "Accelerate B2B growth with demand generation strategies that help technology, robotics and automation companies reach high-value buyers, build pipeline and generate qualified opportunities",
     titleCTA: { label: "Generate Inbound", link: "/contact" },
     features: [
       "Demand Generation Strategy",

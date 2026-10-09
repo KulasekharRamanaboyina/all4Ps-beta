@@ -34,8 +34,7 @@ export const servicesMeta = {
   },
 
   "demand-generation": {
-    title:
-      "B2B Demand Generation Services | Accelerate Pipeline Growth | all4Ps",
+    title: "B2B Demand Generation Agency for Robotics & Technology | all4Ps",
     description:
       "Drive qualified demand with data-driven B2B demand generation, lead generation, and account-based campaigns that accelerate pipeline growth.",
     canonical: "https://www.all4ps.co/services/demand-generation",
@@ -44,7 +43,7 @@ export const servicesMeta = {
 
   abm: {
     title:
-      "B2B Account-Based Marketing Services | Win Enterprise Accounts | all4Ps",
+      "B2B Account-Based Marketing Agency for Robotics & Technology | all4Ps",
     description:
       "Win high-value enterprise accounts with personalized ABM campaigns, ICP mapping, lead generation, and strategic engagement that accelerates conversions.",
     canonical: "https://www.all4ps.co/services/abm",
