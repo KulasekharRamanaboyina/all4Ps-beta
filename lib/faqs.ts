@@ -381,6 +381,10 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
       a: "We develop a structured GTM roadmap by defining your target audience, positioning, messaging, launch channels, and market approach to ensure a successful product introduction.",
     },
     {
+      q: "Can you build GTM strategies for robotics and automation companies?",
+      a: "Answer:Yes. We help robotics and automation companies translate complex products into clear positioning, identify target markets and accounts, develop launch messaging, and activate demand generation programs that support commercial growth.",
+    },
+    {
       q: "Can you support new product launches?",
       a: "Yes. We help plan and execute product launches by coordinating messaging, launch campaigns, buyer collateral, and market activation to maximize early traction.",
     },

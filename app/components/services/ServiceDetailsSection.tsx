@@ -160,7 +160,7 @@ const DETAILED_OVERVIEWS: Record<string, string> = {
   "analytics-reporting":
     "We build custom dashboards, configure GA4 attribution, and deliver pipeline reporting that helps you measure ROI, identify growth opportunities, and make informed marketing decisions.",
   "gtm-execution":
-    "We coordinate and execute product launches and market expansion playbooks. From defining pricing packages and buyer collateral to managing beta cycles and training sales teams, we drive market penetration. We align your product values with sales talk tracks to capture early traction.",
+    "We coordinate and execute product launches and market expansion playbooks. From defining pricing packages and buyer collateral to managing beta cycles and training sales teams, we help align your product value with sales talk tracks and create the conditions for stronger market traction.",
 };
 
 const FEATURE_ICONS: Record<string, any> = {
@@ -296,6 +296,23 @@ export default function ServiceDetailsSection({
               <p className="text-gray-300 text-base sm:text-lg leading-relaxed pt-2">
                 {service.fullDescription}
               </p>
+
+              {["gtm-execution", "demand-generation", "abm"].includes(
+                service.id,
+              ) && (
+                <div className="pt-2">
+                  <a
+                    href="/industries/robotics-marketing-agency"
+                    className="text-purple-400 hover:text-purple-300 underline underline-offset-4"
+                  >
+                    {service.id === "gtm-execution"
+                      ? "Explore our Robotics & Automation GTM approach →"
+                      : service.id === "demand-generation"
+                        ? "Explore demand generation for Robotics & Automation →"
+                        : "Explore ABM for Robotics & Automation companies →"}
+                  </a>
+                </div>
+              )}
             </motion.div>
 
             {/* Single Line Separator & Additional Content */}

@@ -392,9 +392,9 @@ export const SERVICES: Service[] = [
     shortDescription:
       "Launch products with a strategic go-to-market plan that accelerates business growth.",
     fullDescription:
-      "Execute go-to-market strategies that generate demand and drive successful product launches.",
+      "We execute go-to-market strategies that connect positioning, messaging, demand generation and sales activation to help B2B technology, robotics and automation companies enter markets and accelerate growth.",
     intro:
-      "Execute go-to-market strategies that generate demand, accelerate product adoption, and deliver successful product launches",
+      "Execute go-to-market strategies that help B2B technology, robotics and automation companies reach the right markets, generate demand, and accelerate product adoption",
     titleCTA: { label: "Run GTM", link: "/contact" },
     features: [
       "Go-to-Market Strategy",

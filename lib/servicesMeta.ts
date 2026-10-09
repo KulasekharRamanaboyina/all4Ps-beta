@@ -96,9 +96,9 @@ export const servicesMeta = {
   },
 
   "gtm-execution": {
-    title: "GTM Execution Services for B2B Product Launches | all4Ps",
+    title: "GTM Strategy & Execution for B2B Technology Companies | all4Ps",
     description:
-      "Execute go-to-market strategies that generate demand, accelerate product adoption, and drive successful B2B product launches with all4Ps.",
+      "all4Ps helps B2B technology, robotics and automation companies execute GTM strategies, launch products, enter new markets and accelerate demand.",
     canonical: "https://www.all4ps.co/services/gtm-execution",
     ogImage: "/images/og/gtm-execution-og.jpg",
   },
