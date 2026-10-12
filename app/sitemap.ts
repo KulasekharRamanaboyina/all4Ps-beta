@@ -58,6 +58,14 @@ export default async function sitemap() {
       priority: 0.7,
     },
 
+    // Industry Pages
+    {
+      url: "https://www.all4ps.co/industries/robotics-marketing-agency",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+
     // Service Pages
     {
       url: "https://www.all4ps.co/services/brand-strategy",
