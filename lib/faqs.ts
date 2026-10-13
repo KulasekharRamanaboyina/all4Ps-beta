@@ -17,8 +17,8 @@ export const homeFaqs: FAQItem[] = [
     a: "Unlike agencies that focus on isolated marketing activities, all4Ps takes a strategy-first approach. We align branding, positioning, content, SEO, demand generation, and performance marketing into one integrated growth engine designed to support long-term business growth.",
   },
   {
-    q: "What services does all4Ps provide?",
-    a: "Our services include Brand Strategy & Positioning, Go-to-Market Strategy, Demand Generation, Account-Based Marketing (ABM), SEO, Content Marketing, Website Design & Development, Marketing Automation, and Analytics & Reporting. Every engagement is tailored to your business goals and target market.",
+    q: "What marketing services does all4Ps provide for B2B technology companies?",
+    a: "all4Ps is a B2B growth marketing firm that helps technology, robotics, and automation companies build brand authority, generate qualified demand, and accelerate business growth. Its services include brand strategy, positioning and messaging, thought leadership, content marketing, demand generation, account-based marketing (ABM), campaign execution, marketing automation, SEO and search visibility, website optimisation, analytics and reporting, and go-to-market (GTM) execution.",
   },
   {
     q: "How do we get started with all4Ps?",
@@ -219,6 +219,10 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     {
       q: "Can ABM support new market expansion?",
       a: "Yes. We identify target accounts in new markets, develop personalized outreach strategies, and help establish meaningful engagement with decision makers.",
+    },
+    {
+      q: "Can ABM help robotics and automation companies reach target accounts?",
+      a: "Yes. We help robotics and automation companies identify high-value target accounts, map key decision-makers, personalize campaigns and activate multi-channel engagement to generate qualified pipeline.",
     },
   ],
   "campaign-execution": [
