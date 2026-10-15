@@ -22,6 +22,12 @@ import {
 } from "lucide-react";
 import CtaSection from "../components/cta/CtaSection";
 
+declare global {
+  interface Window {
+    dataLayer: Record<string, unknown>[];
+  }
+}
+
 export default function ContactClient() {
   // Form State
   const [formData, setFormData] = useState({
@@ -77,6 +83,13 @@ export default function ContactClient() {
       )
       .then(() => {
         setToast("success");
+        // GA4 Generate Lead Event
+        if (typeof window !== "undefined") {
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({
+            event: "generate_lead",
+          });
+        }
         setFormData({
           name: "",
           email: "",
