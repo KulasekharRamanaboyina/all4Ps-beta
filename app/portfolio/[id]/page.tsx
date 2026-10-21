@@ -23,9 +23,9 @@ export async function generateMetadata({
 
   if (id === "motherson") {
     return {
-      title: "ROBIS Motherson GTM & Marketing Strategy | all4Ps",
+      title: "Motherson ROBIS Case Study | all4Ps",
       description:
-        "See how all4Ps helped ROBIS Motherson build a market-ready GTM and marketing foundation for global robotics and automation growth.",
+        "See the Motherson ROBIS case study from all4Ps, including the project context, confirmed marketing work and documented outcomes.",
       alternates: {
         canonical: `https://www.all4ps.co/portfolio/${id}`,
       },
