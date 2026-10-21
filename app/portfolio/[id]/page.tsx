@@ -62,31 +62,29 @@ export async function generateMetadata({
       alternates: {
         canonical: `https://www.all4ps.co/portfolio/${id}`,
       },
-      openGraph: {
-        title:
-          "Kloudlite Labs Case Study | B2B Marketing & Lead Generation | all4Ps",
-        description:
-          "See how all4Ps helped Kloudlite Labs build a developer-first brand, improve search visibility, and convert high-value B2B leads.",
-        url: `https://www.all4ps.co/portfolio/${id}`,
-        siteName: "all4Ps",
-        type: "article",
-        images: [
-          {
-            url: "https://www.all4ps.co/images/og/kloudlite-hero.jpg",
-            width: 1200,
-            height: 630,
-            alt: "Kloudlite Labs Case Study | all4Ps",
-          },
-        ],
-      },
-      twitter: {
-        card: "summary_large_image",
-        title:
-          "Kloudlite Labs Case Study | B2B Marketing & Lead Generation | all4Ps",
-        description:
-          "See how all4Ps helped Kloudlite Labs build a developer-first brand, improve search visibility, and convert high-value B2B leads.",
-        images: ["https://www.all4ps.co/images/og/kloudlite-hero.jpg"],
-      },
+   openGraph: {
+  title: "Kloudlite Case Study | all4Ps B2B Marketing",
+  description:
+    "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
+  url: https://www.all4ps.co/portfolio/${id},
+  siteName: "all4Ps",
+  type: "article",
+  images: [
+    {
+      url: "https://www.all4ps.co/images/og/kloudlite-hero.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Kloudlite Labs Case Study | all4Ps",
+    },
+  ],
+},
+twitter: {
+  card: "summary_large_image",
+  title: "Kloudlite Case Study | all4Ps B2B Marketing",
+  description:
+    "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
+  images: ["https://www.all4ps.co/images/og/kloudlite-hero.jpg"],
+},
     };
   }
 
