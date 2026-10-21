@@ -56,10 +56,9 @@ export async function generateMetadata({
   }
   if (id === "kloudlite") {
     return {
-      title:
-        "Kloudlite Labs Case Study | B2B Marketing & Lead Generation | all4Ps",
+      title: "Kloudlite Case Study | all4Ps B2B Marketing",
       description:
-        "See how all4Ps helped Kloudlite Labs build a developer-first brand, improve search visibility, and convert high-value B2B leads.",
+        "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
       alternates: {
         canonical: `https://www.all4ps.co/portfolio/${id}`,
       },
