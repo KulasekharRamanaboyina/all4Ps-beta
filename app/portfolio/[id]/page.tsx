@@ -30,9 +30,9 @@ export async function generateMetadata({
         canonical: `https://www.all4ps.co/portfolio/${id}`,
       },
       openGraph: {
-        title: "ROBIS Motherson GTM & Marketing Strategy | all4Ps",
+        title: "Motherson ROBIS Case Study | all4Ps",
         description:
-          "See how all4Ps helped ROBIS Motherson build a market-ready GTM and marketing foundation for global robotics and automation growth.",
+          "See the Motherson ROBIS case study from all4Ps, including the project context, confirmed marketing work and documented outcomes.",
         url: `https://www.all4ps.co/portfolio/${id}`,
         siteName: "all4Ps",
         type: "article",
@@ -41,15 +41,15 @@ export async function generateMetadata({
             url: "https://www.all4ps.co/images/og/motherson-hero.jpg",
             width: 1200,
             height: 630,
-            alt: "ROBIS Motherson Case Study | all4Ps",
+            alt: "Motherson ROBIS Case Study | all4Ps",
           },
         ],
       },
       twitter: {
         card: "summary_large_image",
-        title: "ROBIS Motherson GTM & Marketing Strategy | all4Ps",
+        title: "Motherson ROBIS Case Study | all4Ps",
         description:
-          "See how all4Ps helped ROBIS Motherson build a market-ready GTM and marketing foundation for global robotics and automation growth.",
+          "See the Motherson ROBIS case study from all4Ps, including the project context, confirmed marketing work and documented outcomes.",
         images: ["https://www.all4ps.co/images/og/motherson-hero.jpg"],
       },
     };
@@ -62,29 +62,29 @@ export async function generateMetadata({
       alternates: {
         canonical: `https://www.all4ps.co/portfolio/${id}`,
       },
-   openGraph: {
-  title: "Kloudlite Case Study | all4Ps B2B Marketing",
-  description:
-    "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
-  url: https://www.all4ps.co/portfolio/${id},
-  siteName: "all4Ps",
-  type: "article",
-  images: [
-    {
-      url: "https://www.all4ps.co/images/og/kloudlite-hero.jpg",
-      width: 1200,
-      height: 630,
-      alt: "Kloudlite Labs Case Study | all4Ps",
-    },
-  ],
-},
-twitter: {
-  card: "summary_large_image",
-  title: "Kloudlite Case Study | all4Ps B2B Marketing",
-  description:
-    "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
-  images: ["https://www.all4ps.co/images/og/kloudlite-hero.jpg"],
-},
+      openGraph: {
+        title: "Kloudlite Case Study | all4Ps B2B Marketing",
+        description:
+          "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
+        url: `https://www.all4ps.co/portfolio/${id}`,
+        siteName: "all4Ps",
+        type: "article",
+        images: [
+          {
+            url: "https://www.all4ps.co/images/og/kloudlite-hero.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Kloudlite Labs Case Study | all4Ps",
+          },
+        ],
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: "Kloudlite Case Study | all4Ps B2B Marketing",
+        description:
+          "Explore all4Ps’ work with Kloudlite, including the project context, confirmed marketing deliverables and documented outcomes.",
+        images: ["https://www.all4ps.co/images/og/kloudlite-hero.jpg"],
+      },
     };
   }
 

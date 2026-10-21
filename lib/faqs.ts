@@ -186,6 +186,14 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
       q: "Can you help robotics and automation companies generate demand?",
       a: "Yes. We help robotics and automation companies build demand by combining positioning, content, SEO, LinkedIn, paid campaigns and account-based marketing to reach target buyers and generate qualified pipeline.",
     },
+    {
+      q: "What is robotics demand generation?",
+      a: "Robotics demand generation attracts and educates potential buyers to create qualified sales opportunities through targeted content, SEO, campaigns, and account-based marketing.",
+    },
+    {
+      q: "How do robotics companies generate B2B leads?",
+      a: "Robotics companies generate B2B leads by targeting the right industries and decision-makers with SEO, technical content, LinkedIn, outbound campaigns, and industry events.",
+    },
   ],
   abm: [
     {
@@ -231,6 +239,10 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
       a: "Every campaign starts with understanding your business goals, target audience, and buying journey. We then build a strategy that aligns the right message, channels, and tactics to achieve measurable outcomes.",
     },
     {
+      q: "How should robotics companies define their ICP?",
+      a: "Define an ICP by industry, company size, operational needs, automation challenges, budget, and integration requirements. Validate the criteria against successful customers and opportunities.",
+    },
+    {
       q: "Which marketing channels do you use for campaign execution?",
       a: "We execute campaigns across LinkedIn, Google, email marketing, content marketing, SEO, and other digital channels, selecting the right mix based on your audience and objectives.",
     },
@@ -253,6 +265,10 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
     {
       q: "How do you improve campaign conversion rates?",
       a: "We optimize audience targeting, messaging, landing pages, calls to action, and user experience to reduce friction and increase conversions.",
+    },
+    {
+      q: "What is ABM for robotics companies?",
+      a: "ABM focuses marketing and sales on selected high-value companies, using relevant messaging and content tailored to each account’s needs and buying team.",
     },
   ],
   "marketing-automation": [
@@ -426,6 +442,14 @@ export const roboticsFaqs: FAQItem[] = [
   {
     q: "How can all4Ps help robotics companies generate demand?",
     a: "We combine positioning, content, SEO, ABM, paid campaigns and growth strategy to reach target accounts, build authority and generate qualified B2B demand.",
+  },
+  {
+    q: "How do robotics companies generate B2B leads?",
+    a: "Robotics companies generate B2B leads by targeting the right industries and decision-makers with SEO, technical content, LinkedIn, outbound campaigns, and industry events.",
+  },
+  {
+    q: "Which marketing channels work best for robotics companies?",
+    a: "SEO, technical content, LinkedIn, targeted outbound, and industry events can work well. The right mix depends on the target buyers, solution, and sales cycle.",
   },
   {
     q: "Do you work with automation and industrial robotics companies?",
