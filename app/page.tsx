@@ -10,6 +10,7 @@ import ApproachSection from "./components/home/Approach/ApproachSection";
 import ServicesSection from "./components/home/Services/ServicesSection";
 import SuccessStoriesSection from "./components/home/SuccessStories/SuccessStoriesSection";
 import CTASection from "./components/cta/CtaSection";
+import RoboticsIndustrySection from "./components/home/Industries/RoboticsIndustrySection";
 
 import {
   ArrowRight,
@@ -225,6 +226,8 @@ export default function Page() {
         </div>
       </section> */}
       <ServicesSection />
+  {/* ================= Industry ================= */}
+      <RoboticsIndustrySection />
       {/* ================= SUCCESS STORIES ================= */}
       <SuccessStoriesSection />
       {/* ================= FAQ ================= */}
