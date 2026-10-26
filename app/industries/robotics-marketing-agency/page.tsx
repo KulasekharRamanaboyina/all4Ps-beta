@@ -170,20 +170,25 @@ export default function RoboticsMarketingAgencyPage() {
 
           {/* Main Heading */}
 
-          <h1 className="text-4xl font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
-            B2B Marketing & Demand Generation
-            <br />
-            <span className="bg-gradient-to-r from-[#800080] via-[#c026d3] to-[#f472b6] bg-clip-text text-transparent">
-              for Robotics &amp; Automation Companies.
-            </span>
-          </h1>
+          {/* Main Heading */}
+
+<h1 className="text-4xl font-bold leading-[1.08] tracking-[-0.03em] text-white sm:text-5xl md:text-6xl lg:text-7xl">
+  Robotics Marketing Agency
+  <br />
+  <span className="bg-gradient-to-r from-[#800080] via-[#c026d3] to-[#f472b6] bg-clip-text text-transparent">
+    for B2B Growth
+  </span>
+</h1>
+
+{/* Description */}
 
           {/* Description */}
 
           <p className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg">
-            all4Ps is a B2B demand generation and ABM agency helping robotics
-            and automation companies build pipeline, reach target accounts and
-            generate qualified opportunities.
+            all4Ps helps robotics and industrial automation companies strengthen
+           positioning, reach target B2B buyers, and generate qualified demand
+            through content marketing, SEO, go-to-market (GTM) strategy, and
+           account-based marketing (ABM).
           </p>
 
           {/* CTA */}
@@ -381,40 +386,56 @@ export default function RoboticsMarketingAgencyPage() {
           </div>
 
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "Brand Positioning",
-                href: "/services/positioning-messaging",
-              },
-              {
-                title: "GTM Strategy",
-                href: "/services/gtm-execution",
-              },
-              {
-                title: "Demand Generation",
-                href: "/services/demand-generation",
-              },
-              {
-                title: "Account-Based Marketing",
-                href: "/services/abm",
-              },
-              {
-                title: "Content Marketing",
-                href: "/services/content-marketing",
-              },
-              {
-                title: "SEO & Search Visibility",
-                href: "/services/seo-visibility",
-              },
-              {
-                title: "Website Optimisation",
-                href: "/services/website-optimisation",
-              },
-              {
-                title: "Marketing Automation",
-                href: "/services/marketing-automation",
-              },
-            ].map((service) => (
+  {[
+    {
+      title: "Brand Positioning",
+      description:
+        "Clarify your robotics solution's differentiation and communicate its value to technical and commercial buyers.",
+      href: "/services/positioning-messaging",
+    },
+    {
+      title: "GTM Strategy",
+      description:
+        "Identify priority industries, target accounts, buying committees and market-entry opportunities.",
+      href: "/services/gtm-execution",
+    },
+    {
+      title: "Demand Generation",
+      description:
+        "Build campaigns that attract relevant buyers and support qualified B2B opportunities.",
+      href: "/services/demand-generation",
+    },
+    {
+      title: "Account-Based Marketing",
+      description:
+        "Align marketing outreach with priority accounts and the stakeholders involved in buying decisions.",
+      href: "/services/abm",
+    },
+    {
+      title: "Content Marketing",
+      description:
+        "Explain complex technology through application-focused content and buyer education.",
+      href: "/services/content-marketing",
+    },
+    {
+      title: "SEO & Search Visibility",
+      description:
+        "Help robotics buyers discover your solutions through relevant search content and industry-specific pages.",
+      href: "/services/seo-visibility",
+    },
+    {
+      title: "Website Optimisation",
+      description:
+        "Improve messaging, navigation and enquiry paths to help visitors understand your offering.",
+      href: "/services/website-optimisation",
+    },
+    {
+      title: "Marketing Automation",
+      description:
+        "Support consistent lead follow-up and campaign workflows across the buying journey.",
+      href: "/services/marketing-automation",
+    },
+  ].map((service) => (
               <a
                 key={service.title}
                 href={service.href}
@@ -448,9 +469,13 @@ export default function RoboticsMarketingAgencyPage() {
                   →
                 </div>
 
-                <h3 className="text-base font-semibold group-hover:text-[#800080]">
+                 <h3 className="text-base font-semibold group-hover:text-[#800080]">
                   {service.title}
                 </h3>
+
+                <p className="mt-3 text-sm leading-6 text-gray-400">
+                  {service.description}
+                </p>
               </a>
             ))}
           </div>
@@ -485,32 +510,34 @@ export default function RoboticsMarketingAgencyPage() {
 
           <div className="grid gap-5 md:grid-cols-3">
             {[
-              {
-                number: "01",
-                name: "Unbox Robotics",
-                category: "Robotics & Warehouse Automation",
-                text: "Marketing and digital initiatives for a robotics company operating in warehouse automation.",
-                image: "/images/portfolio/unbox.webp",
-                link: "/portfolio/unbox",
-              },
+              
+{
+  number: "01",
+  name: "Unbox Robotics",
+  category: "Robotics & Warehouse Automation",
+  text: "B2B marketing and digital initiatives for warehouse automation robotics, helping communicate the value of robotic solutions to relevant business audiences.",
+  image: "/images/portfolio/unbox.webp",
+  link: "/portfolio/unbox",
+},
 
-              {
-                number: "02",
-                name: "ANSCER Robotics",
-                category: "Robotics & Automation",
-                text: "Marketing support for a robotics technology company focused on industrial applications.",
-                image: "/images/portfolio/anscer.webp",
-                link: "/portfolio/anscer",
-              },
+{
+  number: "02",
+  name: "ANSCER Robotics",
+  category: "Robotics & Automation",
+  text: "Marketing support for robotics and automation solutions, with a focus on communicating technical capabilities and their relevance to industrial applications.",
+  image: "/images/portfolio/anscer.webp",
+  link: "/portfolio/anscer",
+},
 
-              {
-                number: "03",
-                name: "ROBIS Motherson",
-                category: "Industrial Robotics",
-                text: "Marketing and communication work for robotics and industrial automation initiatives.",
-                image: "/images/portfolio/motherson.webp",
-                link: "/portfolio/motherson",
-              },
+{
+  number: "03",
+  name: "ROBIS Motherson",
+  category: "Industrial Robotics",
+  text: "Marketing strategy and communication for industrial robotics and automation, focused on presenting technical offerings clearly to B2B audiences.",
+  image: "/images/portfolio/motherson.webp",
+  link: "/portfolio/motherson",
+},
+
             ].map((client) => (
               <div
                 key={client.name}
@@ -764,7 +791,7 @@ export default function RoboticsMarketingAgencyPage() {
               </a>
 
               <a
-                href="/portfolio/anscer"
+                href="/portfolio"
                 className="
                   rounded-lg
                   border

@@ -432,9 +432,9 @@ export const serviceFaqs: Record<string, FAQItem[]> = {
 };
 export const roboticsFaqs: FAQItem[] = [
   {
-    q: "What is robotics marketing?",
-    a: "Robotics marketing focuses on positioning, demand generation, content, SEO, and campaigns that help robotics companies reach and engage the right B2B decision-makers.",
-  },
+    q: "What does a robotics marketing agency do?",
+   a: "A robotics marketing agency helps robotics and automation companies communicate technical value, reach relevant B2B decision-makers, improve search visibility, and generate demand through positioning, content, SEO, and targeted campaigns.",
+   },
   {
     q: "Why do robotics companies need specialized marketing?",
     a: "Robotics products are often technically complex and involve longer buying cycles and multiple stakeholders. Specialized marketing helps translate that complexity into clear business value.",
