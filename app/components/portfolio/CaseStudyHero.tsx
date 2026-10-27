@@ -25,9 +25,9 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
       case "motherson":
         return {
           prefix: "",
-          highlight1: "ROBIS Motherson:",
-          middle: " GTM & Marketing Strategy for ",
-          highlight2: "Enterprise Growth",
+         
+          highlight1: "ROBIS Motherson Case Study:",
+    middle: " GTM & Marketing Strategy",
           suffix: "",
         };
       case "anscer":

@@ -487,59 +487,46 @@ export const CASE_STUDIES: CaseStudy[] = [
     id: "motherson",
     client: "ROBIS MOTHERSON",
     description:
-      "ROBIS Motherson is the industrial robotics and automation business unit of the Motherson Group, focused on designing and delivering advanced automation solutions for complex manufacturing environments. The team specializes in custom robotic systems that enhance productivity, precision, and operational scalability across automotive and industrial manufacturing lines. ROBIS supports manufacturers in transitioning from traditional processes to smart, future-ready factories through intelligent automation.",
-    challenge: `Originally built to support internal automation needs, ROBIS operated primarily as an in-house capability within the Motherson Group.
+  "ROBIS Motherson worked on building a go-to-market foundation for its robotics business. The engagement included brand architecture and naming, product positioning, marketing strategy, ideal customer profile definition, product launch readiness, and business planning for FY2026.",
+  challenge: `ROBIS Motherson needed a clear go-to-market foundation to support the commercialization of its robotics offerings beyond internal automation requirements.
 
-As the business moved toward commercializing its robotics solutions and expanding globally, it needed a clearly defined go-to-market strategy to establish positioning, identify target customer segments, and enable sustainable external growth.`,
-    challengeImage: "/images/portfolio/motherson.webp",
+The focus was on defining market positioning, identifying target customer segments, establishing product positioning, and preparing a structured strategy for external growth.`,    
+  challengeImage: "/images/portfolio/motherson.webp",
     industry: "Robotics",
     title:
       "How all4Ps helped ROBIS Motherson build a market-ready GTM foundation for global growth.",
     result: "FY26 GTM Strategy Launched",
     category: "GTM & Marketing Strategy",
-    performanceMetrics: [
-      {
-        value: "Scalable",
-        label: "Brand system built",
-      },
-      {
-        value: "100%",
-        label: "Shift to market-ready offerings",
-      },
-      {
-        value: "<6 ",
-        label: "Months to GTM readiness",
-      },
-
-      {
-        value: "Global",
-        label: "Product launch enabled",
-      },
-    ],
+   performanceMetrics: [
+  { value: "Scalable", label: "Brand system built" },
+  { value: "100%", label: "Shift to market-ready offerings" },
+  { value: "<6 ", label: "Months to GTM readiness" },
+  { value: "Global", label: "Product launch enabled" },
+],
 
     pillars: [
-      {
-        title: "Content & PR",
-        points: [
-          "Developed case studies to showcase real-world automation use cases.",
-          "Positioned Unbox Robotics as a credible industry innovator.",
-        ],
-      },
-      {
-        title: "Digital Performance",
-        points: [
-          "Optimized website structure for clarity and lead capture.",
-          "Improved discoverability through SEO-focused content.",
-        ],
-      },
-      {
-        title: "Growth & Sales Synergy",
-        points: [
-          "Aligned marketing narratives with sales conversations.",
-          "Supported pipeline growth through product-focused messaging.",
-        ],
-      },
+  {
+    title: "GTM & Marketing Strategy",
+    points: [
+      "Developed marketing strategy and defined the ideal customer profile (ICP).",
+      "Created a go-to-market roadmap to support commercialization.",
     ],
+  },
+  {
+    title: "Brand Architecture & Product Positioning",
+    points: [
+      "Developed brand architecture and naming for product offerings.",
+      "Defined positioning across five product lines and architected 33 SKUs.",
+    ],
+  },
+  {
+    title: "Product Launch Readiness",
+    points: [
+      "Prepared technical datasheets and a business strategy deck for FY2026.",
+      "Supported IWS 2025 global brand activation and launch planning.",
+    ],
+  },
+],
     systemicResult:
       "We established a market ready go to market foundation that brought clarity to positioning, structured execution, and aligned teams to support ROBIS’ global commercialization journey.",
     imageUrl: "/images/portfolio/motherson-hero.webp",
