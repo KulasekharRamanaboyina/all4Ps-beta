@@ -86,8 +86,44 @@ export async function generateMetadata({
         images: ["https://www.all4ps.co/images/og/kloudlite-hero.jpg"],
       },
     };
+    
   }
+if (id === "anscer") {
+  const title = "ANSCER Robotics Marketing Case Study | all4Ps";
+  const description =
+    "Explore how all4Ps supported ANSCER Robotics with content marketing, SEO, PR, growth marketing and sales alignment to strengthen market visibility and support lead generation.";
+  const image =
+    "https://www.all4ps.co/images/portfolio/anscer-hero.webp";
 
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://www.all4ps.co/portfolio/${id}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://www.all4ps.co/portfolio/${id}`,
+      siteName: "all4Ps",
+      type: "article",
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: "ANSCER Robotics Case Study | all4Ps",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+  };
+}
   return {
     title: `${client.client} Case Study | all4Ps`,
     description: client.description,

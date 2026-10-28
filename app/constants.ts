@@ -537,7 +537,7 @@ The focus was on defining market positioning, identifying target customer segmen
     description:
       "ANSCER Robotics is an industrial automation company focused on delivering advanced robotics solutions for complex manufacturing environments. Operating across India and the United States, the company designs and deploys robotic systems that help manufacturers improve operational efficiency, consistency, and scalability. ANSCER works closely with industrial clients to replace manual and semi-automated processes with intelligent, future-ready automation solutions.",
     challenge:
-      "Strengthen ANSCER Robotics’ brand presence with a clear and consistent market narrative, generate high-quality leads by focusing on the right industries and decision-makers, and align marketing efforts closely with sales to support pipeline growth and revenue outcomes.",
+  "ANSCER Robotics needed a clear market narrative to strengthen its brand presence across India and the United States. The company also aimed to generate qualified leads from relevant industries, reach key decision-makers, and align marketing activities with sales priorities to support pipeline growth.",
     challengeImage: "/images/portfolio/anscer.webp",
     industry: "Robotics",
     title: "Our work elevated their market credibility.",
@@ -546,11 +546,11 @@ The focus was on defining market positioning, identifying target customer segmen
     performanceMetrics: [
       {
         value: "$1M+",
-        label: "Revenue influenced",
+        label: "Revenue Generated Through Lead Conversion",
       },
       {
         value: "75%",
-        label: "Increase in qualified leads",
+        label: "Increase in Marketing Leads",
       },
       {
         value: "65%",
