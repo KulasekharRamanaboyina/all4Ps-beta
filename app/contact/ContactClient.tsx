@@ -69,18 +69,30 @@ export default function ContactClient() {
     e.preventDefault();
     setLoading(true);
 
-    emailjs
-      .send(
-        "service_xe237sd",
-        "template_k6x0b7g",
-        {
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          concern: `${formData.concern}\n\n[Scheduled Consult Date: May ${selectedDay}, 2026 at ${selectedTime}]`,
-        },
-        "Jkr6JdoCrHYeiNbqg",
-      )
+    // emailjs
+    //   .send(
+    //     "service_xe237sd",
+    //     "template_k6x0b7g",
+    //     {
+    //       name: formData.name,
+    //       email: formData.email,
+    //       company: formData.company,
+    //       concern: `${formData.concern}\n\n[Scheduled Consult Date: May ${selectedDay}, 2026 at ${selectedTime}]`,
+    //     },
+    //     "Jkr6JdoCrHYeiNbqg",
+    //   )
+
+    emailjs.send(
+  "service_obbqdvf",
+  "template_k6x0b7g",
+  {
+    name: formData.name,
+    email: formData.email,
+    company: formData.company,
+    concern: `${formData.concern}\n\n[Scheduled Consult Date: May ${selectedDay}, 2026 at ${selectedTime}]`,
+  },
+  "Jkr6JdoCrHYeiNbqg",
+)
       .then(() => {
         setToast("success");
         // GA4 Generate Lead Event
