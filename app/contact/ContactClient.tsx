@@ -89,7 +89,7 @@ export default function ContactClient() {
     name: formData.name,
     email: formData.email,
     company: formData.company,
-    concern: `${formData.concern}\n\n[Scheduled Consult Date: May ${selectedDay}, 2026 at ${selectedTime}]`,
+   concern: formData.concern,
   },
   "Jkr6JdoCrHYeiNbqg",
 )
