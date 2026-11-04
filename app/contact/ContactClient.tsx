@@ -71,8 +71,14 @@ export default function ContactClient() {
 
    emailjs
   .send(
-    "service_xe237sd",
-    "template_k6x0b7g",
+    // "service_xe237sd",
+    // "template_k6x0b7g",
+   
+   "service_nzi92gg",
+"template_k6x0b7g",
+    
+
+ 
     {
       name: formData.name,
       email: formData.email,
