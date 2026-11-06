@@ -57,6 +57,19 @@ export default async function sitemap() {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+     // Legal Pages
+    {
+      url: "https://www.all4ps.co/privacy-policy",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: "https://www.all4ps.co/terms-and-conditions",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
 
     // Industry Pages
     {
