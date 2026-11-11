@@ -494,7 +494,7 @@ The focus was on defining market positioning, identifying target customer segmen
   challengeImage: "/images/portfolio/motherson.webp",
     industry: "Robotics",
     title:
-      "How all4Ps helped ROBIS Motherson build a market-ready GTM foundation for global growth.",
+      "Discover how all4Ps supported ROBIS Motherson with brand architecture, product positioning, ICP definition and GTM planning for its robotics business.",
     result: "FY26 GTM Strategy Launched",
     category: "GTM & Marketing Strategy",
    performanceMetrics: [
