@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Robotics Marketing Agency for B2B Companies | all4Ps",
+  title: "Robotics Marketing Agency for B2B Companies",
 
   description:
-  "all4Ps helps robotics and industrial automation companies strengthen positioning, reach B2B buyers, and generate demand through SEO, content, GTM strategy and ABM.",
+  "Looking for a robotics marketing agency? all4Ps helps B2B robotics and industrial automation companies with positioning, GTM strategy, SEO and demand generation.",
   alternates: {
     canonical: "https://www.all4ps.co/industries/robotics-marketing-agency",
   },

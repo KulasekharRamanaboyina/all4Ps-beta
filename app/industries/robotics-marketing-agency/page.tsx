@@ -185,10 +185,7 @@ export default function RoboticsMarketingAgencyPage() {
           {/* Description */}
 
           <p className="mx-auto mt-7 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base md:text-lg">
-            all4Ps helps robotics and industrial automation companies strengthen
-           positioning, reach target B2B buyers, and generate qualified demand
-            through content marketing, SEO, go-to-market (GTM) strategy, and
-           account-based marketing (ABM).
+            all4Ps helps robotics and industrial automation companies clarify their positioning, reach the right B2B buyers, and generate qualified demand through content marketing, SEO, go-to-market strategy, and account-based marketing.
           </p>
 
           {/* CTA */}
