@@ -744,10 +744,10 @@ The focus was on defining market positioning, identifying target customer segmen
     description:
       "Kloudlite Labs is a pre-seed, open-source B2B SaaS company offering Development Environments as a Service. The platform helps engineering teams quickly set up secure, scalable, and consistent development environments, reducing setup time and operational complexity while enabling faster, more reliable software delivery for modern cloud-native teams.",
     challenge:
-      "needed to build a strong and credible brand presence while adopting an integrated marketing approach to support early-stage growth. The engagement focused on clarifying positioning, aligning messaging across channels, and creating consistent visibility to drive awareness, adoption, and long-term growth.",
+      "Kloudlite Labs needed to build a strong and credible brand presence while adopting an integrated marketing approach to support early-stage growth.",
     challengeImage: "/images/portfolio/kloudlite.webp",
     industry: "B2B SaaS platform",
-    title: "Built visibility, credibility, and a strong developer ecosystem",
+    title: "Discover how all4Ps supported Kloudlite Labs with brand positioning, website development, SEO, content marketing and developer community growth.",
     result: "Converted high-value leads",
     category: "End to End Marketing",
     performanceMetrics: [
