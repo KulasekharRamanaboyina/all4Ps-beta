@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "Discover the story, team, values, and growth-focused approach behind all4Ps, helping SaaS, AI, robotics, and industrial businesses build authority, generate demand, and drive growth.",
 
   alternates: {
-    canonical: "https://all4ps.co/about",
+    canonical: "https://www.all4ps.co/about",
   },
 
   robots: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       "Discover the story, team, values, and approach behind all4Ps and how we help B2B technology companies build authority, generate demand, and drive growth.",
 
-    url: "https://all4ps.co/about",
+    url: "https://www.all4ps.co/about",
 
     siteName: "all4Ps",
 

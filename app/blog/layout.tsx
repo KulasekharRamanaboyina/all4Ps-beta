@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Explore practical B2B marketing insights, strategies, and ideas on demand generation, brand strategy, SEO, content marketing, sales enablement, and growth for technology and industrial businesses.",
 
   alternates: {
-    canonical: "https://all4ps.co/blog",
+    canonical: "https://www.all4ps.co/blog",
   },
 
   robots: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     title: "B2B Marketing Insights & Strategies | all4Ps",
     description:
       "Explore practical B2B marketing insights, strategies, and ideas on demand generation, brand strategy, SEO, content marketing, and growth for technology and industrial businesses.",
-    url: "https://all4ps.co/blog",
+    url: "https://www.all4ps.co/blog",
     siteName: "all4Ps",
     type: "website",
     images: [

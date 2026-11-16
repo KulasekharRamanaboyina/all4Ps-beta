@@ -25,7 +25,7 @@ const manrope = Manrope({
 
 /* ================= METADATA -added ================= */
 export const metadata: Metadata = {
-  metadataBase: new URL("https://all4ps.co"),
+  metadataBase: new URL("https://www.all4ps.co"),
 
   title: {
     default: "all4Ps | B2B Growth & Marketing Strategy Agency",
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     title: "all4Ps | B2B Growth & Marketing Strategy Agency",
     description:
       "We help SaaS, tech, and industrial companies drive pipeline and revenue through intentional B2B marketing.",
-    url: "https://all4ps.co",
+    url: "https://www.all4ps.co",
     siteName: "all4Ps",
     type: "website",
     images: [
       {
-        url: "https://all4ps.co/og-image.png",
+        url: "https://www.all4ps.co/og-image.png",
         width: 1200,
         height: 630,
       },
@@ -150,8 +150,8 @@ f.parentNode.insertBefore(j,f);
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               name: "all4Ps",
-              url: "https://all4ps.co",
-              logo: "https://all4ps.co/images/logo-black.png",
+              url: "https://www.all4ps.co",
+              logo: "https://www.all4ps.co/images/logo-black.png",
               description:
                 "all4Ps is a B2B growth and marketing strategy agency helping SaaS, tech, and industrial companies drive pipeline and revenue.",
               contactPoint: {

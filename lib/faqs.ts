@@ -452,7 +452,7 @@ export const roboticsFaqs: FAQItem[] = [
     a: "SEO, technical content, LinkedIn, targeted outbound, and industry events can work well. The right mix depends on the target buyers, solution, and sales cycle.",
   },
   {
-    q: "Do you work with automation and industrial robotics companies?",
+    q: "Does all4Ps work with industrial robotics and automation companies?",
     a: "Yes. Our approach is designed for robotics, automation, industrial technology, and other technically complex B2B businesses.",
   },
   {
