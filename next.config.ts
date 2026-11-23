@@ -57,6 +57,11 @@ const nextConfig: NextConfig = {
         destination: "/privacy-policy",
         permanent: true,
       },
+       {
+        source: "/blog/deep-tech-marketing-evolution-what-changed-between-2020-and-2026",
+        destination: "/blog/deep-tech-marketing-vs-traditional-b2b-marketing",
+        permanent: true,
+      },
     ];
   },
 
