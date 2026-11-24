@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Robotics Marketing Agency for B2B Companies | all4Ps",
+    title: "Robotics Marketing Agency for B2B Growth | all4Ps",
 
     description:
-      "Positioning, content marketing, SEO, ABM and demand generation for robotics and automation companies.",
+      "all4Ps helps robotics and industrial automation companies grow through B2B marketing strategy, positioning, SEO, content marketing and demand generation.",
 
     url: "https://www.all4ps.co/industries/robotics-marketing-agency",
 
