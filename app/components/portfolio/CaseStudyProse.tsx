@@ -265,7 +265,7 @@ export default function CaseStudyProse({ client }: CaseStudyProseProps) {
                       key={index}
                       className="text-base sm:text-lg text-gray-300 leading-8"
                     >
-                      {cleanText}
+                     {renderLinkedText(cleanText)}
                     </p>
                   );
                 })}

@@ -19,6 +19,13 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
     "growth initiatives":
       "/services/demand-generation",
   },
-
+  unbox: {
+    "brand strategy": "/services/brand-strategy",
+    "visual identity": "/services/brand-strategy",
+    "structured social media framework": "/services/content-marketing",
+    "blogs and LinkedIn content": "/services/content-marketing",
+    "brand positioning": "/services/positioning-messaging",
+    "website content": "/services/website-optimization",
+  },
   // Future case studies can be added here.
 };

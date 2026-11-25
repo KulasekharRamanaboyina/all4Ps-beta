@@ -615,7 +615,7 @@ The focus was on defining market positioning, identifying target customer segmen
     description:
       "Unbox Robotics is an industrial automation company specializing in robotics solutions for logistics and warehouse operations. Based in Pune, the company focuses on building intelligent robotic systems that enable faster order processing, improved accuracy, and scalable automation for high-volume fulfillment environments. Unbox works with enterprises looking to modernize warehouse operations and adopt next-generation automation technologies.",
     challenge:
-      " needed a clear brand foundation to support early-stage growth and market visibility. While the technology and vision were strong, the brand required clearer identity, structured messaging, and consistent communication across channels. The engagement focused on defining the brand strategy and visual identity, aligning digital touchpoints with the new positioning, and enabling the internal team with frameworks for consistent marketing execution.",
+      "Unbox Robotics needed a clear brand foundation to support early-stage growth and market visibility. While the technology and vision were strong, the brand required clearer identity, structured messaging, and consistent communication across channels. The engagement focused on defining the brand strategy and visual identity, aligning digital touchpoints with the new positioning, and enabling the internal team with frameworks for consistent marketing execution.",
     challengeImage: "/images/portfolio/unbox.webp",
     industry: "Robotics",
     title: "Established a Scalable Brand Foundation.",
