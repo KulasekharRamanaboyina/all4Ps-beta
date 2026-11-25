@@ -27,5 +27,12 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
     "brand positioning": "/services/positioning-messaging",
     "website content": "/services/website-optimization",
   },
+  kloudlite: {
+    "brand positioning": "/services/positioning-messaging",
+    "visual identity": "/services/brand-strategy",
+    "website": "/services/website-optimisation",
+    "SEO and SEM": "/services/seo-visibility",
+    "content-led growth": "/services/content-marketing",
+  },
   // Future case studies can be added here.
 };

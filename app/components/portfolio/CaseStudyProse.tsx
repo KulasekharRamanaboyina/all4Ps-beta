@@ -184,9 +184,9 @@ export default function CaseStudyProse({ client }: CaseStudyProseProps) {
       (a, b) => b.length - a.length
     );
 
-    const escapedAnchors = anchors.map((anchor) =>
-      anchor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-    );
+   const escapedAnchors = anchors.map((anchor) =>
+  anchor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+);
 
     const regex = new RegExp(`(${escapedAnchors.join("|")})`, "gi");
 
