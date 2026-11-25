@@ -4,29 +4,37 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
   Record<string, string>
 > = {
   anscer: {
-    "industrial automation":
-      "/industries/robotics-marketing-agency",
+  "industrial automation company":
+    "/industries/robotics-marketing-agency",
 
-    "case studies, blogs, brochures, and product collaterals":
-      "/services/content-marketing",
+  "case studies, blogs, brochures, and product collaterals":
+    "/services/content-marketing",
 
-    "SEO best practices":
-      "/services/seo-visibility",
+  "SEO best practices":
+    "/services/seo-visibility",
 
-    "brand credibility":
-      "/services/thought-leadership",
+  "enhance brand credibility":
+    "/services/thought-leadership",
 
-    "growth initiatives":
-      "/services/demand-generation",
-  },
+  "growth initiatives focused on lead quality and pipeline impact":
+    "/services/demand-generation",
+},
   unbox: {
-    "brand strategy": "/services/brand-strategy",
-    "visual identity": "/services/brand-strategy",
-    "structured social media framework": "/services/content-marketing",
-    "blogs and LinkedIn content": "/services/content-marketing",
-    "brand positioning": "/services/positioning-messaging",
-    "website content": "/services/website-optimization",
-  },
+  "brand discovery workshop":
+    "/services/brand-strategy",
+
+  "structured social media framework with monthly plans and content calendars":
+    "/services/content-marketing",
+
+  "blogs and LinkedIn content":
+    "/services/content-marketing",
+
+  "new brand positioning":
+    "/services/positioning-messaging",
+
+  "updated website content":
+    "/services/website-optimisation",
+},
   kloudlite: {
     "brand positioning": "/services/positioning-messaging",
     "visual identity": "/services/brand-strategy",
@@ -34,5 +42,11 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
     "SEO and SEM": "/services/seo-visibility",
     "content-led growth": "/services/content-marketing",
   },
+ motherson: {
+  "clear go-to-market foundation": "/services/gtm-execution",
+  "establishing product positioning": "/services/positioning-messaging",
+  "product launch readiness": "/services/gtm-execution",
+  "launch planning": "/services/gtm-execution",
+},
   // Future case studies can be added here.
 };
