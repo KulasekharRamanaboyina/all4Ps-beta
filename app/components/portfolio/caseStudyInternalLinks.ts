@@ -48,5 +48,18 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
   "product launch readiness": "/services/gtm-execution",
   "launch planning": "/services/gtm-execution",
 },
+anzo: {
+  "industrial automation and robotics company":
+    "/industries/robotics-marketing-agency",
+
+  "SEO-optimized blogs":
+    "/services/content-marketing",
+
+  "SEO best practices":
+    "/services/seo-visibility",
+
+  "qualified lead generation":
+    "/services/demand-generation",
+},
   // Future case studies can be added here.
 };

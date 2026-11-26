@@ -679,7 +679,7 @@ The focus was on defining market positioning, identifying target customer segmen
     description:
       "Anzo Controls is an industrial automation and robotics company based in Delhi, specializing in designing and implementing automation solutions for manufacturing and industrial operations. The company helps businesses improve efficiency, control, and scalability by integrating reliable, intelligent automation systems tailored to operational needs.",
     challenge:
-      "needed to strengthen its online presence and improve visibility in a competitive industrial automation market. The engagement focused on leveraging content marketing to build credibility, enhance discoverability, and attract relevant decision-makers, ultimately supporting sustained brand awareness and qualified lead generation.",
+      "Anzo Controls needed to strengthen its online presence and improve visibility in a competitive industrial automation market. The engagement focused on leveraging content marketing to build credibility, enhance discoverability, and attract relevant decision-makers, ultimately supporting sustained brand awareness and qualified lead generation.",
     challengeImage: "/images/portfolio/anzo.webp",
     industry: "Robotics",
     title: "Empowering teams to build sustainable digital visibility",
