@@ -83,5 +83,10 @@ xpstays: {
   "return on ad spend":
     "/services/analytics-reporting",
 },
+panchayath: {
+  "digital strategy": "/services/campaign-execution",
+  "app downloads and engagement": "/services/demand-generation",
+  "website": "/services/website-optimisation",
+},
   // Future case studies can be added here.
 };

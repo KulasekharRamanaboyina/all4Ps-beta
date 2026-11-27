@@ -20,7 +20,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Unbox Robotics",
           middle: " Scaled ",
           highlight2: "Growth",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       case "motherson":
         return {
@@ -36,7 +36,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Anscer Robotics",
           middle: " Supported ",
           highlight2: "$1M Lead Conversion",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       case "anzo":
         return {
@@ -44,7 +44,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Anzo Controls",
           middle: " Built ",
           highlight2: "Digital Visibility",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       case "kloudlite":
         return {
@@ -52,7 +52,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Kloudlite Labs",
           middle: " Converted ",
           highlight2: "High-Value Leads",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       case "synergy":
         return {
@@ -60,7 +60,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Synergy Homecare",
           middle: " Drove ",
           highlight2: "Local Lead Growth",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       case "xpstays":
         return {
@@ -68,7 +68,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "XPStays",
           middle: " Achieved ",
           highlight2: "~7.5× ROAS",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       case "panchayath":
         return {
@@ -76,7 +76,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: "Panchayath App",
           middle: " Enabled ",
           highlight2: "Citizen Engagement",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
       default:
         return {
@@ -84,7 +84,7 @@ export default function CaseStudyHero({ client }: CaseStudyHeroProps) {
           highlight1: cs.client,
           middle: " Partnered for ",
           highlight2: "Success",
-          suffix: " with all4ps",
+          suffix: " with all4Ps",
         };
     }
   };

@@ -945,7 +945,7 @@ The focus was on defining market positioning, identifying target customer segmen
     description:
       "Panchayath App is a citizen engagement and governance platform designed to strengthen communication between local governing bodies and citizens. The platform enables transparent information sharing, issue reporting, and community participation, helping panchayats and local administrations improve service delivery, responsiveness, and public engagement through a digital-first approach.",
     challenge:
-      "needed to increase visibility, community engagement, and app downloads across its target regions. The engagement focused on executing an integrated digital strategy that strengthened awareness, encouraged citizen participation, and drove sustained app adoption.",
+      "Panchayath App needed to increase visibility, community engagement, and app downloads across its target regions. The engagement focused on executing an integrated digital strategy that strengthened awareness, encouraged citizen participation, and drove sustained app adoption.",
     challengeImage: "/images/portfolio/panchayath.webp",
     performanceMetrics: [
       {
