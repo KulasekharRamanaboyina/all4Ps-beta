@@ -26,8 +26,6 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
   "structured social media framework with monthly plans and content calendars":
     "/services/content-marketing",
 
-  "blogs and LinkedIn content":
-    "/services/content-marketing",
 
   "new brand positioning":
     "/services/positioning-messaging",
@@ -45,8 +43,7 @@ export const CASE_STUDY_INTERNAL_LINKS: Record<
  motherson: {
   "clear go-to-market foundation": "/services/gtm-execution",
   "establishing product positioning": "/services/positioning-messaging",
-  "product launch readiness": "/services/gtm-execution",
-  "launch planning": "/services/gtm-execution",
+ 
 },
 anzo: {
   "industrial automation and robotics company":
@@ -60,6 +57,31 @@ anzo: {
 
   "qualified lead generation":
     "/services/demand-generation",
+},
+synergy: {
+  "local listings":
+    "/services/seo-visibility",
+
+  "localized content and blogs":
+    "/services/content-marketing",
+
+  "qualified leads":
+    "/services/demand-generation",
+
+  "brand consistency":
+    "/services/brand-strategy",
+},
+xpstays: {
+
+
+  "targeted paid campaigns":
+    "/services/campaign-execution",
+
+  "maximize returns":
+    "/services/demand-generation",
+
+  "return on ad spend":
+    "/services/analytics-reporting",
 },
   // Future case studies can be added here.
 };

@@ -817,7 +817,7 @@ The focus was on defining market positioning, identifying target customer segmen
     description:
       "Synergy Homecare is a USA-based homecare provider delivering personalized, non-medical care services to individuals and families. The organization focuses on supporting seniors and those in need with reliable, compassionate in-home care, helping improve quality of life while enabling clients to live independently and comfortably.",
     challenge:
-      "needed to improve local visibility and generate qualified leads across multiple franchise units in a competitive market. The engagement focused on strengthening localized marketing efforts, ensuring brand consistency across locations, and enabling scalable lead generation for franchise owners.",
+      "Synergy Homecare needed to improve local visibility and generate qualified leads across multiple franchise units in a competitive market. The engagement focused on strengthening localized marketing efforts, ensuring brand consistency across locations, and enabling scalable lead generation for franchise owners.",
     challengeImage: "/images/portfolio/synergy.webp",
     performanceMetrics: [
       {
