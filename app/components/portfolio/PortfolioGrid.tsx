@@ -20,13 +20,26 @@ export default function PortfolioGrid() {
   ];
 
   // We filter items based on activeCategory
-  const filteredStudies =
-    activeCategory === "All"
-      ? CASE_STUDIES
-      : CASE_STUDIES.filter(
-          (cs) => cs.category.toLowerCase().trim() === activeCategory.toLowerCase().trim()
-        );
+  // const filteredStudies =
+  //   activeCategory === "All"
+  //     ? CASE_STUDIES
+  //     : CASE_STUDIES.filter(
+  //         (cs) => cs.category.toLowerCase().trim() === activeCategory.toLowerCase().trim()
+  //       );
+// Exclude XP Stays from the portfolio grid
+const visibleStudies = CASE_STUDIES.filter(
+  (cs) => cs.id !== "xpstays"
+);
 
+// Filter visible studies based on active category
+const filteredStudies =
+  activeCategory === "All"
+    ? visibleStudies
+    : visibleStudies.filter(
+        (cs) =>
+          cs.category.toLowerCase().trim() ===
+          activeCategory.toLowerCase().trim()
+      );
   return (
     <section id="all-case-studies" className="relative bg-transparent py-16 border-b border-white/5 overflow-hidden">
       {/* Dual ambient background glows */}
